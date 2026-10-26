@@ -1,0 +1,73 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "fBASE",
+          "nodeLineageTag": "f3801fe4-4a5d-48e7-a477-5415c1d9fb50",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 700.07386596194351,
+            "y": 424.24450079201182
+          },
+          "nodeIndex": "MEDIDAS",
+          "nodeLineageTag": "88ea907e-1c68-4be5-8efb-2c8923bd93ad",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 412.93131410422484
+          },
+          "nodeIndex": "dCALENDARIO",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 512.69108730415257,
+            "y": 50.711690790608138
+          },
+          "nodeIndex": "dKEYS",
+          "nodeLineageTag": "dc678e93-42af-4bef-981b-d6bccf0b8349",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 79.553182037699813,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

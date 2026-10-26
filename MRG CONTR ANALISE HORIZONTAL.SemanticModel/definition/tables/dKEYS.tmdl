@@ -1,0 +1,44 @@
+table dKEYS
+	lineageTag: dc678e93-42af-4bef-981b-d6bccf0b8349
+
+	column KEY
+		dataType: string
+		lineageTag: acb2a21f-c8c0-4614-99cd-a151f4feb3db
+		summarizeBy: none
+		sourceColumn: KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column COD_CLT
+		dataType: int64
+		formatString: 0
+		lineageTag: 936ac662-d920-4c37-ac6f-3d182e1364dc
+		summarizeBy: none
+		sourceColumn: COD_CLT
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENTE
+		dataType: string
+		lineageTag: 0e46dd8c-fb80-4dae-aca8-a353d1e3a6e2
+		summarizeBy: none
+		sourceColumn: CLIENTE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dKEYS = m
+		mode: import
+		source =
+				let
+				  Origem = Excel.Workbook(File.Contents("C:\Users\vinicius.vilarinho\Desktop\BASE KEYS E CLIENTES.xlsx"), null, true),
+				  #"Navegação 1" = Origem{[Item = "BASE KEYS E CLIENTES", Kind = "Sheet"]}[Data],
+				  #"Cabeçalhos promovidos" = Table.PromoteHeaders(#"Navegação 1", [PromoteAllScalars = true]),
+				  #"Tipo de coluna alterado" = Table.TransformColumnTypes(#"Cabeçalhos promovidos", {{"KEY", type text}, {"COD_CLT", Int64.Type}, {"CLIENTE", type text}}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Tipo de coluna alterado", {"COD_CLT"})
+				in
+				  #"Duplicatas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

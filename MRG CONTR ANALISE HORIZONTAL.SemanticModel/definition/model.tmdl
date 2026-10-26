@@ -1,0 +1,24 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["fBASE","dKEYS"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table fBASE
+ref table DateTableTemplate_d7bff408-9f12-4662-ab4a-b03948192a4f
+ref table MEDIDAS
+ref table dCALENDARIO
+ref table LocalDateTable_9fdbebe4-f3bc-4773-ae60-71e048f8db41
+ref table LocalDateTable_68c7ec58-9f2b-4869-a3ac-70045622507b
+ref table dKEYS
+
+ref cultureInfo pt-BR
+

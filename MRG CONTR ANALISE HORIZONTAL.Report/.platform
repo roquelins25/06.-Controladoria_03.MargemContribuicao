@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "MRG CONTR ANALISE HORIZONTAL"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1ddd3895-b330-4dbb-a5df-edb3ba6555bd"
+  }
+}

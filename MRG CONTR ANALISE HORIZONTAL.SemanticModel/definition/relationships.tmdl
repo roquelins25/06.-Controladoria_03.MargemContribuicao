@@ -1,0 +1,18 @@
+relationship a45e6c2b-6173-4a9d-813d-ab8e0f7cbd80
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fBASE.Mes_Ano
+	toColumn: LocalDateTable_9fdbebe4-f3bc-4773-ae60-71e048f8db41.Date
+
+relationship 44f662f9-af6a-492e-9c9a-4a80df9b7552
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dCALENDARIO.Date
+	toColumn: LocalDateTable_68c7ec58-9f2b-4869-a3ac-70045622507b.Date
+
+relationship 724ee8b0-40ce-fb25-806e-d071ad3dca05
+	fromColumn: fBASE.Data_NF
+	toColumn: dCALENDARIO.Date
+
+relationship d8cf85b1-5947-db6d-52f7-51b2e049270c
+	fromColumn: fBASE.Cod_Cliente
+	toColumn: dKEYS.COD_CLT
+

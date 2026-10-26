@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "MRG CONTR ANALISE HORIZONTAL"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a435fc63-713d-41c0-9a71-28cf30d9cb97"
+  }
+}
