@@ -30,7 +30,7 @@ table dKEYS
 		mode: import
 		source =
 				let
-				  Origem = Excel.Workbook(File.Contents("C:\Users\vinicius.vilarinho\Desktop\BASE KEYS E CLIENTES.xlsx"), null, true),
+				  Origem = Excel.Workbook(File.Contents("\\dados\Financeiro\Controladoria\VINI\AREA DE TRABALHO\BASE KEYS E CLIENTES.xlsx"), null, true),
 				  #"Navegação 1" = Origem{[Item = "BASE KEYS E CLIENTES", Kind = "Sheet"]}[Data],
 				  #"Cabeçalhos promovidos" = Table.PromoteHeaders(#"Navegação 1", [PromoteAllScalars = true]),
 				  #"Tipo de coluna alterado" = Table.TransformColumnTypes(#"Cabeçalhos promovidos", {{"KEY", type text}, {"COD_CLT", Int64.Type}, {"CLIENTE", type text}}),
