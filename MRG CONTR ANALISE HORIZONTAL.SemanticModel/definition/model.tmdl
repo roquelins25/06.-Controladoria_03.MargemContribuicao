@@ -16,9 +16,19 @@ queryGroup Fatos
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = []
+annotation PBI_QueryOrder = ["TB_FatosDRE","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP"]
 
 annotation PBI_ProTooling = ["DevMode"]
+
+ref table TB_FatosDRE
+ref table TB_CLIENTE
+ref table DateTableTemplate_7eea9b1b-50b4-4bf8-8bba-de7e1d840fb1
+ref table LocalDateTable_a7a6e3d3-7ef7-4d32-b6ad-4752882cc1ad
+ref table TB_FAMRMC
+ref table TB_MOTIVO
+ref table TB_PRODUTO
+ref table TB_REDE
+ref table TB_REP
 
 ref cultureInfo pt-BR
 

@@ -1,0 +1,272 @@
+table TB_PRODUTO
+	lineageTag: 43858bad-c090-4c50-ae47-4714e4b59363
+
+	column CODPRO
+		dataType: string
+		lineageTag: c4d753ae-60f5-438e-acdd-9787fe78cdcb
+		summarizeBy: none
+		sourceColumn: CODPRO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESPRO
+		dataType: string
+		lineageTag: ab19168b-164f-4894-be91-5df3b620dc2b
+		summarizeBy: none
+		sourceColumn: DESPRO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPLPRO
+		dataType: string
+		lineageTag: 1b3795c4-a97e-4547-b86b-3eba245a2c8e
+		summarizeBy: none
+		sourceColumn: CPLPRO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESNFV
+		dataType: string
+		lineageTag: f34399f2-72d9-450b-86c9-5ed15c3750bb
+		summarizeBy: none
+		sourceColumn: DESNFV
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODFAM
+		dataType: string
+		lineageTag: 7c011d1d-154e-4ce4-9b5b-1603f7c77193
+		summarizeBy: none
+		sourceColumn: CODFAM
+
+		annotation SummarizationSetBy = Automatic
+
+	column UNIMED
+		dataType: string
+		lineageTag: 14765ac3-14fd-4d1e-adb0-fef1520212d2
+		summarizeBy: none
+		sourceColumn: UNIMED
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODAGE
+		dataType: string
+		lineageTag: 65f4e2dc-73ad-4e94-83f1-4dbd12ddc1b7
+		summarizeBy: none
+		sourceColumn: CODAGE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITPRO
+		dataType: string
+		lineageTag: 786353d7-c67a-4b15-bac2-5daa0629b255
+		summarizeBy: none
+		sourceColumn: SITPRO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODMAR
+		dataType: string
+		lineageTag: ec4088ec-3da4-4d93-9b1e-418d7942253d
+		summarizeBy: none
+		sourceColumn: CODMAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column PESBRU
+		dataType: double
+		lineageTag: c369b631-e705-4887-9d10-6e730e98ccfb
+		summarizeBy: sum
+		sourceColumn: PESBRU
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PESLIQ
+		dataType: double
+		lineageTag: bc1535e1-1f66-4dde-a833-018f8bd880bf
+		summarizeBy: sum
+		sourceColumn: PESLIQ
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CODAGC
+		dataType: string
+		lineageTag: a0784f4a-44a9-49f4-96e9-8869aa17e38a
+		summarizeBy: none
+		sourceColumn: CODAGC
+
+		annotation SummarizationSetBy = Automatic
+
+	column USU_CLAMAN
+		dataType: string
+		lineageTag: 5e6829e5-0495-4dda-8a3f-5ffee6f5c33f
+		summarizeBy: none
+		sourceColumn: USU_CLAMAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODREF
+		dataType: string
+		lineageTag: 0388dd40-67b1-4888-a9a8-0c419a7bbb75
+		summarizeBy: none
+		sourceColumn: CODREF
+
+		annotation SummarizationSetBy = Automatic
+
+	column QTDPCTUN
+		dataType: double
+		lineageTag: d76f2fb8-93e6-4adc-8420-418e1dbc90d6
+		summarizeBy: sum
+		sourceColumn: QTDPCTUN
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QTDPCT
+		dataType: string
+		lineageTag: 8538fa08-9ef9-4c38-a05a-12ddca21ce02
+		summarizeBy: none
+		sourceColumn: QTDPCT
+
+		annotation SummarizationSetBy = Automatic
+
+	column VOLPRO_UN
+		dataType: string
+		lineageTag: c10e8ed4-5a82-4612-918e-afd6317ad873
+		summarizeBy: none
+		sourceColumn: VOLPRO_UN
+
+		annotation SummarizationSetBy = Automatic
+
+	column Select
+		dataType: string
+		lineageTag: 79ee7799-a9d2-47de-9e12-f767cc245abb
+		summarizeBy: none
+		sourceColumn: Select
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODCLC
+		dataType: string
+		lineageTag: 1efb7693-0b15-463d-98bc-76005a156bff
+		summarizeBy: none
+		sourceColumn: CODCLC
+
+		annotation SummarizationSetBy = Automatic
+
+	column VOLPRO
+		dataType: double
+		lineageTag: 654a76a2-f462-493f-9d7c-a2d7993400dd
+		summarizeBy: sum
+		sourceColumn: VOLPRO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SABOR
+		dataType: string
+		lineageTag: 275418f3-1564-452c-a01b-79475b1086ca
+		summarizeBy: none
+		sourceColumn: SABOR
+
+		annotation SummarizationSetBy = Automatic
+
+	column USU_CODFAMDAY
+		dataType: int64
+		formatString: 0
+		lineageTag: a3be9734-f440-47bf-a38f-904ca3040dab
+		summarizeBy: sum
+		sourceColumn: USU_CODFAMDAY
+
+		annotation SummarizationSetBy = Automatic
+
+	column USU_DESFAMDAY
+		dataType: string
+		lineageTag: 56de8efd-793a-41e2-a584-a4561844ebb0
+		summarizeBy: none
+		sourceColumn: USU_DESFAMDAY
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUTO_ZERO
+		dataType: string
+		lineageTag: 52c4e10b-f0d3-410b-ab32-03f03bdf0f0e
+		summarizeBy: none
+		sourceColumn: PRODUTO_ZERO
+
+		annotation SummarizationSetBy = Automatic
+
+	column QTD_PALETE
+		dataType: double
+		lineageTag: 91fbfde1-0b81-4382-bd60-155536210f12
+		summarizeBy: sum
+		sourceColumn: QTD_PALETE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column XDESPRO
+		dataType: string
+		lineageTag: 51663f8a-89a1-4de6-8795-712872c2601e
+		summarizeBy: none
+		sourceColumn: XDESPRO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLASSIFICACAO_BI
+		dataType: string
+		lineageTag: 22e9f8c1-4606-4867-a78a-be3a45577ad3
+		summarizeBy: none
+		sourceColumn: CLASSIFICACAO_BI
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TB_PRODUTO = m
+		mode: import
+		queryGroup: Dimensao
+		source = ```
+				let
+				    Fonte = Oracle.Database(
+					"147.15.121.67:49182/I260220090255_p.subnetappxts2p.saaspremiumvcn1.oraclevcn.com", 
+					[CommandTimeout = #duration(0, 0, 10, 0),
+				   Query = "
+				SELECT 
+				PRO.*,
+				PRO.CODPRO || ' - ' || PRO.CPLPRO AS xDESPRO,
+				           CASE
+				               WHEN (pro.codfam = '17' AND pro.volpro = 2)     THEN 'ENERGÉTICO 2L'
+				               WHEN (pro.codfam = '17' AND pro.volpro = 0.473) THEN 'ENERGÉTICO 473ML'
+				               WHEN (pro.codfam = '17' AND pro.volpro = 0.250) THEN 'ENERGÉTICO 250ML'
+				               WHEN (pro.codfam = '17' AND pro.volpro = 1)     THEN 'ENERGÉTICO 1L'
+				               WHEN (pro.codfam = '17' AND pro.volpro = 0.750) THEN 'ENERGÉTICO 750ML'
+				               WHEN (pro.codfam = '17' AND pro.volpro = 2.5)   THEN 'ENERGÉTICO 2.5L'
+				               WHEN pro.usu_codfamday = '10002' THEN 'VODKA'
+				               WHEN pro.usu_codfamday = '10003' THEN 'CERVEJA'
+				               WHEN pro.usu_codfamday = '10004' THEN 'GIN'
+				               WHEN pro.usu_codfamday = '10005' THEN 'WHISKY'
+				               WHEN pro.usu_codfamday = '10006' THEN 'KIDS'
+				               WHEN pro.usu_codfamday = '10008' THEN 'OUTROS ALCOOLICOS'
+				               WHEN pro.usu_codfamday = '10009' THEN 'OUTROS NÃO ALCOOLICOS'
+				               WHEN pro.usu_codfamday = '10001' THEN 'OUTROS ALCOOLICOS'
+				               WHEN pro.usu_codfamday = '10011' THEN 'OUTROS ALCOOLICOS'
+				               WHEN pro.usu_codfamday = '10012' THEN 'SAFADAO'
+				               WHEN pro.usu_codfamday = '10013' THEN 'OUTROS ALCOOLICOS'
+				               WHEN pro.usu_codfamday = '10014' THEN 'OUTROS NÃO ALCOOLICOS'
+				               WHEN pro.usu_codfamday = '10015' THEN 'ISOTONICOS'
+				               ELSE 'OUTROS'
+				           END AS classificacao_bi
+				FROM I260220090255_ERPP.USU_V075PRO2 PRO
+				   ", HierarchicalNavigation = true])
+				in
+				    Fonte
+				```
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,9 @@
+relationship 5988ac3b-bca9-44b6-93e7-2dd5fa2e99eb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: TB_CLIENTE.DATCAD
+	toColumn: LocalDateTable_a7a6e3d3-7ef7-4d32-b6ad-4752882cc1ad.Date
+
+relationship AutoDetected_2ff23641-8ff9-4020-87aa-cd1b53f93e83
+	fromColumn: TB_FatosDRE.USU_CODMAR
+	toColumn: TB_MOTIVO.USU_CODMAR
+

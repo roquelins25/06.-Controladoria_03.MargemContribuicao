@@ -1,0 +1,113 @@
+table TB_REP
+	lineageTag: 49927c4f-3e1e-42ee-b75f-d55d2d1c88b8
+
+	column CODREP
+		dataType: int64
+		formatString: 0
+		lineageTag: 49cb1ba2-19ea-46bd-9253-225fe1785695
+		summarizeBy: sum
+		sourceColumn: CODREP
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOMREP
+		dataType: string
+		lineageTag: 9598dcb1-3490-4f9d-9e89-c0289f9abf81
+		summarizeBy: none
+		sourceColumn: NOMREP
+
+		annotation SummarizationSetBy = Automatic
+
+	column APEREP
+		dataType: string
+		lineageTag: c8e24155-318a-49ab-b575-e10e5272b5a1
+		summarizeBy: none
+		sourceColumn: APEREP
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIPREP
+		dataType: string
+		lineageTag: f7a93b14-4761-4948-bbc6-d05a8fac280c
+		summarizeBy: none
+		sourceColumn: TIPREP
+
+		annotation SummarizationSetBy = Automatic
+
+	column CIDREP
+		dataType: string
+		lineageTag: 052aafa3-036d-4e1d-9f57-1ee5b9897e58
+		summarizeBy: none
+		sourceColumn: CIDREP
+
+		annotation SummarizationSetBy = Automatic
+
+	column SIGUFS
+		dataType: string
+		lineageTag: f2aeb283-9ef1-4850-a442-ee2a320fc30c
+		summarizeBy: none
+		sourceColumn: SIGUFS
+
+		annotation SummarizationSetBy = Automatic
+
+	column FONREP
+		dataType: string
+		lineageTag: c194ae2c-471e-4224-88fe-c4785c2dbad0
+		summarizeBy: none
+		sourceColumn: FONREP
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITREP
+		dataType: string
+		lineageTag: 468a3f9b-e188-410c-8fa2-f9c0aa6cacca
+		summarizeBy: none
+		sourceColumn: SITREP
+
+		annotation SummarizationSetBy = Automatic
+
+	column REPSUP
+		dataType: int64
+		formatString: 0
+		lineageTag: aa768fdd-7b2e-42aa-b9d8-3eb2bc8fb67e
+		summarizeBy: sum
+		sourceColumn: REPSUP
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOMSUP
+		dataType: string
+		lineageTag: fbd92f60-5f7e-462b-95fb-9c6370b8794c
+		summarizeBy: none
+		sourceColumn: NOMSUP
+
+		annotation SummarizationSetBy = Automatic
+
+	column REP_CONCAT
+		dataType: int64
+		formatString: 0
+		lineageTag: 54dea88b-e81e-4282-8fd2-e556da08e7ce
+		summarizeBy: sum
+		sourceColumn: REP_CONCAT
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TB_REP = m
+		mode: import
+		queryGroup: Dimensao
+		source = ```
+				let
+				    Fonte = Oracle.Database(
+					"147.15.121.67:49182/I260220090255_p.subnetappxts2p.saaspremiumvcn1.oraclevcn.com", 
+					[CommandTimeout = #duration(0, 0, 10, 0),
+				   Query = "
+				SELECT
+				*
+				FROM I260220090255_ERPP.USU_V090REP
+				   ", HierarchicalNavigation = true])
+				in
+				    Fonte
+				```
+
+	annotation PBI_ResultType = Table
+
