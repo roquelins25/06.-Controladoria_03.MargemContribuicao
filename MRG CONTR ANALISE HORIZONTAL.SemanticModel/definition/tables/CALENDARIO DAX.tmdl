@@ -1,0 +1,186 @@
+table 'CALENDARIO DAX'
+	lineageTag: fe6b691c-0458-41b2-9144-901f0e948316
+
+	column Date
+		formatString: General Date
+		lineageTag: 30bc0ed3-dc62-4806-bc41-bc3fad645b8b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variação
+			isDefault
+			relationship: 8adf8594-d76b-4edf-a5c0-f2492a920c45
+			defaultHierarchy: LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		formatString: 0
+		lineageTag: 47d5994e-123f-47c0-aa94-2b8bc143f373
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnoNumber
+		formatString: 0
+		lineageTag: 7311044b-399c-492b-b489-20b6c8870646
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [AnoNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		formatString: 0
+		lineageTag: 57473808-548d-4d7b-85d1-fbeeea2d2708
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mês]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome do Mês'
+		lineageTag: 374d16ba-9745-4314-bbf9-be991256eafb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nome do Mês]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mês Abrev'
+		lineageTag: e3b99fd0-9b4f-46f0-be33-4439938c18e6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mês Abrev]
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre
+		lineageTag: 1a7f013a-e75e-47f8-86d3-8151c64a5d27
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column semestre
+		lineageTag: 5569cea4-ee5a-4395-8e10-1c622d25eca1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [semestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		formatString: 0
+		lineageTag: 1ac2e942-b733-4c32-87ef-96190fe1d54b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Dia]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia/Mes
+		lineageTag: 266b1e35-a26b-4ab1-9458-f2e580cc60fe
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Dia/Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasSemana
+		lineageTag: 853f087a-30e5-4e5a-a9c6-c221b7b90031
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DiasSemana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Atual'
+		lineageTag: 70402bfd-9fc7-4668-ab79-2d85f3e9ee46
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes Atual]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano-Mes
+		lineageTag: 75452d35-18ac-4173-9b4b-641142cd1e4f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ano-Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderBy
+		formatString: 0
+		lineageTag: bee9c090-67f9-47cb-a05e-ef4e20e6ffe9
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [OrderBy]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Numerosemana
+		formatString: 0
+		lineageTag: 265ee7e8-9a5b-4efe-b206-4e1cac802bb5
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Numerosemana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasUteis
+		lineageTag: 6875adf1-fe2b-4213-94d3-7115e033a579
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DiasUteis]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'CALENDARIO DAX' = calculated
+		mode: import
+		source = ```
+				
+				var minAno = YEAR(MIN(TB_FatosDRE[DATA_NF]))
+				var MaxAno = YEAR(MAX(TB_FatosDRE[DATA_NF])) 
+				RETURN
+				ADDCOLUMNS(
+				    FILTER(
+				        CALENDARAUTO(),
+				        YEAR([Date]) >= minAno &&
+				        YEAR([Date]) <= MaxAno),
+				        "Ano", YEAR([Date]),
+				        "AnoNumber", YEAR( [Date] ),
+				        "Mês", MONTH([Date]),
+				        "Nome do Mês", FORMAT([Date],"mmmm","PT-BR"),
+				        "Mês Abrev",UPPER(LEFT(FORMAT([Date], "mmm"), 1)) & LOWER(RIGHT(FORMAT([Date], "mmm"), 2)),
+				        "trimestre", CONCATENATE(QUARTER([Date]),"-Trimestre"),
+				        "semestre", SWITCH(
+				                        TRUE(),
+				                        MONTH([Date]) IN{1,2,3,4,5,6}, "1-Sem",
+				                        "2-Sem"),
+				        "Dia",DAY([Date]),
+				        "Dia/Mes", FORMAT([Date],"dd-mmm") ,
+				        "DiasSemana",SWITCH(
+				            WEEKDAY([Date]),
+				            1,"Domingo",
+				            2,"Segunda",
+				            3,"Terça",
+				            4,"Quarta",
+				            5,"Quinta",
+				            6,"Sexta",
+				            7,"Sabado"),
+				        "Mes Atual", IF( YEAR( [Date] ) = YEAR( TODAY() ) && MONTH( [Date] ) = MONTH( TODAY() ), "S", "N" ),
+				        "Ano-Mes", UPPER(LEFT(FORMAT([Date], "mmm"), 1)) & LOWER(RIGHT(FORMAT([Date], "mmm"), 2)) & "-" & YEAR( [Date] ),
+				        "OrderBy", (YEAR( [Date] )*100) + MONTH( [Date] ),
+				        "Numerosemana", WEEKNUM( [Date],1),
+				        "DiasUteis", IF( WEEKDAY( [Date] ) IN { 1,7 }, "N", "S" )
+				    )
+				```
+
+	annotation PBI_Id = dfb0ef8dda7a44afa85920966c090401
+

@@ -5,18 +5,31 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 407.4873325859304
       },
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 543.03296101377509
+            "x": 1146.5934853844346,
+            "y": 332.84250589601521
           },
-          "nodeIndex": "fBASE",
-          "nodeLineageTag": "f3801fe4-4a5d-48e7-a477-5415c1d9fb50",
+          "nodeIndex": "TB_CLIENTE",
+          "nodeLineageTag": "2f4df360-4357-4a2d-a524-c7cd7c15bbba",
           "size": {
             "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 669.63579853478041,
+            "y": 126.72157858161164
+          },
+          "nodeIndex": "TB_FAMRMC",
+          "nodeLineageTag": "72f99b04-39f6-4587-b7ff-0a956e853f80",
+          "size": {
+            "height": 152,
             "width": 234
           },
           "zIndex": 2
@@ -24,71 +37,84 @@
         {
           "location": {
             "x": 0,
-            "y": 155.24206177129923
+            "y": 692.18922919714339
           },
-          "nodeIndex": "MEDIDAS",
-          "nodeLineageTag": "88ea907e-1c68-4be5-8efb-2c8923bd93ad",
+          "nodeIndex": "TB_FatosDRE",
+          "nodeLineageTag": "2d396aa5-abfa-44ac-8e5d-c799941c720e",
           "size": {
-            "height": 200,
+            "height": 590.71947626280019,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 8
         },
         {
           "location": {
-            "x": 755.469466595553,
-            "y": 572.57294847633011
+            "x": 290.20874787188507,
+            "y": 325.00646867052706
           },
-          "nodeIndex": "dCALENDARIO",
-          "nodeLineageTag": "ec642019-ac6d-454e-ade6-b40f2749b044",
+          "nodeIndex": "TB_MOTIVO",
+          "nodeLineageTag": "ba6619ff-85a3-4e13-9c68-7cf3263f6a23",
           "size": {
-            "height": 406.15140186634062,
+            "height": 152,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 418.41453157259423,
-            "y": 918.05600352094348
+            "x": 571.88089993359188,
+            "y": 327.94776316225028
           },
-          "nodeIndex": "dKEYS",
-          "nodeLineageTag": "dc678e93-42af-4bef-981b-d6bccf0b8349",
+          "nodeIndex": "TB_PRODUTO",
+          "nodeLineageTag": "43858bad-c090-4c50-ae47-4714e4b59363",
           "size": {
-            "height": 256.33272167625773,
+            "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 752.7820492338542,
-            "y": 233.37499714715389
+            "x": 1265.8156038864051,
+            "y": 114.61848438797297
           },
-          "nodeIndex": "TB REGIÃO",
-          "nodeLineageTag": "35093571-5001-4d9e-bcb5-593d42bda76c",
+          "nodeIndex": "TB_REDE",
+          "nodeLineageTag": "a2937ea4-4305-4d3a-a190-6c4f936d3367",
           "size": {
-            "height": 248,
+            "height": 176,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 1063.1794848386903,
-            "y": 0
+            "x": 859.65687842554973,
+            "y": 331.618820212574
           },
-          "nodeIndex": "TB SENHAS",
-          "nodeLineageTag": "fad2a926-c218-4d32-bdec-48b7720dec6e",
+          "nodeIndex": "TB_REP",
+          "nodeLineageTag": "49927c4f-3e1e-42ee-b75f-d55d2d1c88b8",
           "size": {
-            "height": 224,
+            "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 600.54514503150324,
+            "y": 722.19265146478165
+          },
+          "nodeIndex": "CALENDARIO DAX",
+          "nodeLineageTag": "fe6b691c-0458-41b2-9144-901f0e948316",
+          "size": {
+            "height": 546.09461459857175,
+            "width": 234
+          },
+          "zIndex": 7
         }
       ],
       "name": "Todas as tabelas",
-      "zoomValue": 65.011124273335781,
+      "zoomValue": 81.720331743018633,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

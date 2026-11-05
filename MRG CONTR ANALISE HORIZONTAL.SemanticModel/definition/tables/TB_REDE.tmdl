@@ -5,7 +5,7 @@ table TB_REDE
 		dataType: int64
 		formatString: 0
 		lineageTag: 75a43992-5912-4e5d-a88b-6c31aca733b8
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: CODGRE
 
 		annotation SummarizationSetBy = Automatic

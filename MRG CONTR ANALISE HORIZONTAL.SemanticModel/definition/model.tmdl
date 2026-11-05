@@ -29,6 +29,8 @@ ref table TB_MOTIVO
 ref table TB_PRODUTO
 ref table TB_REDE
 ref table TB_REP
+ref table 'CALENDARIO DAX'
+ref table LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335
 
 ref cultureInfo pt-BR
 

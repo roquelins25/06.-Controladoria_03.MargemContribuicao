@@ -181,7 +181,7 @@ table TB_PRODUTO
 		dataType: int64
 		formatString: 0
 		lineageTag: a3be9734-f440-47bf-a38f-904ca3040dab
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: USU_CODFAMDAY
 
 		annotation SummarizationSetBy = Automatic

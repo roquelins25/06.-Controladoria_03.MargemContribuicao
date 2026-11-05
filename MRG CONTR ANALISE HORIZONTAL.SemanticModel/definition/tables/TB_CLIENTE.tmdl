@@ -5,7 +5,7 @@ table TB_CLIENTE
 		dataType: int64
 		formatString: 0
 		lineageTag: 34eb3b1d-2c79-496f-91b6-ba19a8ec20cf
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: CODCLI
 
 		annotation SummarizationSetBy = Automatic
@@ -63,7 +63,7 @@ table TB_CLIENTE
 		dataType: int64
 		formatString: 0
 		lineageTag: 30405be4-962d-48c4-ab0c-bbce6ac9ada0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: CODGRE
 
 		annotation SummarizationSetBy = Automatic

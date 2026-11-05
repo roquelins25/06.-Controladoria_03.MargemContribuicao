@@ -5,7 +5,7 @@ table TB_REP
 		dataType: int64
 		formatString: 0
 		lineageTag: 49cb1ba2-19ea-46bd-9253-225fe1785695
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: CODREP
 
 		annotation SummarizationSetBy = Automatic
@@ -70,7 +70,7 @@ table TB_REP
 		dataType: int64
 		formatString: 0
 		lineageTag: aa768fdd-7b2e-42aa-b9d8-3eb2bc8fb67e
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: REPSUP
 
 		annotation SummarizationSetBy = Automatic
@@ -87,7 +87,7 @@ table TB_REP
 		dataType: int64
 		formatString: 0
 		lineageTag: 54dea88b-e81e-4282-8fd2-e556da08e7ce
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: REP_CONCAT
 
 		annotation SummarizationSetBy = Automatic

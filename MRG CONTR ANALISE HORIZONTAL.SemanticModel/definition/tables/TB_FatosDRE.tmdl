@@ -45,7 +45,7 @@ table TB_FatosDRE
 	column CODIGO_REPRES_NF
 		dataType: double
 		lineageTag: f4aeba00-8b15-4c8f-9dbf-dd9c484d5617
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: CODIGO_REPRES_NF
 
 		annotation SummarizationSetBy = Automatic
@@ -66,7 +66,7 @@ table TB_FatosDRE
 		dataType: int64
 		formatString: 0
 		lineageTag: 904d2a03-b103-4b38-a435-fcea13f720d2
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: COD_CLIENTE
 
 		annotation SummarizationSetBy = Automatic
