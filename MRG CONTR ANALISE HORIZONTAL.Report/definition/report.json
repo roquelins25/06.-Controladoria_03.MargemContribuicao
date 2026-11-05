@@ -57,22 +57,6 @@
           "type": "BaseTheme"
         }
       ]
-    },
-    {
-      "name": "RegisteredResources",
-      "type": "RegisteredResources",
-      "items": [
-        {
-          "name": "Baly-Logotipo_Principal-Preto_38682817178858153.png",
-          "path": "Baly-Logotipo_Principal-Preto_38682817178858153.png",
-          "type": "Image"
-        },
-        {
-          "name": "eraser36517604517872115.png",
-          "path": "eraser36517604517872115.png",
-          "type": "Image"
-        }
-      ]
     }
   ],
   "settings": {
