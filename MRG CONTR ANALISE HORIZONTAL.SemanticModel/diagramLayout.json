@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 407.4873325859304
+        "y": 177.07227741027651
       },
       "nodes": [
         {
           "location": {
             "x": 1146.5934853844346,
-            "y": 332.84250589601521
+            "y": 390.15174809000172
           },
           "nodeIndex": "TB_CLIENTE",
           "nodeLineageTag": "2f4df360-4357-4a2d-a524-c7cd7c15bbba",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 669.63579853478041,
-            "y": 126.72157858161164
+            "y": 184.03082077559816
           },
           "nodeIndex": "TB_FAMRMC",
           "nodeLineageTag": "72f99b04-39f6-4587-b7ff-0a956e853f80",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 0,
-            "y": 692.18922919714339
+            "y": 749.4984713911299
           },
           "nodeIndex": "TB_FatosDRE",
           "nodeLineageTag": "2d396aa5-abfa-44ac-8e5d-c799941c720e",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 290.20874787188507,
-            "y": 325.00646867052706
+            "y": 382.31571086451356
           },
           "nodeIndex": "TB_MOTIVO",
           "nodeLineageTag": "ba6619ff-85a3-4e13-9c68-7cf3263f6a23",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 571.88089993359188,
-            "y": 327.94776316225028
+            "y": 385.25700535623679
           },
           "nodeIndex": "TB_PRODUTO",
           "nodeLineageTag": "43858bad-c090-4c50-ae47-4714e4b59363",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 1265.8156038864051,
-            "y": 114.61848438797297
+            "y": 171.92772658195946
           },
           "nodeIndex": "TB_REDE",
           "nodeLineageTag": "a2937ea4-4305-4d3a-a190-6c4f936d3367",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 859.65687842554973,
-            "y": 331.618820212574
+            "y": 388.92806240656051
           },
           "nodeIndex": "TB_REP",
           "nodeLineageTag": "49927c4f-3e1e-42ee-b75f-d55d2d1c88b8",
@@ -101,8 +101,8 @@
         },
         {
           "location": {
-            "x": 600.54514503150324,
-            "y": 722.19265146478165
+            "x": 607.88725913215058,
+            "y": 954.48894639086438
           },
           "nodeIndex": "CALENDARIO DAX",
           "nodeLineageTag": "fe6b691c-0458-41b2-9144-901f0e948316",
@@ -111,6 +111,19 @@
             "width": 234
           },
           "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 177.07227741027651
+          },
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "3670fca3-0252-4d77-906a-2819406b8ad7",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas as tabelas",

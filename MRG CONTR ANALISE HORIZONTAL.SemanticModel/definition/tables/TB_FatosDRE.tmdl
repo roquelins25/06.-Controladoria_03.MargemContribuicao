@@ -27,7 +27,8 @@ table TB_FatosDRE
 		annotation SummarizationSetBy = Automatic
 
 	column DATA_NF
-		dataType: string
+		dataType: dateTime
+		formatString: General Date
 		lineageTag: 140af4c1-7374-4a23-a3e4-f7fa5b5116fd
 		summarizeBy: none
 		sourceColumn: DATA_NF
@@ -117,13 +118,14 @@ table TB_FatosDRE
 
 	column VALOR_VENDA
 		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 9669a2ae-ce3e-427e-b54d-83db6fcc7795
 		summarizeBy: sum
 		sourceColumn: VALOR_VENDA
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	column VALOR_CPV_BONIF
 		dataType: double
@@ -354,7 +356,7 @@ table TB_FatosDRE
 				WITH
 				params AS (
 				    SELECT TO_DATE('20260101','YYYYMMDD') AS dt_ini,
-				           TO_DATE('20261031','YYYYMMDD') AS dt_fim
+				           TO_DATE('20261231','YYYYMMDD') AS dt_fim
 				    FROM dual
 				),
 				
@@ -536,6 +538,34 @@ table TB_FatosDRE
 				),
 				
 				/* =====================================================================
+				   BLOCO 0 - taxas_ratio de CPV fixos
+				   esse calculo fixo é enviado pela controladoria e rateado entre o valor.
+				   Regra especifica ainda nao repassada.
+				   % emitido foi calculado com base no valor de CPV do mes de referencia pela Planilha de DRE Oficial.
+				   ===================================================================== */
+				taxas_rateio AS (
+				    SELECT TO_DATE('20260101','YYYYMMDD') mes, 'Saidas' op, 0.050161 cpv, 0.140649 desp, 0.120936 cred FROM dual UNION ALL
+				    SELECT TO_DATE('20260201','YYYYMMDD'), 'Saidas', 0.047767, 0.103806, 0.126601 FROM dual UNION ALL
+				    SELECT TO_DATE('20260301','YYYYMMDD'), 'Saidas', 0.053243, 0.126719, 0.150237 FROM dual UNION ALL
+				    SELECT TO_DATE('20260401','YYYYMMDD'), 'Saidas', 0.053094, 0.162000, 0.153479 FROM dual UNION ALL
+				    SELECT TO_DATE('20260501','YYYYMMDD'), 'Saidas', 0.051199, 0.127485, 0.126017 FROM dual UNION ALL
+				    SELECT TO_DATE('20260601','YYYYMMDD'), 'Saidas', 0.057910, 0.165580, 0.128637 FROM dual UNION ALL
+				    SELECT TO_DATE('20260701','YYYYMMDD'), 'Saidas', 0.052808, 0.146727, 0.101621 FROM dual UNION ALL
+				    SELECT TO_DATE('20260801','YYYYMMDD'), 'Saidas', 0.053311, 0.156930, 0.105914 FROM dual UNION ALL
+				    SELECT TO_DATE('20260901','YYYYMMDD'), 'Saidas', 0.048199, 0.114399, 0.119493 FROM dual UNION ALL
+				    
+				    SELECT TO_DATE('20260101','YYYYMMDD'), 'Entradas', 0.046243, 0.154128, 0.185632 FROM dual UNION ALL
+				    SELECT TO_DATE('20260201','YYYYMMDD'), 'Entradas', 0.044322, 0.114495, 0.195593 FROM dual UNION ALL
+				    SELECT TO_DATE('20260301','YYYYMMDD'), 'Entradas', 0.049404, 0.139767, 0.232109 FROM dual UNION ALL
+				    SELECT TO_DATE('20260401','YYYYMMDD'), 'Entradas', 0.053094, 0.162000, 0.153479 FROM dual UNION ALL
+				    SELECT TO_DATE('20260501','YYYYMMDD'), 'Entradas', 0.051199, 0.127485, 0.126017 FROM dual UNION ALL
+				    SELECT TO_DATE('20260601','YYYYMMDD'), 'Entradas', 0.057910, 0.165580, 0.128637 FROM dual UNION ALL
+				    SELECT TO_DATE('20260701','YYYYMMDD'), 'Entradas', 0.049000, 0.161836, 0.157000 FROM dual UNION ALL
+				    SELECT TO_DATE('20260801','YYYYMMDD'), 'Entradas', 0.049467, 0.173089, 0.163632 FROM dual UNION ALL
+				    SELECT TO_DATE('20260901','YYYYMMDD'), 'Entradas', 0.044723, 0.126179, 0.184612 FROM dual
+				),
+				
+				/* =====================================================================
 				   BLOCO 1 - SAÍDAS (vendas e bonificações) + verba rateada por item
 				   ===================================================================== */
 				saidas AS (
@@ -589,9 +619,9 @@ table TB_FatosDRE
 				          + ipv.vlrics + pvd.vstfcp + ipv.vlrpif + ipv.vlrcff AS Total_Impostos,
 				        CASE WHEN ipv.vlrfin > 0 THEN ipv.vlrcom ELSE 0 END   AS Valor_Comissao,
 				        -- ------ OLHAR ESSE TRECHO: percentuais fixos (rateio) ------
-				        ipv.vlrfin * 0.052807660032938 AS CPV_Proc_Fixo,
-				        ipv.vlrfin * 0.146875869396451 AS DESP_Oper_Fixa,
-				        ipv.vlrfin * 0.101620950147863 AS CRED_Impostos,
+				        ipv.vlrfin * tx.cpv  AS CPV_Proc_Fixo,
+				        ipv.vlrfin * tx.desp AS DESP_Oper_Fixa,
+				        ipv.vlrfin * tx.cred AS CRED_Impostos,
 				        -- -----------------------------------------------------------
 				        -- Verba = (item / total vendido do cliente) x verba do cliente no mês
 				        CASE WHEN ipv.vlrfin > 0
@@ -635,6 +665,10 @@ table TB_FatosDRE
 				                                 AND vf.mes    = TRUNC(nfv.datemi,'MM')
 				    LEFT JOIN verba_var_cli vv    ON vv.codcli = nfv.codcli
 				                                 AND vv.mes    = TRUNC(nfv.datemi,'MM')
+				                                 
+				    LEFT JOIN taxas_rateio tx ON tx.op  = 'Saidas'
+				                             AND tx.mes = TRUNC(nfv.datemi,'MM')
+				                             
 				    WHERE nfv.datemi >= p.dt_ini
 				      AND nfv.datemi <  p.dt_fim + 1
 				      AND nfv.sitnfv = 2
@@ -775,9 +809,9 @@ table TB_FatosDRE
 				        CASE WHEN ipc.numnfv > 0
 				             THEN (ip2.vlrcom / NULLIF(ip2.qtdfat,0)) * ipc.qtdest
 				             ELSE 0 END               AS Valor_Comissao,
-				        ipc.vlrfin * 0.049            AS CPV_Proc_Fixo,
-				        ipc.vlrfin * 0.162            AS DESP_Oper_Fixa,
-				        ipc.vlrfin * 0.157            AS CRED_Impostos,
+				        ipc.vlrfin * tx.cpv  AS CPV_Proc_Fixo,
+				        ipc.vlrfin * tx.desp AS DESP_Oper_Fixa,
+				        ipc.vlrfin * tx.cred AS CRED_Impostos,
 				        0                             AS Verba_Fixa,
 				        0                             AS Verba_Variavel,
 				        CASE WHEN ipc.vlrliq > 0
@@ -815,6 +849,8 @@ table TB_FatosDRE
 				    LEFT JOIN frete_uf fu     ON fu.sigufs = d.uf
 				                             AND fu.datini = TRUNC(nfc.datent,'MM')
 				    LEFT JOIN usu_te440mot mot ON mot.usu_codmar = nfc.usu_codmar
+				    LEFT JOIN taxas_rateio tx ON tx.op  = 'Entradas'
+				                             AND tx.mes = TRUNC(nfc.datent,'MM')
 				    WHERE nfc.datent >= p.dt_ini
 				      AND nfc.datent <  p.dt_fim + 1
 				      AND nfc.sitnfc = 2
@@ -842,7 +878,7 @@ table TB_FatosDRE
 				       b.Operacao,
 				       b.Filial,
 				       TO_CHAR(b.Data_NF, 'MM/YYYY')    AS Mes_Ano,
-				       TO_CHAR(b.Data_NF, 'DD/MM/YYYY') AS Data_NF,
+				       b.Data_NF AS Data_NF,
 				       b.Tipo_Nota,
 				       --b.Regiao,
 				       --b.UF,
@@ -899,5 +935,5 @@ table TB_FatosDRE
 				    Fonte
 				```
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

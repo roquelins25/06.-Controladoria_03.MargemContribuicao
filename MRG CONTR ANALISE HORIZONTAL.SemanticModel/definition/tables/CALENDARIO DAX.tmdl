@@ -112,6 +112,7 @@ table 'CALENDARIO DAX'
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Ano-Mes]
+		sortByColumn: OrderBy
 
 		annotation SummarizationSetBy = Automatic
 

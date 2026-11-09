@@ -1,0 +1,344 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "85a42445947ed357cd13",
+  "position": {
+    "x": 189.03377847604085,
+    "y": 331.81461115475258,
+    "z": 2,
+    "height": 387.82201405152227,
+    "width": 1091.0538641686182
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TB_REDE"
+                    }
+                  },
+                  "Property": "XNOMGRE"
+                }
+              },
+              "queryRef": "TB_REDE.XNOMGRE",
+              "nativeQueryRef": "XNOMGRE",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TB_CLIENTE"
+                    }
+                  },
+                  "Property": "XNOMCLI"
+                }
+              },
+              "queryRef": "TB_CLIENTE.XNOMCLI",
+              "nativeQueryRef": "XNOMCLI",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "03. 01 - Receita Bruta ( R$ )"
+                }
+              },
+              "queryRef": "_Medidas.03. 01 - Receita Bruta ( R$ )",
+              "nativeQueryRef": "03. 01 - Receita Bruta ( R$ )"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "03. 02 - Devolucao"
+                }
+              },
+              "queryRef": "_Medidas.03. 02 - Devolucao",
+              "nativeQueryRef": "03. 02 - Devolucao"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "03. 04 - Margem Bruta ( R$ )"
+                }
+              },
+              "queryRef": "_Medidas.03. Margem Bruta ( R$ )",
+              "nativeQueryRef": "03. 04 - Margem Bruta ( R$ )"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "03. 03 - Margem Bruta ( % )"
+                }
+              },
+              "queryRef": "_Medidas.03. Margem Bruta ( % )",
+              "nativeQueryRef": "03. 03 - Margem Bruta ( % )"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "03. 05 - Despesas Variaveis ( R$ )"
+                }
+              },
+              "queryRef": "_Medidas.03. 05 - Despesas Variaveis ( R$ )",
+              "nativeQueryRef": "03. 05 - Despesas Variaveis ( R$ )"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "03. 06 - Bonificacoes ( R$ )"
+                }
+              },
+              "queryRef": "_Medidas.03. 06 - Bonificacoes ( R$ )",
+              "nativeQueryRef": "03. 06 - Bonificacoes ( R$ )"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "03. 07 - Verbas ( R$ )"
+                }
+              },
+              "queryRef": "_Medidas.03. 07 - Verbas ( R$ )",
+              "nativeQueryRef": "03. 07 - Verbas ( R$ )"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "03. 08 - Margem Contribuicao ( R$ )"
+                }
+              },
+              "queryRef": "_Medidas.03. 08 - Margem Contribuicao ( R$ )",
+              "nativeQueryRef": "03. 08 - Margem Contribuicao ( R$ )"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "03. 09 - Margem Contribuicao ( % )"
+                }
+              },
+              "queryRef": "_Medidas.03. 09 - Margem Contribuicao ( % )",
+              "nativeQueryRef": "03. 09 - Margem Contribuicao ( % )"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "03. 08 - Margem Contribuicao ( R$ )"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "96fc7e817d0702a320d1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TB_REDE"
+              }
+            },
+            "Property": "XNOMGRE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e9d2c5b3372a222cb909",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "TB_CLIENTE"
+              }
+            },
+            "Property": "XNOMCLI"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "99a216cf027351443075",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "03. 04 - Margem Bruta ( R$ )"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "67bb50737a8196deb760",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "03. 01 - Receita Bruta ( R$ )"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dd9c494687a4900c0275",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "03. 02 - Devolucao"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9ade4c8210606da90291",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "03. 03 - Margem Bruta ( % )"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "929275154ad31897870c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "03. 05 - Despesas Variaveis ( R$ )"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9f990ec03774817541de",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "03. 06 - Bonificacoes ( R$ )"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "96bdd50111ce0edbbb22",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "03. 07 - Verbas ( R$ )"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2c8feba5c2570cb8059a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "03. 08 - Margem Contribuicao ( R$ )"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -16,7 +16,7 @@ queryGroup Fatos
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["TB_FatosDRE","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP"]
+annotation PBI_QueryOrder = ["TB_FatosDRE","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -31,6 +31,7 @@ ref table TB_REDE
 ref table TB_REP
 ref table 'CALENDARIO DAX'
 ref table LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335
+ref table _Medidas
 
 ref cultureInfo pt-BR
 
