@@ -36,3 +36,16 @@ relationship d4aab612-0515-7ddb-e058-babf195c7844
 	fromColumn: TB_CLIENTE.CODGRE
 	toColumn: TB_REDE.CODGRE
 
+relationship 045ca485-1a16-0c0b-ae80-ea724ce06ad4
+	fromColumn: TB_CLIENTE.XREGSENHA
+	toColumn: UF/REGIÃO.UF
+
+relationship 9183ec07-9167-5063-5f61-f09e6df2ee46
+	toCardinality: many
+	fromColumn: UF/REGIÃO.ID
+	toColumn: Senhas/Gerente.ID
+
+relationship b9b64cb9-1e51-b739-395b-e7e68cd6b271
+	fromColumn: DRE_LV2.ID_LV1
+	toColumn: DRE_LV1.ID
+

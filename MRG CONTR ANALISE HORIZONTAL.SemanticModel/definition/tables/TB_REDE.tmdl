@@ -47,7 +47,7 @@ table TB_REDE
 				CODGRE,
 				NOMGRE,
 				SIGGRE,
-				CODGRE || ' - ' || NOMGRE AS xNOMGRE
+				CODGRE || ' - ' || UPPER( NOMGRE ) AS xNOMGRE
 				FROM E069GRE
 				   ", HierarchicalNavigation = true])
 				in

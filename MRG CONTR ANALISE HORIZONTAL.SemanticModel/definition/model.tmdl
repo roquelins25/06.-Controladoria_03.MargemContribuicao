@@ -8,15 +8,19 @@ model Model
 
 queryGroup Dimensao
 
-	annotation PBI_QueryGroupOrder = 0
+	annotation PBI_QueryGroupOrder = 1
 
 queryGroup Fatos
 
-	annotation PBI_QueryGroupOrder = 1
+	annotation PBI_QueryGroupOrder = 2
+
+queryGroup _DRE
+
+	annotation PBI_QueryGroupOrder = 2
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["TB_FatosDRE","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas"]
+annotation PBI_QueryOrder = ["TB_FatosDRE","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas","UF/REGIÃO","Senhas/Gerente","DRE_LV1","DRE_LV2"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -32,6 +36,11 @@ ref table TB_REP
 ref table 'CALENDARIO DAX'
 ref table LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335
 ref table _Medidas
+ref table UF/REGIÃO
+ref table Senhas/Gerente
+ref table DRE_LV1
+ref table DRE_LV2
+ref table xSenha
 
 ref cultureInfo pt-BR
 

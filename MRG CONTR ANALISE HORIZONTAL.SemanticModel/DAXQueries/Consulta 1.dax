@@ -1,0 +1,37 @@
+DEFINE
+// Refence Function is Format Number
+    FUNCTION fxFormatNumber = ( xNumber: expr, xSell : int64 ) =>
+        VAR _Formato = 
+        SWITCH(
+            TRUE(),
+            ABS( xNumber ) >= 1000000, "R$ #,#0,,M",
+            ABS( xNumber ) >= 1000, "R$ #,#0,K",
+            "R$ #,#0.00" )
+        VAR _Formato2 = 
+        SWITCH(
+            TRUE(),
+            ABS( xNumber ) >= 1000000, "#,#0,,.00M;-#,#0,,M",
+            ABS( xNumber ) >= 1000, "#,#0,.00K;-#,#0,K",
+            "#,#0.00;-#,#0.00" )
+        VAR _Formato3 =   "R$ #.##"
+        VAR _Formato4 = "R$ #,##0"
+
+        VAR _Formato5 = "R$ #,#0;R$ -#,#0"
+
+        VAR _ForPercent = "0.0%"
+
+        VAR _Formato6 = "#,#0;-#,#0"
+        RETURN
+        SWITCH( 
+            TRUE(), 
+            xSell = 1, _Formato, 
+            xSell = 2, _Formato2,
+            xSell = 3, _Formato3,
+            xSell = 4, _Formato4,
+            xSell = 5, _ForPercent,
+            xSell = 6 , _Formato5,
+            xSell = 7 , _Formato6
+            )
+// Format
+    FUNCTION fxFORMAT = ( xNumber: EXPR , xsell : INT64) =>
+        FORMAT( xNumber , fxFormatNumber( xNumber, xsell ), "pt-BR" )

@@ -239,7 +239,7 @@ table TB_PRODUTO
 				   Query = "
 				SELECT 
 				PRO.*,
-				PRO.CODPRO || ' - ' || PRO.CPLPRO AS xDESPRO,
+				PRO.CODPRO || ' - ' || UPPER( PRO.CPLPRO ) AS xDESPRO,
 				           CASE
 				               WHEN (pro.codfam = '17' AND pro.volpro = 2)     THEN 'ENERGÉTICO 2L'
 				               WHEN (pro.codfam = '17' AND pro.volpro = 0.473) THEN 'ENERGÉTICO 473ML'

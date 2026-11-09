@@ -298,7 +298,7 @@ table TB_CLIENTE
 				select 
 					   e085cli.codcli,
 				       e085cli.nomcli,
-					   e085cli.codcli || ' - ' || e085cli.nomcli as xNOMCLI,
+					   e085cli.codcli || ' - ' || UPPER( e085cli.nomcli ) as xNOMCLI,
 					   e085cli.cgccpf,
 					   e085cli.apecli,
 					   replace(cast((e085hcl.usu_perdup/100) AS VARCHAR2(4000)),'.',',') usu_perdup,
@@ -368,5 +368,5 @@ table TB_CLIENTE
 				    Fonte
 				```
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

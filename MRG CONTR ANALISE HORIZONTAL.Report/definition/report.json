@@ -46,6 +46,9 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "htmlContent443BE3AD55E043BF878BED274D3A6855"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",
@@ -55,6 +58,38 @@
           "name": "CY26SU05",
           "path": "BaseThemes/CY26SU05.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Home4226997229655015.png",
+          "path": "Home4226997229655015.png",
+          "type": "Image"
+        },
+        {
+          "name": "Incorreta3310014167805867.png",
+          "path": "Incorreta3310014167805867.png",
+          "type": "Image"
+        },
+        {
+          "name": "Senhas3602430278388976.png",
+          "path": "Senhas3602430278388976.png",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "siftTable37558C6455D74B6D80A77ABDBC28F82C",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "siftTable37558C6455D74B6D80A77ABDBC28F82C.pbiviz.json",
+          "path": "siftTable37558C6455D74B6D80A77ABDBC28F82C.pbiviz.json",
+          "type": "CustomVisualMetadata"
         }
       ]
     }
