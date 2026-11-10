@@ -53,6 +53,7 @@ table Senhas/Gerente
 
 	partition Senhas/Gerente = m
 		mode: import
+		queryGroup: Dimensao
 		source =
 				let
 				    Fonte = PowerBI.Dataflows(null),

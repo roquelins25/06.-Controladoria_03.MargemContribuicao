@@ -25,11 +25,6 @@ table 'DRE_Geral - Plan'
 		summarizeBy: none
 		sourceColumn: Mes_Ano
 
-		variation Variação
-			isDefault
-			relationship: 08c0e271-c326-4699-9de7-9b8e442fe25d
-			defaultHierarchy: LocalDateTable_20319b4d-479c-4997-a3b1-fa91a49ac09c.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -40,6 +35,11 @@ table 'DRE_Geral - Plan'
 		lineageTag: 33244bf8-fd95-4dd1-8568-fe91091c064f
 		summarizeBy: none
 		sourceColumn: Data_NF
+
+		variation Variação
+			isDefault
+			relationship: e91d0d18-e245-4c85-b953-8663a6a575fc
+			defaultHierarchy: LocalDateTable_db2af823-1cfb-4e14-b69e-73f66c068892.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 

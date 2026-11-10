@@ -20,9 +20,9 @@ queryGroup _DRE
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["TB_FatosDRE","DRE_Geral - Plan","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas","UF/REGIÃO","Senhas/Gerente","DRE_LV1","DRE_LV2"]
+annotation PBI_QueryOrder = ["TB_FatosDRE","DRE_Geral - Plan","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas","UF/REGIÃO","Senhas/Gerente","DRE_LV1","DRE_LV2","_Medidas2"]
 
-annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling","TMDLView_Desktop"]
 
 ref table TB_FatosDRE
 ref table TB_CLIENTE
@@ -42,7 +42,8 @@ ref table DRE_LV1
 ref table DRE_LV2
 ref table xSenha
 ref table 'DRE_Geral - Plan'
-ref table LocalDateTable_20319b4d-479c-4997-a3b1-fa91a49ac09c
+ref table _Medidas2
+ref table LocalDateTable_db2af823-1cfb-4e14-b69e-73f66c068892
 
 ref cultureInfo pt-BR
 

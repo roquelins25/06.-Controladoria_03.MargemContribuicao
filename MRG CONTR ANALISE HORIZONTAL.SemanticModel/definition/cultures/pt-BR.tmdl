@@ -1134,6 +1134,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Nome Cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2731,6 +2741,16 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "GRUPO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Grupos": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5814,18 +5834,20 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "x senha": {
-			            "State": "Generated",
-			            "Weight": 0.87
+			            "State": "Generated"
 			          }
 			        },
 			        {
 			          "xSenha": {
 			            "Type": "Noun",
 			            "State": "Generated",
-			            "Weight": 0.8613
+			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -5838,6 +5860,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "x senha": {
@@ -5861,6 +5886,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "valor xSenha": {
@@ -5877,6 +5905,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          ".check senha": {
@@ -6054,9 +6085,2292 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "DRE_Geral__plan": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DRE_Geral - plan": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DRE_Geral plan": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dre_geral - proposal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "dre_geral - strategy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "dre_geral - agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "dre_geral - arrangement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "dre_geral - idea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "dre_geral - layout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "dre_geral - policy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "dre_geral - preparation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "dre_geral proposal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dre_geral strategy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.operacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Operacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "operacao": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.filial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Filial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "filial": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.mes_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Mes_Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Mes_Ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "DRE_Geral__plan.mes_ano.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "VariationSource": "Mes_Ano",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.mes_ano.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "VariationSource": "Mes_Ano",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mes ano ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me ano ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.mes_ano.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "VariationSource": "Mes_Ano",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mes ano trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me ano trimestre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.mes_ano.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "VariationSource": "Mes_Ano",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mes ano mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me ano mê": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.mes_ano.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "VariationSource": "Mes_Ano",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mes ano dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me ano dia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.data_NF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Data_NF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data NF": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Data_NF": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "NF": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "information nf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact nf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info nf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic nf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document nf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure nf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record nf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "DRE_Geral__plan.tipo_notum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Tipo_Nota"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo notum": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tipo_Nota": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.codigo_repres_NF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Codigo_repres_NF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "codigo repres NF": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "codigo repre NF": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Codigo_repres_NF": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.nota_fiscal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Nota_Fiscal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nota fiscal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "notum fiscal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Nota_Fiscal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "fiscal": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.cod_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Cod_Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cod cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Cod_Cliente": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.cfop": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "CFOP"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cfop": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.cod_produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "CodProduto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cod produto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CodProduto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.qtd_item": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Qtd_Item"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd item": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Qtd_Item": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "qtd product": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "qtd element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "qtd entry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "qtd article": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "qtd object": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "qtd piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "qtd token": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.CPV_item_venda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "CPV_Item_Venda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CPV item venda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CPV_Item_Venda": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "venda": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "item venda": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cpv product venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "cpv element venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "cpv entry venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "product venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "element venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "entry venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "cpv article venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "cpv object venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "cpv piece venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "cpv token venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_venda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Valor_Venda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor venda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_Venda": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "venda": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_CPV_bonif": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Valor_CPV_Bonif"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor CPV bonif": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_CPV_Bonif": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_desconto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Valor_Desconto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor desconto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_Desconto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_outra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Valor_Outras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor outra": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_Outras": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_IPI": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Valor_IPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor IPI": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_IPI": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "IPI": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_ICM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Valor_ICMS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor ICM": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_ICMS": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ICM": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_FCP": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Valor_FCP"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor FCP": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_FCP": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "FCP": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_ST": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Valor_ST"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor ST": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_ST": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ST": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_PIS_venda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Valor_PIS_Venda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor PIS venda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_PIS_Venda": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "venda": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "PIS venda": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_COFIN": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "valor_COFINS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor COFIN": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor_COFINS": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "COFIN": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.total_imposto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Total_Impostos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total imposto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Total_Impostos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate imposto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall imposto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.valor_comissao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Valor_Comissao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor comissao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_Comissao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.CPV_proc_fixo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "CPV_Proc_Fixo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CPV proc fixo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CPV_Proc_Fixo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.DESP_oper_fixa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "DESP_Oper_Fixa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DESP oper fixa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DESP_Oper_Fixa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.CRED_imposto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "CRED_Impostos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CRED imposto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CRED_Impostos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.verba_fixa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Verba_Fixa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "verba fixa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Verba_Fixa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.verba_variavel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Verba_Variavel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "verba variavel": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Verba_Variavel": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.frete": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Frete"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "frete": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan.motivo_devolucao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DRE_Geral - Plan",
+			          "ConceptualProperty": "Motivo_Devolucao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "motivo devolucao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Motivo_Devolucao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_Medidas2": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_total_valor_bruto__r_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE Total Valor Bruto ( R$ )"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE total valor bruto ( r$ )": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "01.DRE total valor bruto": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02__1__rec_brt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02. 1 - REC BRT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02. 1 - rec brt": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "02. 1 rec brt": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "REC BRT": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02__2__dvl": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02. 2 - DVL"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02. 2 - dvl": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "02. 2 dvl": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "DVL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02__3__mrg_brt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02. 3 - MRG BRT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02. 3 - mrg brt": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "02. 3 mrg brt": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "MRG BRT": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_total_impostos__r_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE Total Impostos ( R$ )"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE total impostos ( r$ )": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "01.DRE total impostos": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_total_CPV_ItemVenda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE Total CPV ItemVenda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE total CPV ItemVenda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "01.dre aggregate cpv itemvenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "01.dre overall cpv itemvenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_total_CPV_fixo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE Total CPV Fixo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE total CPV fixo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "01.dre aggregate cpv fixo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "01.dre overall cpv fixo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02__4___mrg_brt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02. 4 - % MRG BRT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02. 4 - % mrg brt": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "02. 4 % mrg brt": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "% MRG BRT": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02__5__otrs_desp_var": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02. 5 - OTRS DESP VAR"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02. 5 - otrs desp var": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "02. 5 otrs desp var": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "OTRS DESP VAR": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_total_comissao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE Total Comissao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE total comissao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "01.dre aggregate comissao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "01.dre overall comissao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_CPV_bonificacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE CPV Bonificacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE CPV bonificacao": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_total_fretes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE Total Fretes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE total fretes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "01.dre aggregate frete": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "01.dre overall frete": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02__6__bnf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02. 6 - BNF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02. 6 - bnf": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "02. 6 bnf": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "BNF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_total_verbas_fixas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE Total Verbas Fixas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE total verbas fixas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "01.dre aggregate verba fixa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "01.dre overall verba fixa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_verbas_variaveis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE Verbas Variaveis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE verbas variaveis": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02__7__verbas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02. 7 - VERBAS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02. 7 - verbas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "02. 7 verbas": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "VERBAS": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02__8__mrg_ctrb": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02. 8 - MRG CTRB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02. 8 - mrg ctrb": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "02. 8 mrg ctrb": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "MRG CTRB": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02__9___MRG_x_RB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02. 9 - % MRG x RB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02. 9 - % MRG x RB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "02. 9 % MRG x RB": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "% MRG x RB": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "DRE_Geral__plan_mes_ano_hierarquia_de_data_has_DRE_Geral__plan_mes_ano_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan.mes_ano.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.mes_ano.hierarquia_de_data"
+			          }
+			        },
+			        "DRE_Geral__plan.mes_ano.trimestre": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.mes_ano.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan.mes_ano.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.mes_ano.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_mes_ano_hierarquia_de_data_has_DRE_Geral__plan_mes_ano_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan.mes_ano.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.mes_ano.hierarquia_de_data"
+			          }
+			        },
+			        "DRE_Geral__plan.mes_ano.ano": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.mes_ano.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan.mes_ano.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.mes_ano.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_mes_ano_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan.mes_ano": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.mes_ano"
+			          }
+			        },
+			        "DRE_Geral__plan.mes_ano.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.mes_ano.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan.mes_ano"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.mes_ano.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mes_anos_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "calendario_dax_date_mê_has_calendario_dax_date_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.date.mê": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.mê"
+			          }
+			        },
+			        "calendario_dax.date.dia": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.mê"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.dia"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario_dax.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê1"
+			        }
+			      ]
+			    },
+			    "calendario_dax_date_trimestre_has_calendario_dax_date_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.date.trimestre": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.trimestre"
+			          }
+			        },
+			        "calendario_dax.date.mê": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.mê"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario_dax.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres1"
+			        }
+			      ]
+			    },
+			    "calendario_dax_date_ano_has_calendario_dax_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.date.ano": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.ano"
+			          }
+			        },
+			        "calendario_dax.date.trimestre": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.ano"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario_dax.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos1"
+			        }
+			      ]
+			    },
+			    "calendario_dax_date_hierarquia_de_data_has_calendario_dax_date_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.hierarquia_de_data"
+			          }
+			        },
+			        "calendario_dax.date.dia": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
 			    "calendario_dax_date_hierarquia_de_data_has_calendario_dax_date_mê": {
 			      "Binding": {
 			        "ConceptualEntity": "CALENDARIO DAX"
@@ -6119,7 +8433,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
+			          "ID": "hierarquia_de_data_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -6152,7 +8466,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
+			          "ID": "hierarquia_de_data_have_anos1"
 			        }
 			      ]
 			    },
@@ -6218,7 +8532,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
+			          "ID": "mê_have_dias1"
 			        },
 			        {
 			          "Attribute": {
@@ -6231,7 +8545,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
+			          "ID": "dias_have_mê1"
 			        },
 			        {
 			          "Preposition": {
@@ -6284,7 +8598,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
+			          "ID": "trimestres_have_mê1"
 			        },
 			        {
 			          "Attribute": {
@@ -6297,7 +8611,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
+			          "ID": "mê_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -6350,7 +8664,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
+			          "ID": "anos_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -6363,7 +8677,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
+			          "ID": "trimestres_have_anos1"
 			        },
 			        {
 			          "Preposition": {
@@ -6416,7 +8730,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -6482,7 +8796,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres1"
+			          "ID": "hierarquia_de_data_have_trimestres2"
 			        }
 			      ]
 			    },
@@ -6515,7 +8829,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos1"
+			          "ID": "hierarquia_de_data_have_anos2"
 			        }
 			      ]
 			    },
@@ -6549,6 +8863,209 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "datcads_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_tb_rep": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "tb_rep": {
+			          "Target": {
+			            "Entity": "tb_rep"
+			          },
+			          "Nouns": [
+			            {
+			              "codigo repres NF": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "tb_rep"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_tb_reps"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_rep"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_reps_have_DRE_Geral__plans"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_tb_produto": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "tb_produto": {
+			          "Target": {
+			            "Entity": "tb_produto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "tb_produto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_tb_produtos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_produto"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_produtos_have_DRE_Geral__plans"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_tb_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "tb_cliente": {
+			          "Target": {
+			            "Entity": "tb_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_tb_clientes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_clientes_have_DRE_Geral__plans"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_calendario_dax": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "calendario_dax": {
+			          "Target": {
+			            "Entity": "calendario_dax"
+			          },
+			          "Nouns": [
+			            {
+			              "data NF": {
+			                "State": "Generated"
+			              }
+			            },
+			            {
+			              "NF": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_calendario_dax"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_dax_have_DRE_Geral__plans"
 			        }
 			      ]
 			    },
@@ -7025,6 +9542,1676 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "TB_fatos_DRE_has_entity__Medidas2_entity_02__9___MRG_x_RB": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_FatosDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "TB_fatos_DRE": {
+			          "Target": {
+			            "Entity": "TB_fatos_DRE"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__9___MRG_x_RB": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__9___MRG_x_RB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "TB_fatos_DRE"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__9___MRG_x_RB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "TB_fatos_DREs_have_02__9___MRG_x_RB"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02__9___MRG_x_RB": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__9___MRG_x_RB": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__9___MRG_x_RB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__9___MRG_x_RB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02__9___MRG_x_RB"
+			        }
+			      ]
+			    },
+			    "TB_fatos_DRE_has_entity__Medidas2_entity_02__8__mrg_ctrb": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_FatosDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "TB_fatos_DRE": {
+			          "Target": {
+			            "Entity": "TB_fatos_DRE"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__8__mrg_ctrb": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__8__mrg_ctrb"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "TB_fatos_DRE"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__8__mrg_ctrb"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "TB_fatos_DREs_have_02__8__mrg_ctrb"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02__8__mrg_ctrb": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__8__mrg_ctrb": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__8__mrg_ctrb"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__8__mrg_ctrb"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02__8__mrg_ctrb"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02__7__verbas": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__7__verbas": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__7__verbas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__7__verbas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02__7__verbas"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_verbas_variaveis": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_verbas_variaveis": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_verbas_variaveis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_verbas_variaveis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_verbas_variaveis"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_total_verbas_fixas": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_total_verbas_fixas": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_total_verbas_fixas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_total_verbas_fixas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_total_verbas_fixas"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02__6__bnf": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__6__bnf": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__6__bnf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__6__bnf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02__6__bnf"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_total_fretes": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_total_fretes": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_total_fretes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_total_fretes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_total_fretes"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_CPV_bonificacao": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_CPV_bonificacao": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_CPV_bonificacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_CPV_bonificacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_CPV_bonificacao"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_total_comissao": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_total_comissao": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_total_comissao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_total_comissao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_total_comissao"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02__5__otrs_desp_var": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__5__otrs_desp_var": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__5__otrs_desp_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__5__otrs_desp_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02__5__otrs_desp_var"
+			        }
+			      ]
+			    },
+			    "TB_fatos_DRE_has_entity__Medidas2_entity_02__4___mrg_brt": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_FatosDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "TB_fatos_DRE": {
+			          "Target": {
+			            "Entity": "TB_fatos_DRE"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__4___mrg_brt": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__4___mrg_brt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "TB_fatos_DRE"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__4___mrg_brt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "TB_fatos_DREs_have_02__4___mrg_brt"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02__4___mrg_brt": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__4___mrg_brt": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__4___mrg_brt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__4___mrg_brt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02__4___mrg_brt"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_total_CPV_fixo": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_total_CPV_fixo": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_total_CPV_fixo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_total_CPV_fixo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_total_CPV_fixo"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_total_CPV_ItemVenda": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_total_CPV_ItemVenda": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_total_CPV_ItemVenda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_total_CPV_ItemVenda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_total_CPV_ItemVenda"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_total_impostos__r_": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_total_impostos__r_": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_total_impostos__r_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_total_impostos__r_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_total_impostos__r_"
+			        }
+			      ]
+			    },
+			    "TB_fatos_DRE_has_entity__Medidas2_entity_02__3__mrg_brt": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_FatosDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "TB_fatos_DRE": {
+			          "Target": {
+			            "Entity": "TB_fatos_DRE"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__3__mrg_brt": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__3__mrg_brt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "TB_fatos_DRE"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__3__mrg_brt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "TB_fatos_DREs_have_02__3__mrg_brt"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02__3__mrg_brt": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__3__mrg_brt": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__3__mrg_brt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__3__mrg_brt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02__3__mrg_brt"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02__2__dvl": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__2__dvl": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__2__dvl"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__2__dvl"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02__2__dvl"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02__1__rec_brt": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02__1__rec_brt": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02__1__rec_brt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02__1__rec_brt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02__1__rec_brt"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_total_valor_bruto__r_": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_total_valor_bruto__r_": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_total_valor_bruto__r_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_total_valor_bruto__r_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_total_valor_bruto__r_"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_motivo_devolucao": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.motivo_devolucao": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.motivo_devolucao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.motivo_devolucao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_motivo_devolucaos"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_frete": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.frete": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.frete"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.frete"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_fretes"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_verba_variavel": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.verba_variavel": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.verba_variavel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.verba_variavel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_verba_variavels"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_verba_fixa": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.verba_fixa": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.verba_fixa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.verba_fixa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_verba_fixas"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_CRED_imposto": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.CRED_imposto": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.CRED_imposto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.CRED_imposto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_CRED_impostos"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_DESP_oper_fixa": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.DESP_oper_fixa": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.DESP_oper_fixa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.DESP_oper_fixa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_DESP_oper_fixas"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_CPV_proc_fixo": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.CPV_proc_fixo": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.CPV_proc_fixo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.CPV_proc_fixo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_CPV_proc_fixos"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_comissao": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_comissao": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_comissao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_comissao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_comissaos"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_total_imposto": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.total_imposto": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.total_imposto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.total_imposto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_total_impostos"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_COFIN": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_COFIN": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_COFIN"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_COFIN"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_COFINs"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_PIS_venda": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_PIS_venda": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_PIS_venda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_PIS_venda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_PIS_venda"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_ST": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_ST": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_ST"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_ST"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_ST"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_FCP": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_FCP": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_FCP"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_FCP"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_FCPs"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_ICM": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_ICM": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_ICM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_ICM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_ICMs"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_IPI": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_IPI": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_IPI"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_IPI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_IPIs"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_outra": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_outra": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_outra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_outra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_outras"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_desconto": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_desconto": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_desconto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_desconto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_descontos"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_CPV_bonif": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_CPV_bonif": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_CPV_bonif"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_CPV_bonif"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_CPV_bonifs"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_valor_venda": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.valor_venda": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.valor_venda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.valor_venda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_valor_venda"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_CPV_item_venda": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.CPV_item_venda": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.CPV_item_venda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.CPV_item_venda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_CPV_item_venda"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_qtd_item": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.qtd_item": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.qtd_item"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.qtd_item"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_qtd_items"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_cfop": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.cfop": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.cfop"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.cfop"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_cfops"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_nota_fiscal": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.nota_fiscal": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.nota_fiscal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.nota_fiscal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_nota_fiscals"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_tipo_notum": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.tipo_notum": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.tipo_notum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.tipo_notum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_tipo_nota"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_data_NF": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.data_NF": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.data_NF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.data_NF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_data_NF"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.mes_ano": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_filial": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.filial": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.filial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.filial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_filial"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Adjectives": [
+			              {
+			                "filial": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "DRE_Geral__plan.filial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "filial_indicates_how_filial_DRE_Geral__plans_are"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_operacao": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "DRE_Geral__plan.operacao": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.operacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.operacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_operacaos"
+			        }
+			      ]
+			    },
 			    "entity__medida_has_entity_00_blank": {
 			      "Binding": {
 			        "ConceptualEntity": "_Medidas"
@@ -7253,138 +11440,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dre_lv_1_have_00__DRE__texto_"
-			        }
-			      ]
-			    },
-			    "x_senha_has_check_senha": {
-			      "Binding": {
-			        "ConceptualEntity": "xSenha"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "x_senha": {
-			          "Target": {
-			            "Entity": "x_senha"
-			          }
-			        },
-			        "x_senha.check_senha": {
-			          "Target": {
-			            "Entity": "x_senha.check_senha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "x_senha"
-			            },
-			            "Object": {
-			              "Role": "x_senha.check_senha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "x_senhas_have__check_senha"
-			        }
-			      ]
-			    },
-			    "senhas_gerente_has_x_senha_check_senha": {
-			      "Binding": {
-			        "ConceptualEntity": "Senhas/Gerente"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "senhas_gerente": {
-			          "Target": {
-			            "Entity": "senhas_gerente"
-			          }
-			        },
-			        "x_senha.check_senha": {
-			          "Target": {
-			            "Entity": "x_senha.check_senha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "senhas_gerente"
-			            },
-			            "Object": {
-			              "Role": "x_senha.check_senha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "senhas_gerentes_have__check_senha"
-			        }
-			      ]
-			    },
-			    "x_senha_has_valor_xSenha": {
-			      "Binding": {
-			        "ConceptualEntity": "xSenha"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "x_senha": {
-			          "Target": {
-			            "Entity": "x_senha"
-			          }
-			        },
-			        "x_senha.valor_xSenha": {
-			          "Target": {
-			            "Entity": "x_senha.valor_xSenha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "x_senha"
-			            },
-			            "Object": {
-			              "Role": "x_senha.valor_xSenha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "x_senhas_have_valor_xSenha"
-			        }
-			      ]
-			    },
-			    "x_senha_has_x_senha": {
-			      "Binding": {
-			        "ConceptualEntity": "xSenha"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "x_senha": {
-			          "Target": {
-			            "Entity": "x_senha"
-			          }
-			        },
-			        "x_senha.x_senha": {
-			          "Target": {
-			            "Entity": "x_senha.x_senha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "x_senha"
-			            },
-			            "Object": {
-			              "Role": "x_senha.x_senha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "x_senhas_have_x_senhas"
 			        }
 			      ]
 			    },
@@ -12855,7 +16910,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_cred_impostos"
+			          "ID": "TB_fatos_DREs_have_CRED_impostos"
 			        }
 			      ]
 			    },
@@ -12888,7 +16943,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_desp_oper_fixas"
+			          "ID": "TB_fatos_DREs_have_DESP_oper_fixas"
 			        }
 			      ]
 			    },
@@ -12921,7 +16976,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_cpv_proc_fixos"
+			          "ID": "TB_fatos_DREs_have_CPV_proc_fixos"
 			        }
 			      ]
 			    },
@@ -13020,7 +17075,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_valor_cofins"
+			          "ID": "TB_fatos_DREs_have_valor_COFINs"
 			        }
 			      ]
 			    },
@@ -13053,7 +17108,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_valor_pis_venda"
+			          "ID": "TB_fatos_DREs_have_valor_PIS_venda"
 			        }
 			      ]
 			    },
@@ -13086,7 +17141,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_valor_st"
+			          "ID": "TB_fatos_DREs_have_valor_ST"
 			        }
 			      ]
 			    },
@@ -13119,7 +17174,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_valor_fcps"
+			          "ID": "TB_fatos_DREs_have_valor_FCPs"
 			        }
 			      ]
 			    },
@@ -13152,7 +17207,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_valor_icms"
+			          "ID": "TB_fatos_DREs_have_valor_ICMs"
 			        }
 			      ]
 			    },
@@ -13185,7 +17240,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_valor_ipis"
+			          "ID": "TB_fatos_DREs_have_valor_IPIs"
 			        }
 			      ]
 			    },
@@ -13284,7 +17339,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_valor_cpv_bonifs"
+			          "ID": "TB_fatos_DREs_have_valor_CPV_bonifs"
 			        }
 			      ]
 			    },
@@ -13377,7 +17432,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_cpv_item_venda"
+			          "ID": "TB_fatos_DREs_have_CPV_item_venda"
 			        }
 			      ]
 			    },
@@ -13575,7 +17630,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_data_nf"
+			          "ID": "TB_fatos_DREs_have_data_NF"
 			        }
 			      ]
 			    },
@@ -13698,20 +17753,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calendario_dax_date_hierarquia_de_data_has_calendario_dax_date_dia": {
+			    "DRE_Geral__plan_mes_ano_hierarquia_de_data_has_DRE_Geral__plan_mes_ano_mê": {
 			      "Binding": {
-			        "ConceptualEntity": "CALENDARIO DAX"
+			        "ConceptualEntity": "DRE_Geral - Plan"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calendario_dax.date.hierarquia_de_data": {
+			        "DRE_Geral__plan.mes_ano.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "calendario_dax.date.hierarquia_de_data"
+			            "Entity": "DRE_Geral__plan.mes_ano.hierarquia_de_data"
 			          }
 			        },
-			        "calendario_dax.date.dia": {
+			        "DRE_Geral__plan.mes_ano.mê": {
 			          "Target": {
-			            "Entity": "calendario_dax.date.dia"
+			            "Entity": "DRE_Geral__plan.mes_ano.mê"
 			          }
 			        }
 			      },
@@ -13719,32 +17774,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calendario_dax.date.hierarquia_de_data"
+			              "Role": "DRE_Geral__plan.mes_ano.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "calendario_dax.date.dia"
+			              "Role": "DRE_Geral__plan.mes_ano.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
+			          "ID": "hierarquia_de_data_have_mê2"
 			        }
 			      ]
 			    },
-			    "calendario_dax_date_ano_has_calendario_dax_date_trimestre": {
+			    "DRE_Geral__plan_mes_ano_hierarquia_de_data_has_DRE_Geral__plan_mes_ano_dia": {
 			      "Binding": {
-			        "ConceptualEntity": "CALENDARIO DAX"
+			        "ConceptualEntity": "DRE_Geral - Plan"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calendario_dax.date.ano": {
+			        "DRE_Geral__plan.mes_ano.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "calendario_dax.date.ano"
+			            "Entity": "DRE_Geral__plan.mes_ano.hierarquia_de_data"
 			          }
 			        },
-			        "calendario_dax.date.trimestre": {
+			        "DRE_Geral__plan.mes_ano.dia": {
 			          "Target": {
-			            "Entity": "calendario_dax.date.trimestre"
+			            "Entity": "DRE_Geral__plan.mes_ano.dia"
 			          }
 			        }
 			      },
@@ -13752,33 +17807,66 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calendario_dax.date.ano"
+			              "Role": "DRE_Geral__plan.mes_ano.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "calendario_dax.date.trimestre"
+			              "Role": "DRE_Geral__plan.mes_ano.dia"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
+			          "ID": "hierarquia_de_data_have_dias2"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_mes_ano_ano_has_DRE_Geral__plan_mes_ano_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan.mes_ano.ano": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.mes_ano.ano"
+			          }
+			        },
+			        "DRE_Geral__plan.mes_ano.trimestre": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan.mes_ano.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan.mes_ano.ano"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan.mes_ano.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calendario_dax.date.trimestre"
+			              "Role": "DRE_Geral__plan.mes_ano.trimestre"
 			            },
 			            "Object": {
-			              "Role": "calendario_dax.date.ano"
+			              "Role": "DRE_Geral__plan.mes_ano.ano"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
+			          "ID": "trimestres_have_anos2"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "calendario_dax.date.trimestre"
+			              "Role": "DRE_Geral__plan.mes_ano.trimestre"
 			            },
 			            "Prepositions": [
 			              {
@@ -13788,29 +17876,29 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "calendario_dax.date.ano"
+			              "Role": "DRE_Geral__plan.mes_ano.ano"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos1"
+			          "ID": "trimestres_are_in_anos2"
 			        }
 			      ]
 			    },
-			    "calendario_dax_date_trimestre_has_calendario_dax_date_mê": {
+			    "DRE_Geral__plan_mes_ano_trimestre_has_DRE_Geral__plan_mes_ano_mê": {
 			      "Binding": {
-			        "ConceptualEntity": "CALENDARIO DAX"
+			        "ConceptualEntity": "DRE_Geral - Plan"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calendario_dax.date.trimestre": {
+			        "DRE_Geral__plan.mes_ano.trimestre": {
 			          "Target": {
-			            "Entity": "calendario_dax.date.trimestre"
+			            "Entity": "DRE_Geral__plan.mes_ano.trimestre"
 			          }
 			        },
-			        "calendario_dax.date.mê": {
+			        "DRE_Geral__plan.mes_ano.mê": {
 			          "Target": {
-			            "Entity": "calendario_dax.date.mê"
+			            "Entity": "DRE_Geral__plan.mes_ano.mê"
 			          }
 			        }
 			      },
@@ -13818,33 +17906,33 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calendario_dax.date.trimestre"
+			              "Role": "DRE_Geral__plan.mes_ano.trimestre"
 			            },
 			            "Object": {
-			              "Role": "calendario_dax.date.mê"
+			              "Role": "DRE_Geral__plan.mes_ano.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
+			          "ID": "trimestres_have_mê2"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calendario_dax.date.mê"
+			              "Role": "DRE_Geral__plan.mes_ano.mê"
 			            },
 			            "Object": {
-			              "Role": "calendario_dax.date.trimestre"
+			              "Role": "DRE_Geral__plan.mes_ano.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
+			          "ID": "mê_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "calendario_dax.date.mê"
+			              "Role": "DRE_Geral__plan.mes_ano.mê"
 			            },
 			            "Prepositions": [
 			              {
@@ -13854,29 +17942,29 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "calendario_dax.date.trimestre"
+			              "Role": "DRE_Geral__plan.mes_ano.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres1"
+			          "ID": "mê_are_in_trimestres2"
 			        }
 			      ]
 			    },
-			    "calendario_dax_date_mê_has_calendario_dax_date_dia": {
+			    "DRE_Geral__plan_mes_ano_mê_has_DRE_Geral__plan_mes_ano_dia": {
 			      "Binding": {
-			        "ConceptualEntity": "CALENDARIO DAX"
+			        "ConceptualEntity": "DRE_Geral - Plan"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calendario_dax.date.mê": {
+			        "DRE_Geral__plan.mes_ano.mê": {
 			          "Target": {
-			            "Entity": "calendario_dax.date.mê"
+			            "Entity": "DRE_Geral__plan.mes_ano.mê"
 			          }
 			        },
-			        "calendario_dax.date.dia": {
+			        "DRE_Geral__plan.mes_ano.dia": {
 			          "Target": {
-			            "Entity": "calendario_dax.date.dia"
+			            "Entity": "DRE_Geral__plan.mes_ano.dia"
 			          }
 			        }
 			      },
@@ -13884,33 +17972,33 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calendario_dax.date.mê"
+			              "Role": "DRE_Geral__plan.mes_ano.mê"
 			            },
 			            "Object": {
-			              "Role": "calendario_dax.date.dia"
+			              "Role": "DRE_Geral__plan.mes_ano.dia"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias1"
+			          "ID": "mê_have_dias2"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calendario_dax.date.dia"
+			              "Role": "DRE_Geral__plan.mes_ano.dia"
 			            },
 			            "Object": {
-			              "Role": "calendario_dax.date.mê"
+			              "Role": "DRE_Geral__plan.mes_ano.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê1"
+			          "ID": "dias_have_mê2"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "calendario_dax.date.dia"
+			              "Role": "DRE_Geral__plan.mes_ano.dia"
 			            },
 			            "Prepositions": [
 			              {
@@ -13920,12 +18008,12 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "calendario_dax.date.mê"
+			              "Role": "DRE_Geral__plan.mes_ano.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê1"
+			          "ID": "dias_are_in_mê2"
 			        }
 			      ]
 			    }
