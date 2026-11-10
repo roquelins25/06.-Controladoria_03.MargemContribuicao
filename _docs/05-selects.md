@@ -11,6 +11,7 @@ Fonte da verdade: o SQL embutido no modelo (o que o Power BI executa). Conexão:
 | TB_PRODUTO | TB_DIMENSAO\TB_PRODUTO.SQL | Idêntico |
 | TB_REDE | TB_DIMENSAO\TB_REDE.SQL | Idêntico |
 | TB_REP | TB_DIMENSAO\TB_REP.SQL | Idêntico |
+| DRE_Geral - Plan | Sem SQL: lê a planilha Excel por Power Query (M) | Fonte é o arquivo `DRE CLIENTE_10112026.xlsx` (ver seção abaixo) |
 
 ## TB_FatosDRE
 
@@ -766,11 +767,32 @@ SELECT
 FROM I260220090255_ERPP.USU_V090REP
 ```
 
+## DRE_Geral - Plan
+
+Não é SQL. É uma consulta M (Power Query) que lê a aba `DRE_Geral - Jan26 a Set26` da planilha da Controladoria, remove linhas vazias, promove o cabeçalho, mantém as colunas usadas e tipa cada uma. Modo Import.
+
+```m
+let
+  Origem = Excel.Workbook(File.Contents("\\dados\Financeiro\Controladoria\BD_BI\DRE CLIENTE CONSOLIDADO\DRE CLIENTE_10112026.xlsx"), null, true),
+  #"Navegação 1" = Origem{[Item = "DRE_Geral - Jan26 a Set26", Kind = "Sheet"]}[Data],
+  #"Linhas filtradas" = Table.SelectRows(#"Navegação 1", each [Column1] <> null and [Column1] <> ""),
+  #"Cabeçalhos promovidos" = Table.PromoteHeaders(#"Linhas filtradas", [PromoteAllScalars = true]),
+  #"As outras colunas foram removidas" = Table.SelectColumns(#"Cabeçalhos promovidos", {"Operacao", "Filial", "Mes_Ano", "Data_NF", "Tipo_Nota", "Codigo_repres_NF", "Nota_Fiscal", "Cod_Cliente", "CFOP", "CodProduto", ...}),
+  #"Tipo de coluna alterado 1" = Table.TransformColumnTypes(#"As outras colunas foram removidas", {{"Operacao", type text}, {"Tipo_Nota", type text}, {"Motivo_Devolucao", type text}, {"Frete", type number}, ...})
+in
+  #"Tipo de coluna alterado 1"
+```
+
+Trechos longos (listas de colunas e tipos) foram abreviados com `...`. A consulta completa está no modelo, na partição `DRE_Geral - Plan`.
+
+Para trocar a versão da planilha, altere o caminho em `Origem = Excel.Workbook(...)` (Transformar dados > Editor Avançado). Ver também o ponto de atenção sobre o período no [README](../README.md).
+
 ## Tabelas sem SELECT
 
 - **UF/REGIÃO** e **Senhas/Gerente**: dataflow do Power BI Service (entidades de mesmo nome).
 - **DRE_LV1** e **DRE_LV2**: dados fixos embutidos no M.
 - **CALENDARIO DAX** e **xSenha**: calculadas em DAX.
+- **DRE_Geral - Plan**: planilha Excel, ver seção acima.
 
 ## SQLs fora do modelo
 

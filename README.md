@@ -16,9 +16,10 @@ Relatório de Power BI da Controladoria: DRE gerencial em análise horizontal e 
 | Projeto | `MRG CONTR ANALISE HORIZONTAL.pbip` |
 | Fonte principal | Oracle ERP (modo Import) |
 | Outras fontes | Dataflow do Power BI Service (UF/REGIÃO, Senhas/Gerente); planilha Excel da Controladoria (`DRE_Geral - Plan`) |
-| Tabelas | 14 (1 fato + dimensões, calendário e tabelas de apoio da DRE) |
-| Medidas | 39 |
-| Relacionamentos | 10 |
+| Fatos | 2: `TB_FatosDRE` (Oracle) e `DRE_Geral - Plan` (planilha da Controladoria) |
+| Tabelas | 16 (14 de dados: fatos, dimensões, calendário e tabelas de apoio da DRE; mais 2 tabelas de medidas) |
+| Medidas | 79 (40 da família Oracle, 37 da família da planilha, 2 de acesso) |
+| Relacionamentos | 14 |
 | Cultura | pt-BR |
 
 ## Documentação
@@ -28,8 +29,8 @@ Toda a documentação técnica está na pasta [`_docs`](_docs/).
 | Arquivo | O que tem |
 |---|---|
 | [00-overview.md](_docs/00-overview.md) | Visão geral, números, fontes de dados e como o modelo funciona |
-| [01-tabelas.md](_docs/01-tabelas.md) | As 14 tabelas, com tipo, origem e colunas |
-| [02-medidas.md](_docs/02-medidas.md) | As 39 medidas, com DAX e explicação |
+| [01-tabelas.md](_docs/01-tabelas.md) | As 16 tabelas, com tipo, origem e colunas |
+| [02-medidas.md](_docs/02-medidas.md) | As 79 medidas, com DAX, explicação e pontos de atenção |
 | [03-relacionamentos.md](_docs/03-relacionamentos.md) | Relacionamentos e diagrama do modelo |
 | [04-dependencias.md](_docs/04-dependencias.md) | Árvore de dependências entre medidas |
 | [05-selects.md](_docs/05-selects.md) | SELECT de cada tabela e SQLs fora do modelo |
@@ -52,6 +53,7 @@ Toda a documentação técnica está na pasta [`_docs`](_docs/).
 - **Manutenção da planilha Excel:** a `DRE_Geral - Plan` lê o arquivo `DRE CLIENTE_10112026.xlsx` em `\\dados\Financeiro\Controladoria\BD_BI\DRE CLIENTE CONSOLIDADO`. Quando a Controladoria gerar uma nova versão, troque o nome do arquivo no Power Query dessa tabela (Transformar dados > Editor Avançado).
 - **Acesso:** o relatório usa usuário e senha (`Senhas/Gerente`, `xSenha` e a medida `.Check Senha`).
 - **DRE horizontal:** a medida `00. DRE` calcula cada linha pelo ID de `DRE_LV2`. Ao incluir uma linha nova na DRE, ajuste o `SWITCH` da medida.
+- **Pontos de atenção no DAX:** três achados factuais estão em [02-medidas.md](_docs/02-medidas.md#pontos-de-atenção). Resumo: o subtotal de impostos de `00. DRE` não bate com a linha analítica de impostos devolvidos; o filtro de CFOP de `02.DRE Fretes Tereceiros ( R$ )` não tem efeito; e a margem de contribuição da planilha (`02. 8 - MRG CTRB`) usa verbas da família Oracle.
 - **SQLs de origem:** ficam em `G:\Meu Drive\BalyEnergy\00.SQLs` (`TB_DIMENSAO` e `TB_FATOS`). `TB_TNS` e `TB_PEDIDOS` existem lá, mas não estão no modelo.
 
 ## Como atualizar a documentação
