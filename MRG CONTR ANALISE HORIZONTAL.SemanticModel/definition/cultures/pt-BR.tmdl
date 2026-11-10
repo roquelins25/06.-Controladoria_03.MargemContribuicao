@@ -4446,16 +4446,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
-			        },
-			        {
-			          "MGT BRT": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -4787,6 +4777,16 @@ cultureInfo pt-BR
 			        {
 			          "00. dre": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5782,7 +5782,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "entity__medida.entity_00__dre_a_a": {
+			    "entity__medida.entity_00__dre_a_h": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
@@ -5792,17 +5792,27 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "00. dre a.a": {
+			          "00. dre a.h": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "00. dre a.a ( % )": {
+			          "00. dre a.h ( % )": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
 			          "( % )": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "A.V ( % )": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5984,9 +5994,637 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "entity__medida.entity_00__DRE__texto_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "00. DRE ( texto )"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "00. DRE ( texto )": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "00. DRE": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Valor ( R$ )": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.entity_00__DRE__cor_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "00. DRE ( cor )"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "00. DRE ( cor )": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "00. DRE": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.entity_00_blank": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "00.BLANK"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "00.blank": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "0": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "calendario_dax_date_hierarquia_de_data_has_calendario_dax_date_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.hierarquia_de_data"
+			          }
+			        },
+			        "calendario_dax.date.mê": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê"
+			        }
+			      ]
+			    },
+			    "calendario_dax_date_hierarquia_de_data_has_calendario_dax_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.hierarquia_de_data"
+			          }
+			        },
+			        "calendario_dax.date.trimestre": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "calendario_dax_date_hierarquia_de_data_has_calendario_dax_date_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.hierarquia_de_data"
+			          }
+			        },
+			        "calendario_dax.date.ano": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "calendario_dax_date_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.date": {
+			          "Target": {
+			            "Entity": "calendario_dax.date"
+			          }
+			        },
+			        "calendario_dax.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "calendario_dax.date.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.date"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.date.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "tb_cliente_datcad_mê_has_tb_cliente_datcad_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_cliente.datcad.mê": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.mê"
+			          }
+			        },
+			        "tb_cliente.datcad.dia": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.mê"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.dia"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "tb_cliente.datcad.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê"
+			        }
+			      ]
+			    },
+			    "tb_cliente_datcad_trimestre_has_tb_cliente_datcad_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_cliente.datcad.trimestre": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.trimestre"
+			          }
+			        },
+			        "tb_cliente.datcad.mê": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.trimestre"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.mê"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "tb_cliente.datcad.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "tb_cliente_datcad_ano_has_tb_cliente_datcad_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_cliente.datcad.ano": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.ano"
+			          }
+			        },
+			        "tb_cliente.datcad.trimestre": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.ano"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.trimestre"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "tb_cliente.datcad.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos"
+			        }
+			      ]
+			    },
+			    "tb_cliente_datcad_hierarquia_de_data_has_tb_cliente_datcad_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_cliente.datcad.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.hierarquia_de_data"
+			          }
+			        },
+			        "tb_cliente.datcad.dia": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
+			    "tb_cliente_datcad_hierarquia_de_data_has_tb_cliente_datcad_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_cliente.datcad.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.hierarquia_de_data"
+			          }
+			        },
+			        "tb_cliente.datcad.mê": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê1"
+			        }
+			      ]
+			    },
+			    "tb_cliente_datcad_hierarquia_de_data_has_tb_cliente_datcad_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_cliente.datcad.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.hierarquia_de_data"
+			          }
+			        },
+			        "tb_cliente.datcad.trimestre": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres1"
+			        }
+			      ]
+			    },
+			    "tb_cliente_datcad_hierarquia_de_data_has_tb_cliente_datcad_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_cliente.datcad.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.hierarquia_de_data"
+			          }
+			        },
+			        "tb_cliente.datcad.ano": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos1"
+			        }
+			      ]
+			    },
+			    "tb_cliente_datcad_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_CLIENTE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_cliente.datcad": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad"
+			          }
+			        },
+			        "tb_cliente.datcad.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "tb_cliente.datcad.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_cliente.datcad"
+			            },
+			            "Object": {
+			              "Role": "tb_cliente.datcad.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datcads_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "dre_lv_2_has_dre_lv_1": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_2": {
+			          "Target": {
+			            "Entity": "dre_lv_2"
+			          }
+			        },
+			        "dre_lv_1": {
+			          "Target": {
+			            "Entity": "dre_lv_1"
+			          },
+			          "Nouns": [
+			            {
+			              "lv 1": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_2"
+			            },
+			            "Object": {
+			              "Role": "dre_lv_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_2_have_dre_lv_1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_1"
+			            },
+			            "Object": {
+			              "Role": "dre_lv_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_1_have_dre_lv_2"
+			        }
+			      ]
+			    },
 			    "uf_região_has_senhas_gerente": {
 			      "Binding": {
 			        "ConceptualEntity": "UF/REGIÃO"
@@ -6407,6 +7045,237 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "entity__medida_has_entity_00_blank": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.entity_00_blank": {
+			          "Target": {
+			            "Entity": "entity__medida.entity_00_blank"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.entity_00_blank"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_00_blank"
+			        }
+			      ]
+			    },
+			    "TB_fatos_DRE_has_entity__medida_entity_00__DRE__cor_": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_FatosDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "TB_fatos_DRE": {
+			          "Target": {
+			            "Entity": "TB_fatos_DRE"
+			          }
+			        },
+			        "entity__medida.entity_00__DRE__cor_": {
+			          "Target": {
+			            "Entity": "entity__medida.entity_00__DRE__cor_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "TB_fatos_DRE"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.entity_00__DRE__cor_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "TB_fatos_DREs_have_00__DRE__cor_"
+			        }
+			      ]
+			    },
+			    "dre_lv_2_has_entity__medida_entity_00__DRE__cor_": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_2": {
+			          "Target": {
+			            "Entity": "dre_lv_2"
+			          }
+			        },
+			        "entity__medida.entity_00__DRE__cor_": {
+			          "Target": {
+			            "Entity": "entity__medida.entity_00__DRE__cor_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_2"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.entity_00__DRE__cor_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_2_have_00__DRE__cor_"
+			        }
+			      ]
+			    },
+			    "dre_lv_1_has_entity__medida_entity_00__DRE__cor_": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_1": {
+			          "Target": {
+			            "Entity": "dre_lv_1"
+			          }
+			        },
+			        "entity__medida.entity_00__DRE__cor_": {
+			          "Target": {
+			            "Entity": "entity__medida.entity_00__DRE__cor_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_1"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.entity_00__DRE__cor_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_1_have_00__DRE__cor_"
+			        }
+			      ]
+			    },
+			    "TB_fatos_DRE_has_entity__medida_entity_00__DRE__texto_": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_FatosDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "TB_fatos_DRE": {
+			          "Target": {
+			            "Entity": "TB_fatos_DRE"
+			          }
+			        },
+			        "entity__medida.entity_00__DRE__texto_": {
+			          "Target": {
+			            "Entity": "entity__medida.entity_00__DRE__texto_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "TB_fatos_DRE"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.entity_00__DRE__texto_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "TB_fatos_DREs_have_00__DRE__texto_"
+			        }
+			      ]
+			    },
+			    "dre_lv_2_has_entity__medida_entity_00__DRE__texto_": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_2": {
+			          "Target": {
+			            "Entity": "dre_lv_2"
+			          }
+			        },
+			        "entity__medida.entity_00__DRE__texto_": {
+			          "Target": {
+			            "Entity": "entity__medida.entity_00__DRE__texto_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_2"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.entity_00__DRE__texto_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_2_have_00__DRE__texto_"
+			        }
+			      ]
+			    },
+			    "dre_lv_1_has_entity__medida_entity_00__DRE__texto_": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_1": {
+			          "Target": {
+			            "Entity": "dre_lv_1"
+			          }
+			        },
+			        "entity__medida.entity_00__DRE__texto_": {
+			          "Target": {
+			            "Entity": "entity__medida.entity_00__DRE__texto_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_1"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.entity_00__DRE__texto_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_1_have_00__DRE__texto_"
+			        }
+			      ]
+			    },
 			    "x_senha_has_check_senha": {
 			      "Binding": {
 			        "ConceptualEntity": "xSenha"
@@ -6539,7 +7408,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "TB_fatos_DRE_has_entity__medida_entity_00__dre_a_a": {
+			    "TB_fatos_DRE_has_entity__medida_entity_00__dre_a_h": {
 			      "Binding": {
 			        "ConceptualEntity": "TB_FatosDRE"
 			      },
@@ -6550,9 +7419,9 @@ cultureInfo pt-BR
 			            "Entity": "TB_fatos_DRE"
 			          }
 			        },
-			        "entity__medida.entity_00__dre_a_a": {
+			        "entity__medida.entity_00__dre_a_h": {
 			          "Target": {
-			            "Entity": "entity__medida.entity_00__dre_a_a"
+			            "Entity": "entity__medida.entity_00__dre_a_h"
 			          }
 			        }
 			      },
@@ -6563,16 +7432,16 @@ cultureInfo pt-BR
 			              "Role": "TB_fatos_DRE"
 			            },
 			            "Object": {
-			              "Role": "entity__medida.entity_00__dre_a_a"
+			              "Role": "entity__medida.entity_00__dre_a_h"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_00__dre_a_a"
+			          "ID": "TB_fatos_DREs_have_00__dre_a_h"
 			        }
 			      ]
 			    },
-			    "dre_lv_2_has_entity__medida_entity_00__dre_a_a": {
+			    "dre_lv_2_has_entity__medida_entity_00__dre_a_h": {
 			      "Binding": {
 			        "ConceptualEntity": "DRE_LV2"
 			      },
@@ -6583,9 +7452,9 @@ cultureInfo pt-BR
 			            "Entity": "dre_lv_2"
 			          }
 			        },
-			        "entity__medida.entity_00__dre_a_a": {
+			        "entity__medida.entity_00__dre_a_h": {
 			          "Target": {
-			            "Entity": "entity__medida.entity_00__dre_a_a"
+			            "Entity": "entity__medida.entity_00__dre_a_h"
 			          }
 			        }
 			      },
@@ -6596,16 +7465,16 @@ cultureInfo pt-BR
 			              "Role": "dre_lv_2"
 			            },
 			            "Object": {
-			              "Role": "entity__medida.entity_00__dre_a_a"
+			              "Role": "entity__medida.entity_00__dre_a_h"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dre_lv_2_have_00__dre_a_a"
+			          "ID": "dre_lv_2_have_00__dre_a_h"
 			        }
 			      ]
 			    },
-			    "dre_lv_1_has_entity__medida_entity_00__dre_a_a": {
+			    "dre_lv_1_has_entity__medida_entity_00__dre_a_h": {
 			      "Binding": {
 			        "ConceptualEntity": "DRE_LV1"
 			      },
@@ -6616,9 +7485,9 @@ cultureInfo pt-BR
 			            "Entity": "dre_lv_1"
 			          }
 			        },
-			        "entity__medida.entity_00__dre_a_a": {
+			        "entity__medida.entity_00__dre_a_h": {
 			          "Target": {
-			            "Entity": "entity__medida.entity_00__dre_a_a"
+			            "Entity": "entity__medida.entity_00__dre_a_h"
 			          }
 			        }
 			      },
@@ -6629,12 +7498,12 @@ cultureInfo pt-BR
 			              "Role": "dre_lv_1"
 			            },
 			            "Object": {
-			              "Role": "entity__medida.entity_00__dre_a_a"
+			              "Role": "entity__medida.entity_00__dre_a_h"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dre_lv_1_have_00__dre_a_a"
+			          "ID": "dre_lv_1_have_00__dre_a_h"
 			        }
 			      ]
 			    },
@@ -12846,554 +13715,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "TB_fatos_DREs_have_operacaos"
-			        }
-			      ]
-			    },
-			    "dre_lv_2_has_dre_lv_1": {
-			      "Binding": {
-			        "ConceptualEntity": "DRE_LV2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dre_lv_2": {
-			          "Target": {
-			            "Entity": "dre_lv_2"
-			          }
-			        },
-			        "dre_lv_1": {
-			          "Target": {
-			            "Entity": "dre_lv_1"
-			          },
-			          "Nouns": [
-			            {
-			              "lv 1": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dre_lv_2"
-			            },
-			            "Object": {
-			              "Role": "dre_lv_1"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dre_lv_2_have_dre_lv_1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dre_lv_1"
-			            },
-			            "Object": {
-			              "Role": "dre_lv_2"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dre_lv_1_have_dre_lv_2"
-			        }
-			      ]
-			    },
-			    "tb_cliente_datcad_has_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "TB_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tb_cliente.datcad": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad"
-			          }
-			        },
-			        "tb_cliente.datcad.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.hierarquia_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "datcads_have_hierarquia_de_data"
-			        }
-			      ]
-			    },
-			    "tb_cliente_datcad_hierarquia_de_data_has_tb_cliente_datcad_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "TB_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tb_cliente.datcad.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.hierarquia_de_data"
-			          }
-			        },
-			        "tb_cliente.datcad.ano": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
-			        }
-			      ]
-			    },
-			    "tb_cliente_datcad_hierarquia_de_data_has_tb_cliente_datcad_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "TB_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tb_cliente.datcad.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.hierarquia_de_data"
-			          }
-			        },
-			        "tb_cliente.datcad.trimestre": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
-			        }
-			      ]
-			    },
-			    "tb_cliente_datcad_hierarquia_de_data_has_tb_cliente_datcad_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "TB_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tb_cliente.datcad.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.hierarquia_de_data"
-			          }
-			        },
-			        "tb_cliente.datcad.mê": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
-			        }
-			      ]
-			    },
-			    "tb_cliente_datcad_hierarquia_de_data_has_tb_cliente_datcad_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "TB_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tb_cliente.datcad.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.hierarquia_de_data"
-			          }
-			        },
-			        "tb_cliente.datcad.dia": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
-			    "tb_cliente_datcad_ano_has_tb_cliente_datcad_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "TB_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tb_cliente.datcad.ano": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.ano"
-			          }
-			        },
-			        "tb_cliente.datcad.trimestre": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.ano"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.trimestre"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "tb_cliente.datcad.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos"
-			        }
-			      ]
-			    },
-			    "tb_cliente_datcad_trimestre_has_tb_cliente_datcad_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "TB_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tb_cliente.datcad.trimestre": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.trimestre"
-			          }
-			        },
-			        "tb_cliente.datcad.mê": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.trimestre"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.mê"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "tb_cliente.datcad.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres"
-			        }
-			      ]
-			    },
-			    "tb_cliente_datcad_mê_has_tb_cliente_datcad_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "TB_CLIENTE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tb_cliente.datcad.mê": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.mê"
-			          }
-			        },
-			        "tb_cliente.datcad.dia": {
-			          "Target": {
-			            "Entity": "tb_cliente.datcad.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.mê"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.dia"
-			            },
-			            "Object": {
-			              "Role": "tb_cliente.datcad.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "tb_cliente.datcad.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "tb_cliente.datcad.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê"
-			        }
-			      ]
-			    },
-			    "calendario_dax_date_has_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "CALENDARIO DAX"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_dax.date": {
-			          "Target": {
-			            "Entity": "calendario_dax.date"
-			          }
-			        },
-			        "calendario_dax.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "calendario_dax.date.hierarquia_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_dax.date"
-			            },
-			            "Object": {
-			              "Role": "calendario_dax.date.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dates_have_hierarquia_de_data"
-			        }
-			      ]
-			    },
-			    "calendario_dax_date_hierarquia_de_data_has_calendario_dax_date_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "CALENDARIO DAX"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_dax.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "calendario_dax.date.hierarquia_de_data"
-			          }
-			        },
-			        "calendario_dax.date.ano": {
-			          "Target": {
-			            "Entity": "calendario_dax.date.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_dax.date.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "calendario_dax.date.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos1"
-			        }
-			      ]
-			    },
-			    "calendario_dax_date_hierarquia_de_data_has_calendario_dax_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "CALENDARIO DAX"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_dax.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "calendario_dax.date.hierarquia_de_data"
-			          }
-			        },
-			        "calendario_dax.date.trimestre": {
-			          "Target": {
-			            "Entity": "calendario_dax.date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_dax.date.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "calendario_dax.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres1"
-			        }
-			      ]
-			    },
-			    "calendario_dax_date_hierarquia_de_data_has_calendario_dax_date_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "CALENDARIO DAX"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendario_dax.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "calendario_dax.date.hierarquia_de_data"
-			          }
-			        },
-			        "calendario_dax.date.mê": {
-			          "Target": {
-			            "Entity": "calendario_dax.date.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_dax.date.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "calendario_dax.date.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
 			        }
 			      ]
 			    },

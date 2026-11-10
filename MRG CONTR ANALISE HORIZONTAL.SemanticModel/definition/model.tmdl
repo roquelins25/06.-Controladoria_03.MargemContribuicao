@@ -22,7 +22,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_QueryOrder = ["TB_FatosDRE","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas","UF/REGIÃO","Senhas/Gerente","DRE_LV1","DRE_LV2"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
 
 ref table TB_FatosDRE
 ref table TB_CLIENTE
