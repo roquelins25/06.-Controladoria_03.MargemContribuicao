@@ -65,6 +65,7 @@ table UF/REGIÃO
 
 	partition UF/REGIÃO = m
 		mode: import
+		queryGroup: Dimensao
 		source =
 				let
 				    Fonte = PowerBI.Dataflows(null),

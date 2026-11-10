@@ -4,10 +4,10 @@
   "position": {
     "x": 222.18097447795824,
     "y": 73.503480278422273,
-    "z": 6003,
+    "z": 7000,
     "height": 622.27378190255217,
     "width": 1057.447795823666,
-    "tabOrder": 6001
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -43,7 +43,7 @@
               },
               "queryRef": "CALENDARIO DAX.Ano-Mes",
               "nativeQueryRef": "Ano-Mes",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -217,7 +217,20 @@
             "isPinned": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'3-Trimestre'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
       }
     ],
     "objects": {
