@@ -41,11 +41,6 @@ table 'DRE_Geral - Plan'
 		summarizeBy: none
 		sourceColumn: Data_NF
 
-		variation Variação
-			isDefault
-			relationship: fc854f2a-22ba-4479-9c4b-2cc98c05155d
-			defaultHierarchy: LocalDateTable_1550c84a-46a0-4d16-bf35-4fe0b7f4046b.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -61,7 +56,7 @@ table 'DRE_Geral - Plan'
 	column Codigo_repres_NF
 		dataType: double
 		lineageTag: 0df2924e-3b7d-413e-a047-6d6bc17f3b86
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Codigo_repres_NF
 
 		annotation SummarizationSetBy = Automatic
@@ -81,7 +76,7 @@ table 'DRE_Geral - Plan'
 		dataType: int64
 		formatString: 0
 		lineageTag: 6da063aa-8324-4134-9c70-f18d756dbf3c
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Cod_Cliente
 
 		annotation SummarizationSetBy = Automatic

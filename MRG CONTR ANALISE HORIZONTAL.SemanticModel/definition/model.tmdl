@@ -43,7 +43,6 @@ ref table DRE_LV2
 ref table xSenha
 ref table 'DRE_Geral - Plan'
 ref table LocalDateTable_20319b4d-479c-4997-a3b1-fa91a49ac09c
-ref table LocalDateTable_1550c84a-46a0-4d16-bf35-4fe0b7f4046b
 
 ref cultureInfo pt-BR
 
