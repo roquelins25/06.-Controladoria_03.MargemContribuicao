@@ -1,0 +1,62 @@
+DEFINE
+    // 1) Compacto em texto: R$ 1.648,1M | R$ 34,6K | R$ 999   (xDec = casas do K/M)
+    FUNCTION fxFormatCompacto = ( xNumber : SCALAR VAL, xDec : INT64 ) =>
+        VAR _abs   = ABS( xNumber )
+        VAR _casas = IF( xDec > 0, "." & REPT( "0", xDec ), "" )
+        VAR _fmt   = "R$ #,0" & _casas & ";-R$ #,0" & _casas
+        VAR _usaM  = _abs >= 1000000 || ROUND( _abs / 1000, xDec ) >= 1000
+        VAR _usaK  = _abs >= 1000
+        RETURN
+        IF(
+            ISBLANK( xNumber ), BLANK(),
+            SWITCH(
+                TRUE(),
+                _usaM, FORMAT( xNumber / 1000000, _fmt, "pt-BR" ) & "M",
+                _usaK, FORMAT( xNumber / 1000,    _fmt, "pt-BR" ) & "K",
+                FORMAT( xNumber, "R$ #,0;-R$ #,0", "pt-BR" )
+            )
+        )
+
+    // 2) Formato DRE: compacto com negativo entre parênteses  ->  (R$ 182,2M)
+    FUNCTION _FormatDre = ( xNumber : SCALAR VAL, xDec : INT64 ) =>
+        VAR _abs   = ABS( xNumber )
+        VAR _casas = IF( xDec > 0, "." & REPT( "0", xDec ), "" )
+        VAR _fmt   = "R$ #,0" & _casas
+        VAR _usaM  = _abs >= 1000000 || ROUND( _abs / 1000, xDec ) >= 1000
+        VAR _usaK  = _abs >= 1000
+        VAR _txt   =
+            SWITCH(
+                TRUE(),
+                _usaM, FORMAT( _abs / 1000000, _fmt, "pt-BR" ) & "M",
+                _usaK, FORMAT( _abs / 1000,    _fmt, "pt-BR" ) & "K",
+                FORMAT( _abs, "R$ #,0", "pt-BR" )
+            )
+        RETURN
+        IF( ISBLANK( xNumber ), BLANK(), IF( xNumber < 0, "(" & _txt & ")", _txt ) )
+
+    // 3) Devolve o FORMATO (texto), para "Dynamic format string" (tipos 3 a 8)
+    FUNCTION fxFormatNumber = ( xNumber : SCALAR VAL, xTipo : INT64 ) =>
+        SWITCH(
+            xTipo,
+            1, "R$ #,0;-R$ #,0",          -- compacto: só vale em fxFORMAT
+            2, "R$ #,0;-R$ #,0",          -- compacto: só vale em fxFORMAT
+            3, "R$ #,0.00;-R$ #,0.00",
+            4, "R$ #,0;-R$ #,0",
+            5, "0.0%;-0.0%",
+            6, "R$ #,0;R$ -#,0",
+            7, "#,0;-#,0",
+            8, "R$ #,0;(R$ #,0)"
+        )
+
+    // 4) Devolve TEXTO formatado (rótulos, cards, matriz só de exibição)
+    FUNCTION fxFORMAT = ( xNumber : SCALAR VAL, xTipo : INT64 ) =>
+        IF(
+            ISBLANK( xNumber ), BLANK(),
+            SWITCH(
+                xTipo,
+                1, fxFormatCompacto( xNumber, 0 ),
+                2, fxFormatCompacto( xNumber, 1 ),
+                9, _FormatDre( xNumber, 1 ),
+                FORMAT( xNumber, fxFormatNumber( xNumber, xTipo ), "pt-BR" )
+            )
+        )

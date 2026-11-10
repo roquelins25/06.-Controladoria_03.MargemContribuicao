@@ -1,0 +1,620 @@
+table _Medidas
+	lineageTag: 3670fca3-0252-4d77-906a-2819406b8ad7
+
+	measure '01. Total Valor Bruto ( R$ )' =
+			
+			SUM( TB_FatosDRE[VALOR_VENDA] )
+		displayFolder: 01. Totais
+		lineageTag: ac412e90-24c1-48cc-915f-8f5d8a421e27
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02. Receita Operacional Bruta ( R$ )' = ```
+			
+			// CFOPs RETIRADOS
+			// 5201	Devolução de compra para industrialização	
+			// 5102	Venda de sucatas
+			// 6201	Devolução de compra p/ industrialização (interestadual)
+			// 5556	Devolução de compra de material de uso/consumo c/ controle
+			// 6556	Devolução de compra de material de uso/consumo (c/ e s/ controle)
+			CALCULATE(
+			    [01. Total Valor Bruto ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Saidas",
+			    NOT TB_FatosDRE[CFOP] IN ({"5201","5102","6201","5556","6556"})
+			)
+			```
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\01.Receita OP
+		lineageTag: 5ac30689-df7e-44e7-b03f-d580884a98ce
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '02. Devolucao e Cancelamentos ( R$ )' = ```
+			
+			CALCULATE(
+			    [01. Total Valor Bruto ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Entradas" )
+			    
+			```
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\02. Devolucoes
+		lineageTag: 5ab5183e-3810-40a6-814f-cfa7af0177c2
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '02. Imposto de Vendas ( R$ )' = ```
+			
+			CALCULATE(
+			    [01. Total Valor Impostos ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Saidas" ) 
+			```
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\03. Impostos
+		lineageTag: ad7a4eeb-2c08-47f7-872c-78812142b189
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '01. Total Valor Impostos ( R$ )' =
+			
+			SUM( TB_FatosDRE[TOTAL_IMPOSTOS] )
+		displayFolder: 01. Totais
+		lineageTag: 6c2214dd-4dcd-448f-b5ce-54304a3e4dd8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02. Impostos Devolucoes ( R$ )' =
+			
+			CALCULATE(
+			    [01. Total Valor Impostos ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Entradas" )
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\03. Impostos
+		lineageTag: e090167f-50c0-4449-b93d-6f059215e00d
+
+	measure '01. Total Volume ( PCTs )' =
+			
+			SUM( TB_FatosDRE[QTD_ITEM] )
+		displayFolder: 01. Totais
+		lineageTag: cdf8ae0f-694c-4901-ba8f-3efcaaa4c5d7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02. Volume Total ( PCTs )' =
+			
+			CALCULATE(
+			    [01. Total Volume ( PCTs )],
+			    TB_FatosDRE[OPERACAO] = "Saidas",
+			    NOT TB_FatosDRE[CFOP] IN({"5910", "6910", "7949",BLANK()})
+			)
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\00.Volume
+		lineageTag: f433af6a-29f6-43a5-85e7-b2f0fd7ffe3f
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '02. Volume Bonificado/Verba ( PCTs )' =
+			
+			CALCULATE(
+			    [01. Total Volume ( PCTs )],
+			    TB_FatosDRE[OPERACAO] = "Saidas",
+			    TB_FatosDRE[CFOP] IN({"5910", "6910", "7949", BLANK() })
+			)
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\00.Volume
+		lineageTag: f1199ced-34c8-4294-97f2-cf719849aa27
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '02. PV Bruto / Pacotes ( R$ )' =
+			
+			// calcula o Preço Bruto por Pacotes
+			DIVIDE(
+			    [02. Receita Operacional Bruta ( R$ )], [02. Volume Total ( PCTs )], 0 )
+		displayFolder: 02. Auxiliares Horizontal\00.Volume
+		lineageTag: d505d1d4-98ea-4a60-bef7-f4f135d6f5c3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02. Materia Prima + Embalagens ( CPV Variaveis ) ( R$ )' =
+			
+			CALCULATE(
+			    [01. Total CPV ItemVenda ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Saidas"
+			)
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\04. CPV
+		lineageTag: 8f7676e5-57cd-4a5e-af91-5180f2b83d98
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '01. Total CPV ItemVenda ( R$ )' =
+			
+			SUM( TB_FatosDRE[CPV_ITEM_VENDA] )
+		displayFolder: 01. Totais
+		lineageTag: 16cd3353-ff3b-468a-b73a-b0634e1ef013
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '01. Total CPV Fixo ( R$ )' =
+			
+			SUM( TB_FatosDRE[CPV_PROC_FIXO] )
+		displayFolder: 01. Totais
+		lineageTag: 2121ee68-4153-44b7-ad26-0f54b72f2306
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02. Gastos Gerais Fabricacao-GGF FIXO ( R$ )' =
+			
+			CALCULATE(
+			    [01. Total CPV Fixo ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Saidas"
+			)
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\04. CPV
+		lineageTag: 811e14a4-9622-4374-bfbc-22e8493b075d
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '02. Credito CPV - Devolucao Pro ACA' =
+			
+			CALCULATE(
+			    [01. Total CPV ItemVenda ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Entradas"
+			)
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\04. CPV
+		lineageTag: 5b1c3729-9b66-4afd-b650-bc9a9d891fe9
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '01. Total Comissao ( R$ )' =
+			
+			SUM( TB_FatosDRE[VALOR_COMISSAO] )
+		displayFolder: 01. Totais
+		lineageTag: f41db805-a968-4442-b76c-96ee544e8b69
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02. Comissoes ( R$ )' = ```
+			
+			VAR _Saidas = 
+			CALCULATE(
+			    [01. Total Comissao ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Saidas" )
+			
+			VAR _Entradas = 
+			CALCULATE(
+			    [01. Total Comissao ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Entradas" )
+			
+			RETURN
+			_Saidas - _Entradas
+			```
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\05. Despesas Variaveis
+		lineageTag: 913c5071-29be-4a82-9861-6f42567d0481
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '01. Total Fretes ( R$ )' =
+			
+			SUM( TB_FatosDRE[FRETE] )
+		displayFolder: 01. Totais
+		lineageTag: 7363acfe-bbee-4da9-b27b-785a59bb1758
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02. Fretes Tereceiros ( R$ )' =
+			
+			CALCULATE(
+			    [01. Total Fretes ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Saidas",
+			    NOT TB_FatosDRE[CFOP] IN ({"5201","5102","6201","5556","6556"})
+			)
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\05. Despesas Variaveis
+		lineageTag: 0d4bea48-2d62-49b6-82ba-b47ae3c35408
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '01. Total Verbas Fixas ( R$ )' =
+			
+			SUM( TB_FatosDRE[VERBA_FIXA] )
+		displayFolder: 01. Totais
+		lineageTag: 5abfd2d4-6804-4e2b-9001-24b805f2b0c8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '01. Total Verbas Variaveis' =
+			
+			SUM( TB_FatosDRE[VERBA_VARIAVEL] )
+		displayFolder: 01. Totais
+		lineageTag: 1986f680-0b19-45dd-9270-b2c18eef0f35
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02. Verbas Fixas ( R$ )' =
+			
+			CALCULATE(
+			    [01. Total Verbas Fixas ( R$ )],
+			    TB_FatosDRE[OPERACAO] = "Saidas"
+			)
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\05. Despesas Variaveis
+		lineageTag: c89d4bf3-2347-4c6f-a2e8-5aa75d272767
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '02. Verbas Variaveis ( R$ )' =
+			
+			CALCULATE(
+			    [01. Total Verbas Variaveis],
+			    TB_FatosDRE[OPERACAO] = "Saidas"
+			)
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\05. Despesas Variaveis
+		lineageTag: 7cdb7cf4-8217-4d9b-b269-f2a838d671a8
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '01. Total CPV Bonificacao' =
+			
+			SUM( TB_FatosDRE[VALOR_CPV_BONIF] )
+		displayFolder: 01. Totais
+		lineageTag: fe2e03fb-83c9-4300-a331-f5b708148a6f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02. Bonificacao' =
+			
+			CALCULATE(
+			    [01. Total CPV Bonificacao],
+			    TB_FatosDRE[OPERACAO] = "Saidas",
+			    NOT TB_FatosDRE[CFOP] IN ({"5201","5102","6201","5556","6556"})
+			)
+		formatString: #,0
+		displayFolder: 02. Auxiliares Horizontal\05. Despesas Variaveis
+		lineageTag: c0c6c317-5357-4290-858b-8add2c29471f
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '03. 04 - Margem Bruta ( R$ )' = ```
+			
+			VAR _RECEITA =  [03. 01 - Receita Bruta ( R$ )]
+			
+			VAR _DEVOLUCAO = [03. 02 - Devolucao]
+			
+			VAR _IMPOSTO = 
+			    VAR vIMPSAIDAS = CALCULATE( [01. Total Valor Impostos ( R$ )], TB_FatosDRE[OPERACAO] = "Saidas" )
+			    VAR vIMPENTRAD = CALCULATE( [01. Total Valor Impostos ( R$ )], TB_FatosDRE[OPERACAO] = "Entradas" )
+			    RETURN
+			    vIMPSAIDAS - vIMPENTRAD
+			
+			VAR _CPV = 
+			    VAR vCPVSAIDAS = CALCULATE( [01. Total CPV ItemVenda ( R$ )], TB_FatosDRE[OPERACAO] = "Saidas" )
+			    VAR vCPVENTRAD = CALCULATE( [01. Total CPV ItemVenda ( R$ )], TB_FatosDRE[OPERACAO] = "Entradas" )
+			    VAR vCPVFIXOSA = CALCULATE( [01. Total CPV Fixo ( R$ )], TB_FatosDRE[OPERACAO] = "Saidas" )
+			    RETURN
+			    vCPVSAIDAS -  vCPVENTRAD + vCPVFIXOSA 
+			
+			VAR vTOTAL = _RECEITA - _DEVOLUCAO - _IMPOSTO  - _CPV 
+			
+			RETURN
+			vTOTAL
+			```
+		displayFolder: 03. Auxiliares Vertical
+		lineageTag: d4c7f907-fa11-48e4-b19a-eda8cb6f0a22
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. 01 - Receita Bruta ( R$ )' =
+			
+			[02. Receita Operacional Bruta ( R$ )]
+		displayFolder: 03. Auxiliares Vertical
+		lineageTag: 1f8af24f-95aa-4aa6-b0da-994a8494eb20
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. 02 - Devolucao' =
+			
+			[02. Devolucao e Cancelamentos ( R$ )]
+		displayFolder: 03. Auxiliares Vertical
+		lineageTag: b21862b5-292c-4ba3-ba5b-ea991fda5a7c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. 03 - Margem Bruta ( % )' =
+			
+			// Calculado percentual encima da Receita Bruta
+			DIVIDE( [03. 04 - Margem Bruta ( R$ )], [03. 01 - Receita Bruta ( R$ )] , 0 )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 03. Auxiliares Vertical
+		lineageTag: f64e50fd-a57a-4fec-8a4d-8b80f4844d3f
+
+	measure '03. 05 - Despesas Variaveis ( R$ )' = ```
+			
+			VAR _COMISSOES = 
+			    VAR vCOMISAIDAS = CALCULATE( [01. Total Comissao ( R$ )], TB_FatosDRE[OPERACAO] = "Saidas" )
+			    VAR vCOMIENTRAD = CALCULATE( [01. Total Comissao ( R$ )], TB_FatosDRE[OPERACAO] = "Entradas" )
+			    RETURN
+			    vCOMISAIDAS - vCOMIENTRAD
+			
+			VAR _FRETES = CALCULATE( [01. Total Fretes ( R$ )], TB_FatosDRE[OPERACAO] = "Saidas" )
+			
+			VAR _BONIFICACOES =
+			    VAR vBONISAIDAS = CALCULATE( [01. Total CPV Bonificacao], TB_FatosDRE[OPERACAO] = "Saidas" )
+			    VAR vBONIENTRAD = CALCULATE( [01. Total CPV Bonificacao], TB_FatosDRE[OPERACAO] = "Entradas" )
+			    RETURN
+			    vBONISAIDAS - vBONIENTRAD
+			
+			VAR vTOTAL = _COMISSOES + _FRETES + _BONIFICACOES
+			
+			RETURN
+			vTOTAL
+			```
+		displayFolder: 03. Auxiliares Vertical
+		lineageTag: 14cd7ae0-54a9-4ebc-9f99-41544e3b9d89
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. 06 - Bonificacoes ( R$ )' =
+			
+			VAR _BONIFICACOES =
+			    VAR vBONISAIDAS = CALCULATE( [01. Total CPV Bonificacao], TB_FatosDRE[OPERACAO] = "Saidas" )
+			    VAR vBONIENTRAD = CALCULATE( [01. Total CPV Bonificacao], TB_FatosDRE[OPERACAO] = "Entradas" )
+			    RETURN
+			    vBONISAIDAS - vBONIENTRAD
+			RETURN
+			_BONIFICACOES
+		displayFolder: 03. Auxiliares Vertical
+		lineageTag: 8d3adeea-e905-4c93-b7a8-215a4e572bd9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. 07 - Verbas ( R$ )' = ```
+			
+			VAR _FIXAS = 
+			    CALCULATE( [01. Total Verbas Fixas ( R$ )], TB_FatosDRE[OPERACAO] = "Saidas" )
+			VAR _VARIAVEIS = 
+			    CALCULATE( [01. Total Verbas Variaveis], TB_FatosDRE[OPERACAO] = "Saidas" )
+			RETURN
+			_FIXAS + _VARIAVEIS
+			```
+		displayFolder: 03. Auxiliares Vertical
+		lineageTag: d1e88f55-312f-48cb-8037-8356be72e781
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. 08 - Margem Contribuicao ( R$ )' =
+			
+			VAR _MargemBruta = [03. 04 - Margem Bruta ( R$ )]
+			VAR _DespVariavel = [03. 05 - Despesas Variaveis ( R$ )]
+			VAR _Verbas = [03. 07 - Verbas ( R$ )]
+			
+			RETURN
+			_MargemBruta - _DespVariavel - _Verbas
+		displayFolder: 03. Auxiliares Vertical
+		lineageTag: c26d0246-8467-4773-81a5-efd4396c19c9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. 09 - Margem Contribuicao ( % )' = ```
+			
+			// calculado encima da receita bruta 
+			DIVIDE( [03. 08 - Margem Contribuicao ( R$ )], [02. Receita Operacional Bruta ( R$ )], 0 )
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 03. Auxiliares Vertical
+		lineageTag: 2aaa6894-5996-41a7-98ec-c670d0d208f1
+
+	measure '00. DRE' =
+			
+			VAR _tipo = SELECTEDVALUE( DRE_LV1[SUB] )
+			VAR _cur  = VALUE( SELECTEDVALUE( DRE_LV1[ID] ) )
+			
+			-- valor assinado de cada linha analítica (A) do LV1
+			VAR _rob  =  [02. Receita Operacional Bruta ( R$ )]
+			VAR _dev  = -[02. Devolucao e Cancelamentos ( R$ )]
+			VAR _imp  = -( [02. Imposto de Vendas ( R$ )] + [02. Impostos Devolucoes ( R$ )] )
+			VAR _cpv  = -( [02. Materia Prima + Embalagens ( CPV Variaveis ) ( R$ )]
+			             + [02. Gastos Gerais Fabricacao-GGF FIXO ( R$ )]
+			             - [02. Credito CPV - Devolucao Pro ACA] )
+			VAR _desp = -( [02. Fretes Tereceiros ( R$ )] + [02. Verbas Fixas ( R$ )]
+			             + [02. Verbas Variaveis ( R$ )] + [02. Bonificacao] + [02. Comissoes ( R$ )] )
+			
+			VAR _analitico =
+			    SUMX(
+			        VALUES( DRE_LV2[ID] ),
+			        SWITCH(
+			            DRE_LV2[ID],
+			            1,    IF( ISINSCOPE( DRE_LV2[DESC] ), [02. PV Bruto / Pacotes ( R$ )], [02. Volume Total ( PCTs )] ) ,
+			            20001, _rob,
+			            30001, _dev,
+			            40001, -[02. Imposto de Vendas ( R$ )],
+			            50001,  [02. Impostos Devolucoes ( R$ )],
+			            60001, -[02. Materia Prima + Embalagens ( CPV Variaveis ) ( R$ )],
+			            70001, -[02. Gastos Gerais Fabricacao-GGF FIXO ( R$ )],
+			            80001,  [02. Credito CPV - Devolucao Pro ACA],
+			            90001, -[02. Comissoes ( R$ )],
+			            10001, -[02. Fretes Tereceiros ( R$ )],
+			            11001, -[02. Verbas Fixas ( R$ )],
+			            12001, -[02. Verbas Variaveis ( R$ )],
+			            13001, -[02. Bonificacao]
+			        )
+			    )
+			
+			-- ST = soma acumulada das linhas A (exceto volume) até o índice atual
+			VAR _acumulado =
+			    SUMX(
+			        FILTER(
+			            ALL( DRE_LV1 ),
+			            VALUE( DRE_LV1[ID] ) <= _cur
+			                && DRE_LV1[SUB] = "A"
+			                && DRE_LV1[ID] <> "10001"
+			        ),
+			        SWITCH(
+			            DRE_LV1[ID],
+			            "10002", _rob,
+			            "10003", _dev,
+			            "10005", _imp,
+			            "10007", _cpv,
+			            "10009", _desp
+			        )
+			    )
+			
+			RETURN
+			IF(
+			    ISINSCOPE( DRE_LV2[DESC] ) && _tipo = "ST", BLANK(),
+			    SWITCH( _tipo, "A", _analitico, "ST", _acumulado )
+			)
+		lineageTag: 8b7f07f4-6b2b-4c6d-bdba-dfb1a9a242ca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure HTML_Filtros_Ativos =
+			
+			VAR FiltroACC = IF( ISFILTERED('Senhas/Gerente'[Usuario]),
+			    CONCATENATEX( TOPN(5, VALUES('Senhas/Gerente'[Usuario]), 'Senhas/Gerente'[Usuario], ASC),
+			        "<span class='chip'>" & 'Senhas/Gerente'[Usuario] & "</span>", "", 'Senhas/Gerente'[Usuario], ASC )
+			    & IF( COUNTROWS(VALUES('Senhas/Gerente'[Usuario])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES('Senhas/Gerente'[Usuario])) - 5) & "</span>", "" ) )
+			
+			VAR Filtro1 = IF( ISFILTERED('CALENDARIO DAX'[Ano]),
+			    CONCATENATEX( TOPN(5, VALUES('CALENDARIO DAX'[Ano]), 'CALENDARIO DAX'[Ano], ASC),
+			        "<span class='chip'>" & 'CALENDARIO DAX'[Ano] & "</span>", "", 'CALENDARIO DAX'[Ano], ASC )
+			    & IF( COUNTROWS(VALUES('CALENDARIO DAX'[Ano])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES('CALENDARIO DAX'[Ano])) - 5) & "</span>", "" ) )
+			VAR Filtro2 = IF( ISFILTERED('CALENDARIO DAX'[Ano-Mes]),
+			    CONCATENATEX( TOPN(5, VALUES('CALENDARIO DAX'[Ano-Mes]), 'CALENDARIO DAX'[Ano-Mes], ASC),
+			        "<span class='chip'>" & 'CALENDARIO DAX'[Ano-Mes] & "</span>", "", 'CALENDARIO DAX'[Ano-Mes], ASC )
+			    & IF( COUNTROWS(VALUES('CALENDARIO DAX'[Ano-Mes])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES('CALENDARIO DAX'[Ano-Mes])) - 5) & "</span>", "" ) )
+			VAR Filtro3 = IF( ISFILTERED(TB_REDE[XNOMGRE]),
+			    CONCATENATEX( TOPN(5, VALUES(TB_REDE[XNOMGRE]), TB_REDE[XNOMGRE], ASC),
+			        "<span class='chip'>" & TB_REDE[XNOMGRE] & "</span>", "", TB_REDE[XNOMGRE], ASC )
+			    & IF( COUNTROWS(VALUES(TB_REDE[XNOMGRE])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES(TB_REDE[XNOMGRE])) - 5) & "</span>", "" ) )
+			VAR Filtro4 = IF( ISFILTERED(TB_CLIENTE[XNOMCLI]),
+			    CONCATENATEX( TOPN(5, VALUES(TB_CLIENTE[XNOMCLI]), TB_CLIENTE[XNOMCLI], ASC),
+			        "<span class='chip'>" & TB_CLIENTE[XNOMCLI] & "</span>", "", TB_CLIENTE[XNOMCLI], ASC )
+			    & IF( COUNTROWS(VALUES(TB_CLIENTE[XNOMCLI])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES(TB_CLIENTE[XNOMCLI])) - 5) & "</span>", "" ) )
+			VAR Filtro5 = IF( ISFILTERED(TB_REP[NOMREP]),
+			    CONCATENATEX( TOPN(5, VALUES(TB_REP[NOMREP]), TB_REP[NOMREP], ASC),
+			        "<span class='chip'>" & TB_REP[NOMREP] & "</span>", "", TB_REP[NOMREP], ASC )
+			    & IF( COUNTROWS(VALUES(TB_REP[NOMREP])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES(TB_REP[NOMREP])) - 5) & "</span>", "" ) )
+			VAR Filtro6 = IF( ISFILTERED('UF/REGIÃO'[Região/Grupo]),
+			    CONCATENATEX( TOPN(5, VALUES('UF/REGIÃO'[Região/Grupo]), 'UF/REGIÃO'[Região/Grupo], ASC),
+			        "<span class='chip'>" & 'UF/REGIÃO'[Região/Grupo] & "</span>", "", 'UF/REGIÃO'[Região/Grupo], ASC )
+			    & IF( COUNTROWS(VALUES('UF/REGIÃO'[Região/Grupo])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES('UF/REGIÃO'[Região/Grupo])) - 5) & "</span>", "" ) )
+			VAR Filtro7 = IF( ISFILTERED('UF/REGIÃO'[UF]),
+			    CONCATENATEX( TOPN(5, VALUES('UF/REGIÃO'[UF]), 'UF/REGIÃO'[UF], ASC),
+			        "<span class='chip'>" & 'UF/REGIÃO'[UF] & "</span>", "", 'UF/REGIÃO'[UF], ASC )
+			    & IF( COUNTROWS(VALUES('UF/REGIÃO'[UF])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES('UF/REGIÃO'[UF])) - 5) & "</span>", "" ) )
+			
+			VAR TotalFiltros =
+			    (NOT ISBLANK(FiltroACC)) +
+			    (NOT ISBLANK(Filtro1)) + (NOT ISBLANK(Filtro2)) + (NOT ISBLANK(Filtro3)) +
+			    (NOT ISBLANK(Filtro4)) + (NOT ISBLANK(Filtro5)) + (NOT ISBLANK(Filtro6)) +
+			    (NOT ISBLANK(Filtro7))
+			
+			VAR CSS =
+			"<style>
+			 .bar{font-family:'Segoe UI',Arial,sans-serif;display:flex;align-items:center;gap:12px;box-sizing:border-box;
+			   width:100%;min-height:36px;padding:6px 12px;background:#FFFBEA;border:1px solid #FBE08A;
+			   border-left:5px solid #FEC200;border-radius:8px}
+			 .head{display:flex;align-items:center;gap:6px;flex:0 0 auto;font-size:11px;font-weight:800;
+			   letter-spacing:.06em;text-transform:uppercase;color:#6B5000}
+			 .badge{background:#FEC200;color:#1F1F1F;border-radius:999px;min-width:20px;height:20px;padding:0 6px;
+			   display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;box-sizing:border-box}
+			 .list{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;flex:1 1 auto}
+			 .grp{display:flex;align-items:center;gap:5px}
+			 .lbl{font-size:11px;font-weight:700;color:#B38600}
+			 .chips{display:flex;flex-wrap:wrap;gap:4px}
+			 .chip{background:#fff;color:#4A3800;border:1px solid #FBE08A;border-radius:999px;padding:2px 9px;font-size:11px;
+			   max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+			 .more{background:#FEC200;color:#1F1F1F;border-radius:999px;padding:2px 8px;font-size:11px;font-weight:800}
+			 .none{font-size:11px;color:#8A7A3A;font-style:italic}
+			</style>"
+			
+			VAR Grupos =
+			    IF( NOT ISBLANK(FiltroACC), "<div class='grp'><span class='lbl'>Usuario:</span><div class='chips'>" & FiltroACC & "</div></div>", "" ) &
+			    IF( NOT ISBLANK(Filtro1), "<div class='grp'><span class='lbl'>Ano:</span><div class='chips'>" & Filtro1 & "</div></div>", "" ) &
+			    IF( NOT ISBLANK(Filtro2), "<div class='grp'><span class='lbl'>Mês:</span><div class='chips'>" & Filtro2 & "</div></div>", "" ) &
+			    IF( NOT ISBLANK(Filtro3), "<div class='grp'><span class='lbl'>Grupo:</span><div class='chips'>" & Filtro3 & "</div></div>", "" ) &
+			    IF( NOT ISBLANK(Filtro4), "<div class='grp'><span class='lbl'>Cliente:</span><div class='chips'>" & Filtro4 & "</div></div>", "" ) &
+			    IF( NOT ISBLANK(Filtro5), "<div class='grp'><span class='lbl'>Representante:</span><div class='chips'>" & Filtro5 & "</div></div>", "" ) &
+			    IF( NOT ISBLANK(Filtro6), "<div class='grp'><span class='lbl'>Região:</span><div class='chips'>" & Filtro6 & "</div></div>", "" ) &
+			    IF( NOT ISBLANK(Filtro7), "<div class='grp'><span class='lbl'>UF:</span><div class='chips'>" & Filtro7 & "</div></div>", "" )
+			
+			RETURN
+			CSS &
+			"<div class='bar'>
+			    <div class='head'>&#9660; Filtros aplicados <span class='badge'>" & TotalFiltros & "</span></div>
+			    <div class='list'>" &
+			        IF( TotalFiltros = 0, "<span class='none'>Nenhum filtro aplicado</span>", Grupos ) &
+			    "</div>
+			</div>"
+		lineageTag: faecb63c-7852-489a-bea3-af559bf6c640
+
+	measure '00. DRE A.H ( % )' = ```
+			
+			VAR _Receita = CALCULATE( [02. Receita Operacional Bruta ( R$ )] )
+			
+			VAR _TOTAL = 
+			DIVIDE(
+			    _Medidas[00. DRE],
+			    _Receita ,
+			    0 )
+			
+			RETURN
+			_TOTAL
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 9328cc12-146e-4a5d-b9f8-61ec2bbd6f8a
+
+	measure '00. DRE ( texto )' =
+			
+			VAR _v   = [00. DRE]
+			VAR _lv1 = SELECTEDVALUE( DRE_LV1[ID] )
+			VAR _lv2 = SELECTEDVALUE( DRE_LV2[ID] )
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK( _v ), BLANK(),
+			    ISINSCOPE( DRE_LV2[DESC] ) && _lv2 = 1, FORMAT( _v, "R$ #,0.00" ),   -- PV por pacote
+			    _lv1 = "10001", FORMAT( _v, "#,0" ),                                  -- volume
+			    fxFORMAT( _v, 9 )                                             -- demais linhas: 1 casa
+			)
+		lineageTag: bd653dab-2470-49c9-881a-3f09fe752548
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure '00. DRE ( cor )' =
+			
+			VAR _v = [00. DRE]
+			RETURN
+			IF( _v < 0, "#930202", "#000000" )
+		lineageTag: 6553b45d-6e9e-4c4c-b517-38a2b9e6eefe
+
+	measure '00.BLANK' =
+			
+			BLANK()
+		formatString: 0
+		lineageTag: fe449cbb-227a-495f-8499-5da8be647a31
+
+	partition _Medidas = m
+		mode: import
+		source =
+				let
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Colunas Removidas" = Table.RemoveColumns(Origem,{"Coluna 1"})
+				in
+				  #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

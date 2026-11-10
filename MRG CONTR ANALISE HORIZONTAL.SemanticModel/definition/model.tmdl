@@ -6,19 +6,44 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
+queryGroup Dimensao
+
+	annotation PBI_QueryGroupOrder = 1
+
+queryGroup Fatos
+
+	annotation PBI_QueryGroupOrder = 2
+
+queryGroup _DRE
+
+	annotation PBI_QueryGroupOrder = 2
+
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["fBASE","dKEYS"]
+annotation PBI_QueryOrder = ["TB_FatosDRE","DRE_Geral - Plan","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas","UF/REGIÃO","Senhas/Gerente","DRE_LV1","DRE_LV2","_Medidas2"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling","TMDLView_Desktop"]
 
-ref table fBASE
-ref table DateTableTemplate_d7bff408-9f12-4662-ab4a-b03948192a4f
-ref table MEDIDAS
-ref table dCALENDARIO
-ref table LocalDateTable_9fdbebe4-f3bc-4773-ae60-71e048f8db41
-ref table LocalDateTable_68c7ec58-9f2b-4869-a3ac-70045622507b
-ref table dKEYS
+ref table TB_FatosDRE
+ref table TB_CLIENTE
+ref table DateTableTemplate_7eea9b1b-50b4-4bf8-8bba-de7e1d840fb1
+ref table LocalDateTable_a7a6e3d3-7ef7-4d32-b6ad-4752882cc1ad
+ref table TB_FAMRMC
+ref table TB_MOTIVO
+ref table TB_PRODUTO
+ref table TB_REDE
+ref table TB_REP
+ref table 'CALENDARIO DAX'
+ref table LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335
+ref table _Medidas
+ref table UF/REGIÃO
+ref table Senhas/Gerente
+ref table DRE_LV1
+ref table DRE_LV2
+ref table xSenha
+ref table 'DRE_Geral - Plan'
+ref table _Medidas2
+ref table LocalDateTable_db2af823-1cfb-4e14-b69e-73f66c068892
 
 ref cultureInfo pt-BR
 

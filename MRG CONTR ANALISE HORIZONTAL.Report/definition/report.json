@@ -46,6 +46,10 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "htmlContent443BE3AD55E043BF878BED274D3A6855",
+    "ultimateWaterfall9712E1351D4E4FA89077ED4D9351DC71"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",
@@ -63,14 +67,30 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Baly-Logotipo_Principal-Preto_38682817178858153.png",
-          "path": "Baly-Logotipo_Principal-Preto_38682817178858153.png",
+          "name": "Home4226997229655015.png",
+          "path": "Home4226997229655015.png",
           "type": "Image"
         },
         {
-          "name": "eraser36517604517872115.png",
-          "path": "eraser36517604517872115.png",
+          "name": "Incorreta3310014167805867.png",
+          "path": "Incorreta3310014167805867.png",
           "type": "Image"
+        },
+        {
+          "name": "Senhas3602430278388976.png",
+          "path": "Senhas3602430278388976.png",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "siftTable37558C6455D74B6D80A77ABDBC28F82C",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "siftTable37558C6455D74B6D80A77ABDBC28F82C.pbiviz.json",
+          "path": "siftTable37558C6455D74B6D80A77ABDBC28F82C.pbiviz.json",
+          "type": "CustomVisualMetadata"
         }
       ]
     }

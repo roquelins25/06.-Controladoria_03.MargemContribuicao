@@ -1,0 +1,53 @@
+table DRE_LV2
+	lineageTag: e04ab721-74c0-47e7-b022-7bfea74c772b
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 67af61d4-545d-48d2-9e1a-b8dac48477cb
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_LV1
+		dataType: string
+		lineageTag: 9bb4115f-db67-43a0-a639-335e51775be5
+		summarizeBy: none
+		sourceColumn: ID_LV1
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESC
+		dataType: string
+		lineageTag: 300c3344-8ca6-42ab-9b0c-f90f4ee5eb97
+		summarizeBy: none
+		sourceColumn: DESC
+		sortByColumn: Índice
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Índice
+		dataType: int64
+		formatString: 0
+		lineageTag: e4a0f0b5-a0d3-48c5-a7d4-bb7146bba10a
+		summarizeBy: sum
+		sourceColumn: Índice
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DRE_LV2 = m
+		mode: import
+		queryGroup: _DRE
+		source =
+				let
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("hZHNToNQEIVfZcJKY40C1tqloDQuGokxbEgXA4zJTYBp7r00vo5xYXwAn4AXc/hJRRIjm5PAd2bOHNLUuZTHdRaOO2qcQKAbyxcx5mzJOLtF6ngTyBN9opyURXjck8ZccY1lz/kTzhe9owOXTfvRfpEBghDrnEqsqLY8DL6aGJaiD9WejWVIqC6wJ5Z/ENPRPXg9AVeiW7Ttp1YIsVYVwhncbwM4gVAOTFDeH0gZOO2tq5l1g7LBwEaOEybCTKscZdU7y4BIvfLou5n5Qk2FkmzdjvOfhGKLNRdNwXCbY4YF9+71xL3u3FwpY473uLPPkSb5HfBMWrrXY3+uO59RW41d+IR0hqZLiyPq/YN2rbRvXS0D7//mA67Vy9BDH3H3DQ==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ID = _t, ID_LV1 = _t, DESC = _t]),
+				  #"Tipo de coluna alterado" = Table.TransformColumnTypes(Origem, {{"ID", Int64.Type}, {"DESC", type text}, {"ID_LV1", type text}}),
+				  #"Índice adicionado" = Table.AddIndexColumn(#"Tipo de coluna alterado", "Índice", 1, 1, Int64.Type)
+				in
+				  #"Índice adicionado"
+
+	annotation PBI_ResultType = Table
+

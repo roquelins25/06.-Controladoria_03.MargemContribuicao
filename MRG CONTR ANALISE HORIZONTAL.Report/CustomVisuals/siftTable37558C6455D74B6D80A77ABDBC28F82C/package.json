@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0.8",
+  "author": {
+    "name": "faizaan.me",
+    "email": "contact@faizaan.me"
+  },
+  "resources": [
+    {
+      "resourceId": "rId0",
+      "sourceType": 5,
+      "file": "resources/siftTable37558C6455D74B6D80A77ABDBC28F82C.pbiviz.json"
+    }
+  ],
+  "visual": {
+    "guid": "siftTable37558C6455D74B6D80A77ABDBC28F82C",
+    "name": "siftTable",
+    "displayName": "Sift Table",
+    "version": "1.0.0.8",
+    "description": "Table with a filter under every column header. Column filters become real Power BI report filters.",
+    "supportUrl": "https://faizaan.me",
+    "gitHubUrl": "",
+    "visualClassName": "Visual"
+  },
+  "metadata": {
+    "pbivizjson": {
+      "resourceId": "rId0"
+    }
+  }
+}

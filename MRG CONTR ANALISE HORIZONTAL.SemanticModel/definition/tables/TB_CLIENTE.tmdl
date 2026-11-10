@@ -1,0 +1,372 @@
+table TB_CLIENTE
+	lineageTag: 2f4df360-4357-4a2d-a524-c7cd7c15bbba
+
+	column CODCLI
+		dataType: int64
+		formatString: 0
+		lineageTag: 34eb3b1d-2c79-496f-91b6-ba19a8ec20cf
+		summarizeBy: none
+		sourceColumn: CODCLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOMCLI
+		dataType: string
+		lineageTag: 500a9161-b45e-4a13-a102-51287ce0b2ab
+		summarizeBy: none
+		sourceColumn: NOMCLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column XNOMCLI
+		dataType: string
+		lineageTag: 1e474063-af3c-4f7d-9471-269c4cd10e23
+		summarizeBy: none
+		sourceColumn: XNOMCLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column CGCCPF
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a23873c-97e0-4d9a-913f-37a5dfc9bd64
+		summarizeBy: sum
+		sourceColumn: CGCCPF
+
+		annotation SummarizationSetBy = Automatic
+
+	column APECLI
+		dataType: string
+		lineageTag: 2d3e4c6b-3342-43ea-beaa-790c8bd7af81
+		summarizeBy: none
+		sourceColumn: APECLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column USU_PERDUP
+		dataType: string
+		lineageTag: ef1b4bf0-865d-47ff-9efc-f97c5cdc2a1b
+		summarizeBy: none
+		sourceColumn: USU_PERDUP
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARCLI
+		dataType: string
+		lineageTag: b48dfa5e-aff9-45c9-9eb1-64916bbdd398
+		summarizeBy: none
+		sourceColumn: MARCLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODGRE
+		dataType: int64
+		formatString: 0
+		lineageTag: 30405be4-962d-48c4-ab0c-bbce6ac9ada0
+		summarizeBy: none
+		sourceColumn: CODGRE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CEPCLI
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d91de0e-8ec0-4f0d-a3f4-41fc0f32f1f0
+		summarizeBy: sum
+		sourceColumn: CEPCLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column ENDCLI
+		dataType: string
+		lineageTag: 65aac845-f630-4003-b890-174af3d2b37a
+		summarizeBy: none
+		sourceColumn: ENDCLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column CIDCLI
+		dataType: string
+		lineageTag: d11f4182-ba02-4ffe-845d-60ba84f291af
+		summarizeBy: none
+		sourceColumn: CIDCLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column SIGUFS
+		dataType: string
+		lineageTag: 175f9594-f2c5-444e-830a-e023da679695
+		summarizeBy: none
+		sourceColumn: SIGUFS
+
+		annotation SummarizationSetBy = Automatic
+
+	column FONCLI
+		dataType: string
+		lineageTag: d3ffd5f1-b227-4ed8-b892-295a17400e52
+		summarizeBy: none
+		sourceColumn: FONCLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATCAD
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 77f6a433-d8a8-4b4c-9dd1-c390dae9d253
+		summarizeBy: none
+		sourceColumn: DATCAD
+
+		variation Variação
+			isDefault
+			relationship: 5988ac3b-bca9-44b6-93e7-2dd5fa2e99eb
+			defaultHierarchy: LocalDateTable_a7a6e3d3-7ef7-4d32-b6ad-4752882cc1ad.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITCLI
+		dataType: string
+		lineageTag: c148697a-c6fa-4f18-aa1a-d06ef8cd2af8
+		summarizeBy: none
+		sourceColumn: SITCLI
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODREP
+		dataType: int64
+		formatString: 0
+		lineageTag: dc0e2e34-3bf1-4a96-bfcf-e61fa08b99fb
+		summarizeBy: sum
+		sourceColumn: CODREP
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOMREP
+		dataType: string
+		lineageTag: 89444d3b-6f17-4aec-ba8c-3f06736da3ae
+		summarizeBy: none
+		sourceColumn: NOMREP
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODPAI
+		dataType: string
+		lineageTag: a6436798-3f7b-4f79-83f9-ae2758466a88
+		summarizeBy: none
+		sourceColumn: CODPAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOMPAI
+		dataType: string
+		lineageTag: a9dffc69-a3ef-477a-9cf6-63d79cd50516
+		summarizeBy: none
+		sourceColumn: NOMPAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODRAM
+		dataType: string
+		lineageTag: 21bfc2a1-8908-4b89-bd2e-7fb2dd6e7d4d
+		summarizeBy: none
+		sourceColumn: CODRAM
+
+		annotation SummarizationSetBy = Automatic
+
+	column USU_CODRAM
+		dataType: string
+		lineageTag: e75cac85-4544-4646-bc72-72a26410eef0
+		summarizeBy: none
+		sourceColumn: USU_CODRAM
+
+		annotation SummarizationSetBy = Automatic
+
+	column USU_DESRAM
+		dataType: string
+		lineageTag: 2ba10235-90f0-4ba5-bf22-2ae6df778efb
+		summarizeBy: none
+		sourceColumn: USU_DESRAM
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITFINANCEIRO
+		dataType: string
+		lineageTag: c7e38b76-1a5a-4515-a725-087668d40658
+		summarizeBy: none
+		sourceColumn: SITFINANCEIRO
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITINADIMPLENCIA
+		dataType: string
+		lineageTag: 57b8e544-51f2-4e00-b06b-0448a579c130
+		summarizeBy: none
+		sourceColumn: SITINADIMPLENCIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODCPG
+		dataType: string
+		lineageTag: c2ca5ca8-8fd1-4009-b1dc-0ed2bf76c5ea
+		summarizeBy: none
+		sourceColumn: CODCPG
+
+		annotation SummarizationSetBy = Automatic
+
+	column ABRCPG
+		dataType: string
+		lineageTag: d6a575de-2c1b-47ea-81e4-c192be4b96b5
+		summarizeBy: none
+		sourceColumn: ABRCPG
+
+		annotation SummarizationSetBy = Automatic
+
+	column VLRLIM
+		dataType: double
+		lineageTag: ce32c8e0-84c9-4b52-82ec-742b84e8bb83
+		summarizeBy: sum
+		sourceColumn: VLRLIM
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EXIAGE
+		dataType: string
+		lineageTag: 2959d136-c721-48d9-bf96-0816c6fbd623
+		summarizeBy: none
+		sourceColumn: EXIAGE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEP_PADRAO
+		dataType: string
+		lineageTag: 8d7012ec-96c3-492b-a013-b3113007f595
+		summarizeBy: none
+		sourceColumn: DEP_PADRAO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODREVE
+		dataType: string
+		lineageTag: b89e8a8d-17c9-4a91-ac5e-d15aafc1deb2
+		summarizeBy: none
+		sourceColumn: CODREVE
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOMRVE
+		dataType: string
+		lineageTag: 7e6cfbcc-4a59-485c-bdb5-fe5891c72f7f
+		summarizeBy: none
+		sourceColumn: NOMRVE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ABRRVE
+		dataType: string
+		lineageTag: 21280d6f-fefb-4a31-b54d-96f66e57cce1
+		summarizeBy: none
+		sourceColumn: ABRRVE
+
+		annotation SummarizationSetBy = Automatic
+
+	column XREGSENHA
+		dataType: string
+		lineageTag: 027bd795-bacd-49d9-804a-d585ead4c6aa
+		summarizeBy: none
+		sourceColumn: XREGSENHA
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODTPR
+		dataType: string
+		lineageTag: 0b1f7664-0ca5-4764-aef1-7cc18335c44f
+		summarizeBy: none
+		sourceColumn: CODTPR
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TB_CLIENTE = m
+		mode: import
+		queryGroup: Dimensao
+		source = ```
+				let
+				    Fonte = Oracle.Database(
+					"147.15.121.67:49182/I260220090255_p.subnetappxts2p.saaspremiumvcn1.oraclevcn.com", 
+					[CommandTimeout = #duration(0, 0, 10, 0),
+				   Query = "
+				select 
+					   e085cli.codcli,
+				       e085cli.nomcli,
+					   e085cli.codcli || ' - ' || UPPER( e085cli.nomcli ) as xNOMCLI,
+					   e085cli.cgccpf,
+					   e085cli.apecli,
+					   replace(cast((e085hcl.usu_perdup/100) AS VARCHAR2(4000)),'.',',') usu_perdup,
+					   e085cli.marcli,
+					   e085cli.codgre,
+					   e085cli.cepcli,
+					   e085cli.endcli,
+					   e085cli.cidcli,
+					   e085cli.sigufs,
+					   e085cli.foncli,
+					   e085cli.datcad,
+					   e085cli.sitcli,
+					   e085hcl.codrep,
+					   e090rep.nomrep,
+					   e085cli.codpai,
+					   e006pai.nompai,
+					   e085cli.codram,
+					   e085cli.usu_codram,
+					   upper(usu_tcanais.usu_desram) as usu_desram,
+					   case when SitFinanceira.codcli is null then NULL
+						     else 'PENDÊNCIA FINANCEIRA'
+					   end SitFinanceiro,
+					   case when SitInadimplencia.codcli is null then 'NAO'
+						     else 'SIM'
+					   end SitInadimplencia,
+				       e085hcl.codcpg,
+					   e028cpg.abrcpg,
+					   e085hcl.vlrlim,
+					   e085hcl.exiage,
+				       case when exists(select 1 from e085ccl where e085ccl.codcli = e085cli.codcli and e085cli.sigufs='SC') then 'TORNADO-SC'
+					        when (e085cli.sigufs='PR') then 'TORNADO-PR'
+					        when (e085cli.sigufs='RS') then 'CLICK-RS'
+							else 'PADRAO' end as Dep_Padrao,
+						e085hcl.codrve codreve,
+						e017rve.nomrve nomrve,
+						e017rve.abrrve abrrve,
+						CASE
+							WHEN e017rve.abrrve IN ('SPI','SPA','SPC') THEN e017rve.abrrve
+							ELSE e085cli.sigufs
+						END xREGSenha,
+						
+						e085hcl.codtpr codtpr
+				from e085cli
+				  join e085hcl  on e085cli.codcli = e085hcl.codcli and e085hcl.codfil = 1
+				  LEFT OUTER JOIN e017rve ON e017rve.codrve = e085hcl.codrve AND e017rve.codemp = e085hcl.codemp
+				  left outer join e006pai  on e085cli.codpai = e006pai.codpai
+				  left outer join usu_tcanais  on e085cli.usu_codram = usu_tcanais.usu_codram
+				  left outer join e090rep  on e085hcl.codrep =  e090rep.codrep
+				  left outer JOIN e081tab   on e085hcl.codemp = e081tab.codemp and e085hcl.codtpr = e081tab.codtpr
+				  left outer JOIN e028cpg   on e085hcl.codemp = e028cpg.codemp and e085hcl.codcpg = e028cpg.codcpg
+				  left outer join(select codcli
+					     from e301tcr
+						where sittit = 'AB'
+						  and codtpt = '01'
+						  and vctpro < (SYSDATE - 7)
+						group by codcli) SitFinanceira
+								on SitFinanceira.codcli = e085cli.codcli
+				  left outer join (select tcr.codcli
+				                     from e301tcr tcr
+				                     join e039por por on por.codpor=tcr.codpor
+				                    where por.codpor IN ('ADV','ANGE','CART','CNTH','EXCE','GBNT','PERD','PLCB','REN')
+				                      AND TCR.VLRABE>0
+				                 group by tcr.codcli) SitInadimplencia
+								       on SitInadimplencia.codcli = e085cli.codcli
+				   ", HierarchicalNavigation = true])
+				in
+				    Fonte
+				```
+
+	annotation PBI_ResultType = Exception
+

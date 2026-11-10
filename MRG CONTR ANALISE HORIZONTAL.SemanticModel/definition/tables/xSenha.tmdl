@@ -1,0 +1,49 @@
+table xSenha
+	isHidden
+	lineageTag: 1aab9d1a-59bf-4526-9f79-4cc366fa70c6
+
+	measure 'Valor xSenha' = SELECTEDVALUE('xSenha'[xSenha])
+		formatString: 0
+		isHidden
+		lineageTag: a18f73fb-7e17-4075-93be-3b01698ef6a8
+
+	measure '.Check Senha' = ```
+			
+			VAR _Usuario = TRIM( SELECTEDVALUE( 'Senhas/Gerente'[Usuario] ) )
+			VAR _SenhaDigitada = [Valor xSenha]
+			VAR _SenhaCorreta = 
+			    CALCULATE(
+			        MAX( 'Senhas/Gerente'[Senha] ),
+			        'Senhas/Gerente'[Usuario] = _Usuario
+			    )
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK( _Usuario ), "SELECIONE UM USUÁRIO",
+			    _SenhaDigitada <> _SenhaCorreta, "SENHA INCORRETA",
+			    "HORIZONTAL"
+			)
+			```
+		isHidden
+		lineageTag: 8bd52e42-da44-4e71-914a-c1e4a6db6e2f
+
+	column xSenha
+		isHidden
+		formatString: 0
+		lineageTag: a8b7f40e-976f-4d9c-b0ce-b686650c24c0
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition xSenha = calculated
+		mode: import
+		source = GENERATESERIES(0, 9999, 1)
+
+	annotation PBI_Id = 51bfcb72bd6a44d6a5ed7cfb01d1e079
+
