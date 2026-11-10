@@ -4,9 +4,10 @@
   "position": {
     "x": 222.21523959151611,
     "y": 0,
-    "z": 5,
+    "z": 5000,
     "height": 56.307934014139832,
-    "width": 1057.7847604084839
+    "width": 1057.7847604084839,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
@@ -63,23 +64,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "bcd9820a09a2db30aee2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "HTML_Filtros_Ativos"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

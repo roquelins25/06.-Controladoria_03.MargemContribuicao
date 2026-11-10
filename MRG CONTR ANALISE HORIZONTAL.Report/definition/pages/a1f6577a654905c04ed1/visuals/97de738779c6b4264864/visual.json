@@ -6,7 +6,8 @@
     "y": 80.439905734485464,
     "z": 0,
     "height": 631.453260015711,
-    "width": 1057.7847604084839
+    "width": 1057.7847604084839,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -1050,7 +1051,7 @@
         }
       },
       {
-        "name": "2c05c9a5cb0e475434c2",
+        "name": "35b9414b0a9aba40a01e",
         "field": {
           "Column": {
             "Expression": {
@@ -1064,21 +1065,7 @@
         "type": "Categorical"
       },
       {
-        "name": "267b4b8061219ed36111",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "03. 04 - Margem Bruta ( R$ )"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ed8540499c5c4b710cc1",
+        "name": "294c1eda2aabc0065a0d",
         "field": {
           "Measure": {
             "Expression": {
@@ -1092,7 +1079,7 @@
         "type": "Advanced"
       },
       {
-        "name": "242d79e930039eee1008",
+        "name": "5ebf7d553b724b87cacc",
         "field": {
           "Measure": {
             "Expression": {
@@ -1106,7 +1093,21 @@
         "type": "Advanced"
       },
       {
-        "name": "488c4682475bd5ee0b3b",
+        "name": "c70020bbc4dcb599a33a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "03. 04 - Margem Bruta ( R$ )"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b2846738076747ea5d8d",
         "field": {
           "Measure": {
             "Expression": {
@@ -1120,7 +1121,7 @@
         "type": "Advanced"
       },
       {
-        "name": "a345bbdeb440d148cb85",
+        "name": "988f1994958a63d02440",
         "field": {
           "Measure": {
             "Expression": {
@@ -1134,7 +1135,7 @@
         "type": "Advanced"
       },
       {
-        "name": "508f84671710ca50475c",
+        "name": "954a985be9723712364a",
         "field": {
           "Measure": {
             "Expression": {
@@ -1148,7 +1149,7 @@
         "type": "Advanced"
       },
       {
-        "name": "557731e9823003468307",
+        "name": "8a946d74d436a20c95c4",
         "field": {
           "Measure": {
             "Expression": {
@@ -1162,7 +1163,7 @@
         "type": "Advanced"
       },
       {
-        "name": "9f2be83789d300284240",
+        "name": "7ad1a44fc00270088e19",
         "field": {
           "Measure": {
             "Expression": {
@@ -1176,7 +1177,7 @@
         "type": "Advanced"
       },
       {
-        "name": "9b06a6469430e4ca80d0",
+        "name": "b2bf7177546242ac6a55",
         "field": {
           "Measure": {
             "Expression": {
