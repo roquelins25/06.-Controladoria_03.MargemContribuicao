@@ -577,6 +577,36 @@ table _Medidas
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 9328cc12-146e-4a5d-b9f8-61ec2bbd6f8a
 
+	measure '00. DRE ( texto )' =
+			
+			VAR _v   = [00. DRE]
+			VAR _lv1 = SELECTEDVALUE( DRE_LV1[ID] )
+			VAR _lv2 = SELECTEDVALUE( DRE_LV2[ID] )
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK( _v ), BLANK(),
+			    ISINSCOPE( DRE_LV2[DESC] ) && _lv2 = 1, FORMAT( _v, "R$ #,0.00" ),   -- PV por pacote
+			    _lv1 = "10001", FORMAT( _v, "#,0" ),                                  -- volume
+			    fxFORMAT( _v, 9 )                                             -- demais linhas: 1 casa
+			)
+		lineageTag: bd653dab-2470-49c9-881a-3f09fe752548
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure '00. DRE ( cor )' =
+			
+			VAR _v = [00. DRE]
+			RETURN
+			IF( _v < 0, "#930202", "#000000" )
+		lineageTag: 6553b45d-6e9e-4c4c-b517-38a2b9e6eefe
+
+	measure '00.BLANK' =
+			
+			BLANK()
+		formatString: 0
+		lineageTag: fe449cbb-227a-495f-8499-5da8be647a31
+
 	partition _Medidas = m
 		mode: import
 		source =
