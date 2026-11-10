@@ -1,8 +1,11 @@
 # MRG CONTR ANALISE HORIZONTAL
 
-## Origem dos dados e responsabilidade
+**Construído por Bruno Roque.**
 
-A fonte de dados deste Power BI é uma planilha Excel elaborada e mantida pela Controladoria. O autor da planilha tem plena ciência dos dados disponibilizados. Este Power BI apenas reflete o resultado dessa planilha: não cria, corrige nem valida os números de origem. Dúvidas sobre o conteúdo dos dados (valores, regras de cálculo da base, classificações) devem ser tratadas com a Controladoria.
+> **Origem dos dados e responsabilidade**
+> A fonte de dados deste Power BI é uma **planilha Excel elaborada e mantida pela Controladoria**. O autor da planilha tem plena ciência dos dados disponibilizados. Este Power BI **apenas reflete o resultado dessa planilha**: não cria, corrige nem valida os números de origem. Dúvidas sobre o conteúdo dos dados (valores, regras de cálculo da base, classificações) devem ser tratadas com a Controladoria.
+
+---
 
 Relatório de Power BI da Controladoria: DRE gerencial em análise horizontal e vertical, com Margem Bruta e Margem de Contribuição por cliente, representante, produto e região.
 
