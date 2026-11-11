@@ -1,9 +1,9 @@
 table 'DRE_Geral - Plan'
-	lineageTag: 8d0e4570-de3c-49b9-ae0b-b317f44be92e
+	lineageTag: 4e0e30e5-fd32-4116-a90a-1dc49c2a2ce2
 
 	column Operacao
 		dataType: string
-		lineageTag: c0c5e9ae-b110-4203-a46d-c50c04df75f5
+		lineageTag: 3fd7d0be-60c4-40d8-bfb9-df2e796eb758
 		summarizeBy: none
 		sourceColumn: Operacao
 
@@ -12,7 +12,7 @@ table 'DRE_Geral - Plan'
 	column Filial
 		dataType: int64
 		formatString: 0
-		lineageTag: 12e8f3c7-2331-4f32-b4a6-b839df02b564
+		lineageTag: 2a02252c-f20d-4629-9359-57cd4cc7a4bf
 		summarizeBy: sum
 		sourceColumn: Filial
 
@@ -21,7 +21,7 @@ table 'DRE_Geral - Plan'
 	column Mes_Ano
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 8e55b3e9-84a2-4dbb-a215-e7a1cc808def
+		lineageTag: e10c4232-c2fb-4db1-b5d8-aad6e523c5b8
 		summarizeBy: none
 		sourceColumn: Mes_Ano
 
@@ -32,14 +32,14 @@ table 'DRE_Geral - Plan'
 	column Data_NF
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 33244bf8-fd95-4dd1-8568-fe91091c064f
+		lineageTag: 8843993a-ceea-4ec3-80f0-9de0b51311bd
 		summarizeBy: none
 		sourceColumn: Data_NF
 
 		variation Variação
 			isDefault
-			relationship: e91d0d18-e245-4c85-b953-8663a6a575fc
-			defaultHierarchy: LocalDateTable_db2af823-1cfb-4e14-b69e-73f66c068892.'Hierarquia de datas'
+			relationship: f00e7a07-1fd1-4bf7-b7b5-8123f7346edf
+			defaultHierarchy: LocalDateTable_4b66a03b-b322-4aa3-8307-3b19a2284be4.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -47,7 +47,7 @@ table 'DRE_Geral - Plan'
 
 	column Tipo_Nota
 		dataType: string
-		lineageTag: 403ad36d-27f6-4a8d-92fc-203d48771c9f
+		lineageTag: 325f649c-3eec-462c-80f5-32f8b4cd77f8
 		summarizeBy: none
 		sourceColumn: Tipo_Nota
 
@@ -55,7 +55,7 @@ table 'DRE_Geral - Plan'
 
 	column Codigo_repres_NF
 		dataType: double
-		lineageTag: 0df2924e-3b7d-413e-a047-6d6bc17f3b86
+		lineageTag: ff8d1d56-cdc6-4aaf-8465-c88af94b8a5f
 		summarizeBy: none
 		sourceColumn: Codigo_repres_NF
 
@@ -66,7 +66,7 @@ table 'DRE_Geral - Plan'
 	column Nota_Fiscal
 		dataType: int64
 		formatString: 0
-		lineageTag: ad23ccde-ee22-4256-a153-5ec1925294b3
+		lineageTag: 1c4d7f25-8783-41dc-bc50-e186cacf6b02
 		summarizeBy: sum
 		sourceColumn: Nota_Fiscal
 
@@ -75,7 +75,7 @@ table 'DRE_Geral - Plan'
 	column Cod_Cliente
 		dataType: int64
 		formatString: 0
-		lineageTag: 6da063aa-8324-4134-9c70-f18d756dbf3c
+		lineageTag: 70f74f8a-7ea6-430b-9c32-4a9b45c7260e
 		summarizeBy: none
 		sourceColumn: Cod_Cliente
 
@@ -83,7 +83,7 @@ table 'DRE_Geral - Plan'
 
 	column CFOP
 		dataType: string
-		lineageTag: 83b4165a-043d-4c42-bbc4-38418ac07fb1
+		lineageTag: 7ba87c39-6157-41f1-85d6-f4a0f098613b
 		summarizeBy: none
 		sourceColumn: CFOP
 
@@ -91,7 +91,7 @@ table 'DRE_Geral - Plan'
 
 	column CodProduto
 		dataType: string
-		lineageTag: 304fdf01-d810-4680-ad4e-89855d288b94
+		lineageTag: 3d11573e-7bb2-4e8d-9e83-093d45f30bbc
 		summarizeBy: none
 		sourceColumn: CodProduto
 
@@ -99,7 +99,7 @@ table 'DRE_Geral - Plan'
 
 	column Qtd_Item
 		dataType: double
-		lineageTag: d65cdfd8-0243-407b-ab8c-d603adb4829e
+		lineageTag: 94ba70f6-d363-4c1b-992c-46a1881bd62d
 		summarizeBy: sum
 		sourceColumn: Qtd_Item
 
@@ -109,7 +109,7 @@ table 'DRE_Geral - Plan'
 
 	column CPV_Item_Venda
 		dataType: double
-		lineageTag: dd72020a-e99e-4d42-b5ed-1888c54eccd8
+		lineageTag: f3ef72d7-8953-4520-a152-8d86a4ec32c2
 		summarizeBy: sum
 		sourceColumn: CPV_Item_Venda
 
@@ -119,7 +119,7 @@ table 'DRE_Geral - Plan'
 
 	column Valor_Venda
 		dataType: double
-		lineageTag: 276b1e97-b212-4710-a819-c969719c2d7d
+		lineageTag: a2f7b595-828e-4c7e-9766-2b5fa438e6d2
 		summarizeBy: sum
 		sourceColumn: Valor_Venda
 
@@ -129,7 +129,7 @@ table 'DRE_Geral - Plan'
 
 	column Valor_CPV_Bonif
 		dataType: double
-		lineageTag: 5a50d07c-a00d-4ce4-a9cc-4fdaa07451d7
+		lineageTag: fe2f5a9a-14e5-42b7-bbf4-0f8262acbfcf
 		summarizeBy: sum
 		sourceColumn: Valor_CPV_Bonif
 
@@ -139,7 +139,7 @@ table 'DRE_Geral - Plan'
 
 	column Valor_Desconto
 		dataType: double
-		lineageTag: bcfb93a0-9b04-4ae9-918d-b6b1b1779039
+		lineageTag: b375f503-cb97-4db3-830d-d2694c5287a1
 		summarizeBy: sum
 		sourceColumn: Valor_Desconto
 
@@ -149,7 +149,7 @@ table 'DRE_Geral - Plan'
 
 	column Valor_Outras
 		dataType: double
-		lineageTag: 6e8ce6a3-7157-4f97-bd9c-fdf49d6abf39
+		lineageTag: 7019aa3f-8363-41cf-930f-f30b9c80cc0d
 		summarizeBy: sum
 		sourceColumn: Valor_Outras
 
@@ -159,7 +159,7 @@ table 'DRE_Geral - Plan'
 
 	column Valor_IPI
 		dataType: double
-		lineageTag: a4552821-c2b9-4bf8-8577-a7d87ed8aeea
+		lineageTag: 12667558-c163-489d-bfe4-98727ec155ea
 		summarizeBy: sum
 		sourceColumn: Valor_IPI
 
@@ -169,7 +169,7 @@ table 'DRE_Geral - Plan'
 
 	column Valor_ICMS
 		dataType: double
-		lineageTag: b6f7f783-488e-485d-950f-ae87e2ade5e1
+		lineageTag: 8b6ba147-a963-4f8f-a333-c13f1c52b3cc
 		summarizeBy: sum
 		sourceColumn: Valor_ICMS
 
@@ -179,7 +179,7 @@ table 'DRE_Geral - Plan'
 
 	column Valor_FCP
 		dataType: double
-		lineageTag: 62710533-11ab-49f1-ae12-169a5f3f5886
+		lineageTag: 7abef914-214e-4b03-9461-cb3da4e7e61d
 		summarizeBy: sum
 		sourceColumn: Valor_FCP
 
@@ -189,7 +189,7 @@ table 'DRE_Geral - Plan'
 
 	column Valor_ST
 		dataType: double
-		lineageTag: 5d6a3704-757e-4601-a720-70a4907b90e5
+		lineageTag: 6cec695f-ff30-44f4-94a3-3d814d9c7a59
 		summarizeBy: sum
 		sourceColumn: Valor_ST
 
@@ -199,7 +199,7 @@ table 'DRE_Geral - Plan'
 
 	column Valor_PIS_Venda
 		dataType: double
-		lineageTag: 87b57a61-f4a5-44cf-a26e-b64bd75fee2f
+		lineageTag: c07ab2da-3b40-410b-9c04-912d48eb816e
 		summarizeBy: sum
 		sourceColumn: Valor_PIS_Venda
 
@@ -209,7 +209,7 @@ table 'DRE_Geral - Plan'
 
 	column valor_COFINS
 		dataType: double
-		lineageTag: 3d0eb7e8-06db-42b2-a452-49999056128a
+		lineageTag: 187c277b-155e-46a3-9484-12b188133f31
 		summarizeBy: sum
 		sourceColumn: valor_COFINS
 
@@ -219,7 +219,7 @@ table 'DRE_Geral - Plan'
 
 	column Total_Impostos
 		dataType: double
-		lineageTag: d434d50e-7e9b-40e5-99ed-4c4eff1538af
+		lineageTag: df54d5b7-4d9c-4839-8066-e7d7957e54ce
 		summarizeBy: sum
 		sourceColumn: Total_Impostos
 
@@ -229,7 +229,7 @@ table 'DRE_Geral - Plan'
 
 	column Valor_Comissao
 		dataType: double
-		lineageTag: 6b0295a7-1cc3-4813-9b64-06672d8664f0
+		lineageTag: 8e493a48-7755-4d16-b637-81b98365905b
 		summarizeBy: sum
 		sourceColumn: Valor_Comissao
 
@@ -239,7 +239,7 @@ table 'DRE_Geral - Plan'
 
 	column CPV_Proc_Fixo
 		dataType: double
-		lineageTag: 3f76b6b9-bb9f-4f97-89e4-3f97d7f8cfef
+		lineageTag: f955cd40-3c43-4e29-aeda-163ab8be0f45
 		summarizeBy: sum
 		sourceColumn: CPV_Proc_Fixo
 
@@ -249,7 +249,7 @@ table 'DRE_Geral - Plan'
 
 	column DESP_Oper_Fixa
 		dataType: double
-		lineageTag: 8612e8b9-f0c7-4ab5-8685-e23952846f2e
+		lineageTag: c59d31b9-7940-4467-85ce-94862cf3dfb9
 		summarizeBy: sum
 		sourceColumn: DESP_Oper_Fixa
 
@@ -259,7 +259,7 @@ table 'DRE_Geral - Plan'
 
 	column CRED_Impostos
 		dataType: double
-		lineageTag: ce9d2fc0-fbea-491d-85b3-bd8af783b97e
+		lineageTag: c9140d23-c6e4-4d79-80b4-bfd9bd2dff60
 		summarizeBy: sum
 		sourceColumn: CRED_Impostos
 
@@ -269,7 +269,7 @@ table 'DRE_Geral - Plan'
 
 	column Verba_Fixa
 		dataType: double
-		lineageTag: d88d7f2b-db35-4ee2-9d11-b5fb5acbb4cc
+		lineageTag: 131a030d-81b0-477d-bb01-59d4377a4cfd
 		summarizeBy: sum
 		sourceColumn: Verba_Fixa
 
@@ -279,7 +279,7 @@ table 'DRE_Geral - Plan'
 
 	column Verba_Variavel
 		dataType: double
-		lineageTag: 582aa380-fa69-48c8-a8de-a62f6f550c7a
+		lineageTag: 5a9566e9-e6b2-4ba0-a30b-018a19b22aff
 		summarizeBy: sum
 		sourceColumn: Verba_Variavel
 
@@ -289,7 +289,7 @@ table 'DRE_Geral - Plan'
 
 	column Frete
 		dataType: double
-		lineageTag: 30e9081b-dc86-44d4-9ab7-b6e15a6022fe
+		lineageTag: ee354814-0bc9-4fe1-877c-0a7feb1eed10
 		summarizeBy: sum
 		sourceColumn: Frete
 
@@ -299,7 +299,7 @@ table 'DRE_Geral - Plan'
 
 	column Motivo_Devolucao
 		dataType: string
-		lineageTag: a2d9f804-2c54-47da-ab9b-664d8ec6d2f5
+		lineageTag: 32c11b38-237f-43b5-9f9e-54acc47089e5
 		summarizeBy: none
 		sourceColumn: Motivo_Devolucao
 
@@ -310,14 +310,7 @@ table 'DRE_Geral - Plan'
 		queryGroup: Fatos
 		source =
 				let
-				  Origem = Excel.Workbook(File.Contents("\\dados\Financeiro\Controladoria\BD_BI\DRE CLIENTE CONSOLIDADO\DRE CLIENTE_10112026.xlsx"), null, true),
-				  #"Navegação 1" = Origem{[Item = "DRE_Geral - Jan26 a Set26", Kind = "Sheet"]}[Data],
-				  #"Linhas filtradas" = Table.SelectRows(#"Navegação 1", each [Column1] <> null and [Column1] <> ""),
-				  #"Cabeçalhos promovidos" = Table.PromoteHeaders(#"Linhas filtradas", [PromoteAllScalars = true]),
-				  #"As outras colunas foram removidas" = Table.SelectColumns(#"Cabeçalhos promovidos", {"Operacao", "Filial", "Mes_Ano", "Data_NF", "Tipo_Nota", "Codigo_repres_NF", "Nota_Fiscal", "Cod_Cliente", "CFOP", "CodProduto", "Qtd_Item", "CPV_Item_Venda", "Valor_Venda", "Valor_CPV_Bonif", "Valor_Desconto", "Valor_Outras", "Valor_IPI", "Valor_ICMS", "Valor_FCP", "Valor_ST", "Valor_PIS_Venda", "valor_COFINS", "Total_Impostos", "Valor_Comissao", "CPV_Proc_Fixo", "DESP_Oper_Fixa", "CRED_Impostos", "Verba_Fixa", "Verba_Variavel", "Frete", "Motivo_Devolucao"}),
-				  #"Tipo de coluna alterado 1" = Table.TransformColumnTypes(#"As outras colunas foram removidas", {{"Operacao", type text}, {"Tipo_Nota", type text}, {"Motivo_Devolucao", type text}, {"Frete", type number}, {"Verba_Variavel", type number}, {"Verba_Fixa", type number}, {"CRED_Impostos", type number}, {"DESP_Oper_Fixa", type number}, {"CPV_Proc_Fixo", type number}, {"Valor_Comissao", type number}, {"Total_Impostos", type number}, {"valor_COFINS", type number}, {"Valor_PIS_Venda", type number}, {"Valor_ST", type number}, {"Valor_FCP", type number}, {"Valor_ICMS", type number}, {"Valor_IPI", type number}, {"Valor_Outras", type number}, {"Valor_Desconto", type number}, {"Valor_CPV_Bonif", type number}, {"Valor_Venda", type number}, {"CPV_Item_Venda", type number}, {"Qtd_Item", type number}, {"CodProduto", type text}, {"CFOP", type text}, {"Cod_Cliente", Int64.Type}, {"Nota_Fiscal", Int64.Type}, {"Codigo_repres_NF", type number}, {"Data_NF", type date}, {"Mes_Ano", type date}, {"Filial", Int64.Type}})
+				  Origem = Table.Combine({#"DRE_Geral - Plan1", DRE_OUT})
 				in
-				  #"Tipo de coluna alterado 1"
-
-	annotation PBI_ResultType = Table
+				  Origem
 

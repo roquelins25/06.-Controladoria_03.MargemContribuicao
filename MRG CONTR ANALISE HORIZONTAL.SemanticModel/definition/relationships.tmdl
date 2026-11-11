@@ -49,24 +49,24 @@ relationship b9b64cb9-1e51-b739-395b-e7e68cd6b271
 	fromColumn: DRE_LV2.ID_LV1
 	toColumn: DRE_LV1.ID
 
-relationship 85a51af1-540a-afd2-e162-64057a676d08
-	fromColumn: 'DRE_Geral - Plan'.Cod_Cliente
-	toColumn: TB_CLIENTE.CODCLI
+relationship f00e7a07-1fd1-4bf7-b7b5-8123f7346edf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'DRE_Geral - Plan'.Data_NF
+	toColumn: LocalDateTable_4b66a03b-b322-4aa3-8307-3b19a2284be4.Date
 
-relationship 48259466-2c7f-37dd-7f27-46d0b6d03120
+relationship 6a853e48-e812-a8b3-9672-dc22feabdcd1
+	fromColumn: 'DRE_Geral - Plan'.Mes_Ano
+	toColumn: 'CALENDARIO DAX'.Date
+
+relationship 4c998965-8291-aba4-fe4e-7becc7caed87
 	fromColumn: 'DRE_Geral - Plan'.CodProduto
 	toColumn: TB_PRODUTO.CODPRO
 
-relationship 0a1cbae2-cb66-8429-f9d1-b87e75816704
+relationship c8fe253e-4a73-2122-c007-c60c532b0f07
 	fromColumn: 'DRE_Geral - Plan'.Codigo_repres_NF
 	toColumn: TB_REP.CODREP
 
-relationship e91d0d18-e245-4c85-b953-8663a6a575fc
-	joinOnDateBehavior: datePartOnly
-	fromColumn: 'DRE_Geral - Plan'.Data_NF
-	toColumn: LocalDateTable_db2af823-1cfb-4e14-b69e-73f66c068892.Date
-
-relationship e7c44f92-5ed8-6a44-c62c-9db06198fe99
-	fromColumn: 'DRE_Geral - Plan'.Mes_Ano
-	toColumn: 'CALENDARIO DAX'.Date
+relationship 75114246-f426-a5b6-5cb2-a3a8df39f67c
+	fromColumn: 'DRE_Geral - Plan'.Cod_Cliente
+	toColumn: TB_CLIENTE.CODCLI
 

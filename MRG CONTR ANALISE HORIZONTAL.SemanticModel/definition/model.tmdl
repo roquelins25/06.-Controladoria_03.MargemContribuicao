@@ -3,6 +3,7 @@ model Model
 	defaultPowerBIDataSourceVersion: powerBI_V3
 	sourceQueryCulture: pt-BR
 	dataAccessOptions
+		fastCombine
 		legacyRedirects
 		returnErrorValuesAsNull
 
@@ -18,9 +19,13 @@ queryGroup _DRE
 
 	annotation PBI_QueryGroupOrder = 2
 
+queryGroup 'Fatos Dim'
+
+	annotation PBI_QueryGroupOrder = 3
+
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["TB_FatosDRE","DRE_Geral - Plan","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas","UF/REGIÃO","Senhas/Gerente","DRE_LV1","DRE_LV2","_Medidas2"]
+annotation PBI_QueryOrder = ["TB_FatosDRE","DRE_Geral - Plan1","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas","UF/REGIÃO","Senhas/Gerente","DRE_LV1","DRE_LV2","_Medidas2","DRE_OUT","DRE_Geral - Plan"]
 
 annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling","TMDLView_Desktop"]
 
@@ -41,9 +46,9 @@ ref table Senhas/Gerente
 ref table DRE_LV1
 ref table DRE_LV2
 ref table xSenha
-ref table 'DRE_Geral - Plan'
 ref table _Medidas2
-ref table LocalDateTable_db2af823-1cfb-4e14-b69e-73f66c068892
+ref table 'DRE_Geral - Plan'
+ref table LocalDateTable_4b66a03b-b322-4aa3-8307-3b19a2284be4
 
 ref cultureInfo pt-BR
 

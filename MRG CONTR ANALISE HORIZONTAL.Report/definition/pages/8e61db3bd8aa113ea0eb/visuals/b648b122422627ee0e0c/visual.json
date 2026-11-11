@@ -202,7 +202,7 @@
                 "Property": "02. 8 - MRG CTRB"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -354,7 +354,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "100.15343932667388D"
+                  "Value": "89.31021181296151D"
                 }
               }
             }
@@ -368,7 +368,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "49.226253410652276D"
+                  "Value": "58.373353178633714D"
                 }
               }
             }
@@ -691,7 +691,7 @@
                           "min": {
                             "color": {
                               "Literal": {
-                                "Value": "'#800000'"
+                                "Value": "'#efb5b9'"
                               }
                             },
                             "value": {
@@ -703,7 +703,7 @@
                           "mid": {
                             "color": {
                               "Literal": {
-                                "Value": "'#FBFB4C'"
+                                "Value": "'#FFFFA9'"
                               }
                             },
                             "value": {
