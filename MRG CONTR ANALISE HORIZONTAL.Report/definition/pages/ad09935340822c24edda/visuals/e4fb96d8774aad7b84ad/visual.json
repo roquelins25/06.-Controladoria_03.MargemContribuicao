@@ -4,9 +4,10 @@
   "position": {
     "x": 0,
     "y": 433.40258814414676,
-    "z": 11001,
+    "z": 5000,
     "height": 204.74126336397393,
-    "width": 515.50734632720014
+    "width": 515.50734632720014,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "lineChart",
@@ -875,34 +876,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "c1292b29a7207daed3ec",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas2"
-              }
-            },
-            "Property": "00.DRE DRE"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "eee3e5c9702caa7075c3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "CALENDARIO DAX"
-              }
-            },
-            "Property": "Mês Abrev"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

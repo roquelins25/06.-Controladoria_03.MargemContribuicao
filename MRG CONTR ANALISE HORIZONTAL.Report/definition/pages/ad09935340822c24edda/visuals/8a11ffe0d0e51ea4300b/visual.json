@@ -4,9 +4,10 @@
   "position": {
     "x": 1.4551299183402311,
     "y": 215.80434971110813,
-    "z": 9000,
+    "z": 2000,
     "height": 204.74126336397393,
-    "width": 515.50734632720014
+    "width": 515.50734632720014,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineChart",
@@ -273,7 +274,7 @@
                       "Entity": "_Medidas2"
                     }
                   },
-                  "Property": "03. 02 - Grafico Rotulo TOPO2"
+                  "Property": "00.DRE DRE A.H ( % )"
                 }
               }
             }
@@ -809,48 +810,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "152d844a590235640b63",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas2"
-              }
-            },
-            "Property": "00.DRE DRE"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "40334382e0a6e0204b65",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "CALENDARIO DAX"
-              }
-            },
-            "Property": "Mês Abrev"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c93d16d0450aac67950c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas2"
-              }
-            },
-            "Property": "03. Grafic ( % ) zero"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -7,15 +7,6 @@ relationship AutoDetected_2ff23641-8ff9-4020-87aa-cd1b53f93e83
 	fromColumn: TB_FatosDRE.USU_CODMAR
 	toColumn: TB_MOTIVO.USU_CODMAR
 
-relationship 8adf8594-d76b-4edf-a5c0-f2492a920c45
-	joinOnDateBehavior: datePartOnly
-	fromColumn: 'CALENDARIO DAX'.Date
-	toColumn: LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335.Date
-
-relationship b4da1ee2-2fa3-8147-2bd4-8961973e1b09
-	fromColumn: TB_FatosDRE.DATA_NF
-	toColumn: 'CALENDARIO DAX'.Date
-
 relationship 02163e64-9ecd-51c7-8ce4-14252b9d93e8
 	fromColumn: TB_FatosDRE.CODPRODUTO
 	toColumn: TB_PRODUTO.CODPRO
@@ -54,10 +45,6 @@ relationship f00e7a07-1fd1-4bf7-b7b5-8123f7346edf
 	fromColumn: 'DRE_Geral - Plan'.Data_NF
 	toColumn: LocalDateTable_4b66a03b-b322-4aa3-8307-3b19a2284be4.Date
 
-relationship 6a853e48-e812-a8b3-9672-dc22feabdcd1
-	fromColumn: 'DRE_Geral - Plan'.Mes_Ano
-	toColumn: 'CALENDARIO DAX'.Date
-
 relationship 4c998965-8291-aba4-fe4e-7becc7caed87
 	fromColumn: 'DRE_Geral - Plan'.CodProduto
 	toColumn: TB_PRODUTO.CODPRO
@@ -69,4 +56,33 @@ relationship c8fe253e-4a73-2122-c007-c60c532b0f07
 relationship 75114246-f426-a5b6-5cb2-a3a8df39f67c
 	fromColumn: 'DRE_Geral - Plan'.Cod_Cliente
 	toColumn: TB_CLIENTE.CODCLI
+
+relationship 18c9999e-a614-9d40-79c8-7e7408f6cf34
+	fromColumn: TB_REAL2025.xCOD
+	toColumn: DRE_LV2.ID
+
+relationship 715ee892-10c4-4cb0-9bc0-c1d89a1c8d79
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CALENDARIO DAX'.Date
+	toColumn: LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335.Date
+
+relationship b4da1ee2-2fa3-8147-2bd4-8961973e1b09
+	fromColumn: TB_FatosDRE.DATA_NF
+	toColumn: 'CALENDARIO DAX'.Date
+
+relationship 6a853e48-e812-a8b3-9672-dc22feabdcd1
+	fromColumn: 'DRE_Geral - Plan'.Mes_Ano
+	toColumn: 'CALENDARIO DAX'.Date
+
+relationship b0507044-9c80-57d7-f822-21cd9dbd9853
+	fromColumn: TB_REAL2025.xDATA
+	toColumn: 'CALENDARIO DAX'.Date
+
+relationship aaab6689-9077-6fb6-6499-926a6c179cbf
+	fromColumn: TB_ORCADO.xCOD
+	toColumn: DRE_LV2.ID
+
+relationship 23972f34-56ea-659b-1c18-f45a0678c7e9
+	fromColumn: TB_ORCADO.xDATA
+	toColumn: 'CALENDARIO DAX'.Date
 

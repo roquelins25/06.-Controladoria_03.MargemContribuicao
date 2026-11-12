@@ -4,9 +4,10 @@
   "position": {
     "x": 906.23759863796477,
     "y": 215.7904516445044,
-    "z": 11000,
+    "z": 4000,
     "height": 47.963491310125264,
-    "width": 135.0602492910306
+    "width": 135.0602492910306,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -169,20 +170,6 @@
   "parentGroupName": "669dd39f02e08747da00",
   "filterConfig": {
     "filters": [
-      {
-        "name": "534e0e84ad08288acce6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DRE_LV2"
-              }
-            },
-            "Property": "DESC"
-          }
-        },
-        "type": "Categorical"
-      },
       {
         "name": "13d41aa80272270067a2",
         "field": {

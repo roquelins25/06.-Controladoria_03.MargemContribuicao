@@ -10,7 +10,7 @@ table 'CALENDARIO DAX'
 
 		variation Variação
 			isDefault
-			relationship: 8adf8594-d76b-4edf-a5c0-f2492a920c45
+			relationship: 715ee892-10c4-4cb0-9bc0-c1d89a1c8d79
 			defaultHierarchy: LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
@@ -147,7 +147,7 @@ table 'CALENDARIO DAX'
 		mode: import
 		source = ```
 				
-				var minAno = YEAR(MIN(TB_FatosDRE[DATA_NF]))
+				var minAno = YEAR(MIN(TB_REAL2025[xDATA]))
 				var MaxAno = YEAR(MAX(TB_FatosDRE[DATA_NF])) 
 				RETURN
 				ADDCOLUMNS(

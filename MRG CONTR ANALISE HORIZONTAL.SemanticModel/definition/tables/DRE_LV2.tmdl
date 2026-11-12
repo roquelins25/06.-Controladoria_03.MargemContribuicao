@@ -5,7 +5,7 @@ table DRE_LV2
 		dataType: int64
 		formatString: 0
 		lineageTag: 67af61d4-545d-48d2-9e1a-b8dac48477cb
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ID
 
 		annotation SummarizationSetBy = Automatic
@@ -43,7 +43,7 @@ table DRE_LV2
 		queryGroup: _DRE
 		source =
 				let
-				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("hZLPSsNAEMZfZchJsaKbttYebTXFQzGI5BJ6mCYjLDSZsrstvo54EB/AJ8iLOfnTdg2IexnY/L5vZr5smgbXclQwCFRX4wRmZuf4KsaMHdlgNUiD0INCqc+UkXYIT1symGkucdNwQ48bSr2nPW921Wf1TRYI5lhmtMGCSset8cgTjKU+Flu2jiGhMseGGP9B+NYNeOOBE6lLdNWX0Qix0QXCBTwsZ3AGc1kwQbnfk7Zw3kgnPekCpYOFhSwnTIRrozOUVh8sBpF+405329PNDeVaZqt7XJ4mFFlsON/lDHcZrjHnRj311NNazYW29riP6n2ODMnvgBcykr3p8lOq71E6g/XwCZk12npa7NDwH7ROpXqvY2n54W9+xqV+bXM4jjg6Ikqd9rfeuziYjU9k+zDsliz2ydUP", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ID = _t, ID_LV1 = _t, DESC = _t]),
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("hZLbSsNAEIZfZciVYkXTcy/tEcFiKJKb0otpMsJCko27m+LriBfiA/gEeTFns7FNg2JuBrLfP4d/Zrv1bvnzvY7n1zEIYaoKI28CjKQh7e06W6/bgLocNxSRMAiPOSmMhMwwqbheg+txnNNBJkX5UX6RBoIZZhElmFJmpEvcbwgGHO/TXGojIaQsxooY/EE0U1fgsAGOOK7RlJ9KIARKpAhXsFhP4QJmPGCI/P9AQsNlJR21pCvkChpWPBwzS9wrESGXepecYCleZa0bt3QzRbHg3myN61OHLAuUjItYwl2Ee4xlpZ401BOrlqnQ+jiP33peKuJ1wBMp9l7V/vl+O0dmFNrmQ1J71LZbrNHuP6h1pXyztji+d85PZSaenQ/HFvtHxPdP8+vGXfwkG5xIdxg6J42/kcNzMpjPwT2M2ilyRZFwe3HE+JzYLHSRGLabXcjs6bFt8CBeCmE3sPsG", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ID = _t, ID_LV1 = _t, DESC = _t]),
 				  #"Tipo de coluna alterado" = Table.TransformColumnTypes(Origem, {{"ID", Int64.Type}, {"DESC", type text}, {"ID_LV1", type text}}),
 				  #"Índice adicionado" = Table.AddIndexColumn(#"Tipo de coluna alterado", "Índice", 1, 1, Int64.Type)
 				in

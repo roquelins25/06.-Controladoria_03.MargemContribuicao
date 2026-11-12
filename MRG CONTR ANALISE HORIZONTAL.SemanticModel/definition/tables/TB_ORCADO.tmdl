@@ -1,0 +1,109 @@
+table TB_ORCADO
+	lineageTag: a7f05ee0-1737-4722-9224-70eb8845b2bb
+
+	column 'D R E   Gerêncial'
+		dataType: string
+		lineageTag: 945d63bd-4f5d-4db0-8c52-503b1425483f
+		summarizeBy: none
+		sourceColumn: D R E   Gerêncial
+
+		annotation SummarizationSetBy = Automatic
+
+	column xCOD
+		dataType: int64
+		formatString: 0
+		lineageTag: 45044cec-773d-4279-87ca-f6ccfb6ee209
+		summarizeBy: none
+		sourceColumn: xCOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column Atributo
+		dataType: string
+		lineageTag: 2f619f9f-b394-4141-bdc7-37f354535b6d
+		summarizeBy: none
+		sourceColumn: Atributo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valor
+		dataType: double
+		lineageTag: 977c33ce-3c1e-4876-a5f2-4f74118ec094
+		summarizeBy: sum
+		sourceColumn: Valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column xDATA
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b7e7ec5c-eac8-4688-bbd9-262f80c150a2
+		summarizeBy: none
+		sourceColumn: xDATA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition TB_ORCADO = m
+		mode: import
+		queryGroup: Fatos
+		source = ```
+				let
+				  Origem = Excel.Workbook(File.Contents("\\dados\Financeiro\Controladoria\BD_BI\DRE CLIENTE CONSOLIDADO\DRE_ORCADOS\KPIs DRE Consolidado.xlsx"), null, true),
+				  #"Navegação 1" = Origem{[Item = "Planilha1", Kind = "Sheet"]}[Data],
+				  #"As outras colunas foram removidas" = Table.SelectColumns(#"Navegação 1", {"Column2", "Column27", "Column29", "Column31", "Column33", "Column35", "Column37", "Column39", "Column41", "Column43", "Column45", "Column47", "Column49"}),
+				  #"Linhas filtradas" = Table.SelectRows(#"As outras colunas foram removidas", each ([Column2] <> null)),
+				  #"Cabeçalhos promovidos" = Table.PromoteHeaders(#"Linhas filtradas", [PromoteAllScalars = true]),
+				  #"Personalização adicionada" = Table.AddColumn(#"Cabeçalhos promovidos", "xCOD", each if [D R E   Gerêncial] = "Receita Operacional Bruta " then 20001
+				else if [D R E   Gerêncial] = "Devolução de Clientes" then 30001
+				else if [D R E   Gerêncial] = "Impostos s/ vendas" then 40001
+				else if [D R E   Gerêncial] = "MATÉRIA PRIMA + EMBALAGENS (CPV Variáveis)" then 60001
+				else if [D R E   Gerêncial] = " GASTOS GERAIS FABRICAÇÃO-GGF FIXO" then 70001
+				else if [D R E   Gerêncial] = "CRÉDITO CPV - Devolução Prod ACA" then 80001
+				else if [D R E   Gerêncial] = "Comissões " then 90001
+				else if [D R E   Gerêncial] = "Fretes Terceiros" then 10001
+				else if [D R E   Gerêncial] = "Contratos Verbas Fixas" then 11001
+				else if [D R E   Gerêncial] = "Contratos Verbas Variáveis" then 12001
+				else if [D R E   Gerêncial] = "Bonificação" then 13001
+				else if [D R E   Gerêncial] = "CRÉDITOS OPERACIONAIS" then 14001
+				else if [D R E   Gerêncial] = "DESPESAS OPERACIONAIS" then 15001
+				else if [D R E   Gerêncial] = "PDD - Prov Devedores Duvidosos" then 16001
+				else if [D R E   Gerêncial] = "DEPRECIAÇÃO Total" then 17001
+				else if [D R E   Gerêncial] = "RESULTADO FINANCEIRO LIQUIDO" then 18001
+				else null),
+				  #"Linhas filtradas 1" = Table.SelectRows(#"Personalização adicionada", each ([xCOD] <> null)),
+				  #"Colunas transformadas em linhas" = Table.UnpivotOtherColumns(#"Linhas filtradas 1", {"D R E   Gerêncial", "xCOD"}, "Atributo", "Valor"),
+				  #"Coluna Condicional Adicionada" = Table.AddColumn(
+				    #"Colunas transformadas em linhas",
+				    "xDATA",
+				    each
+				        let
+				            Mes = Text.End(Text.Trim([Atributo]), 6),
+				            MesNum = 
+				                if Text.StartsWith(Mes, "JAN") then 1
+				                else if Text.StartsWith(Mes, "FEV") then 2
+				                else if Text.StartsWith(Mes, "MAR") then 3
+				                else if Text.StartsWith(Mes, "ABR") then 4
+				                else if Text.StartsWith(Mes, "MAI") then 5
+				                else if Text.StartsWith(Mes, "JUN") then 6
+				                else if Text.StartsWith(Mes, "JUL") then 7
+				                else if Text.StartsWith(Mes, "AGO") then 8
+				                else if Text.StartsWith(Mes, "SET") then 9
+				                else if Text.StartsWith(Mes, "OUT") then 10
+				                else if Text.StartsWith(Mes, "NOV") then 11
+				                else if Text.StartsWith(Mes, "DEZ") then 12
+				                else null
+				        in
+				            if MesNum <> null then #date(2026, MesNum, 1) else null,
+				    type date
+				),
+				  #"Tipo de coluna alterado 1" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada", {{"xCOD", Int64.Type}, {"Valor", type number}, {"D R E   Gerêncial", type text}, {"Atributo", type text}})
+				in
+				  #"Tipo de coluna alterado 1"
+				```
+
+	annotation PBI_ResultType = Table
+

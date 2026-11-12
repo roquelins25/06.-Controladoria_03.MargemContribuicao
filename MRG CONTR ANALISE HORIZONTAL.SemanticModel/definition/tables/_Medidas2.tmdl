@@ -483,9 +483,10 @@ table _Medidas2
 			    SWITCH( _tipo, "A", _analitico, "ST", _acumulado )
 			)
 			```
+		formatString: #,0
 		lineageTag: 8b7f07f4-6b2b-4c6d-bdba-dfb1a9a242ca
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure '00.DRE DRE ( cor )' =
 			
@@ -749,7 +750,7 @@ table _Medidas2
 			
 			SWITCH(
 			    TRUE(),
-			    SELECTEDVALUE( DRE_LV1[ID] ) = "10001", "#ffd6a5",
+			    SELECTEDVALUE( DRE_LV1[ID] ) IN{ "10001", "10006" }, "#ffd6a5",
 			    SELECTEDVALUE( DRE_LV1[SUB] ) = "ST", "#fff3b0",
 			    "#f8f9fa"
 			)
@@ -835,6 +836,50 @@ table _Medidas2
 		lineageTag: d90a191a-3b3b-44db-96d3-b665f7433b2f
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '00.DRE 2025' = ```
+			
+			VAR _VALOR = SUM( TB_REAL2025[Valor] )
+			VAR _SUBTOTAL = 
+			SWITCH(
+			    SELECTEDVALUE(DRE_LV1[SUB]),
+			    "A", _VALOR  ,
+			    "ST",CALCULATE(
+			            SUM( TB_REAL2025[Valor] ) ,
+			            FILTER(
+			                ALL(DRE_LV1),
+			                'DRE_LV1'[Índice] <= MAX(DRE_LV1[Índice])
+			            )
+			    )
+			)
+			RETURN
+			_SUBTOTAL
+			```
+		formatString: #,0
+		lineageTag: f4c0d24c-d937-4143-92e6-132c798aecb0
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '00.DRE ORCADO 2026' = ```
+			
+			VAR _VALOR = SUM( TB_ORCADO[Valor] )
+			VAR _SUBTOTAL = 
+			SWITCH(
+			    SELECTEDVALUE(DRE_LV1[SUB]),
+			    "A", _VALOR  ,
+			    "ST",CALCULATE(
+			            SUM( TB_ORCADO[Valor] ) ,
+			            FILTER(
+			                ALL(DRE_LV1),
+			                'DRE_LV1'[Índice] <= MAX(DRE_LV1[Índice])
+			            )
+			    )
+			)
+			RETURN
+			_SUBTOTAL
+			```
+		formatString: #,0
+		lineageTag: 32fbfa04-97e4-4268-8014-c33250f4fcd0
 
 	partition _Medidas2 = m
 		mode: import

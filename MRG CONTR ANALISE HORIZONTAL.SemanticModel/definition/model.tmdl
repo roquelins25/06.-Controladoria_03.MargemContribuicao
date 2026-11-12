@@ -25,7 +25,7 @@ queryGroup 'Fatos Dim'
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["TB_FatosDRE","DRE_Geral - Plan1","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas","UF/REGIÃO","Senhas/Gerente","DRE_LV1","DRE_LV2","_Medidas2","DRE_OUT","DRE_Geral - Plan"]
+annotation PBI_QueryOrder = ["TB_FatosDRE","DRE_Geral - Plan1","TB_CLIENTE","TB_FAMRMC","TB_MOTIVO","TB_PRODUTO","TB_REDE","TB_REP","_Medidas","UF/REGIÃO","Senhas/Gerente","DRE_LV1","DRE_LV2","_Medidas2","DRE_OUT","DRE_Geral - Plan","TB_REAL2025","TB_ORCADO"]
 
 annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling","TMDLView_Desktop"]
 
@@ -39,7 +39,6 @@ ref table TB_PRODUTO
 ref table TB_REDE
 ref table TB_REP
 ref table 'CALENDARIO DAX'
-ref table LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335
 ref table _Medidas
 ref table UF/REGIÃO
 ref table Senhas/Gerente
@@ -49,6 +48,9 @@ ref table xSenha
 ref table _Medidas2
 ref table 'DRE_Geral - Plan'
 ref table LocalDateTable_4b66a03b-b322-4aa3-8307-3b19a2284be4
+ref table TB_REAL2025
+ref table LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335
+ref table TB_ORCADO
 
 ref cultureInfo pt-BR
 

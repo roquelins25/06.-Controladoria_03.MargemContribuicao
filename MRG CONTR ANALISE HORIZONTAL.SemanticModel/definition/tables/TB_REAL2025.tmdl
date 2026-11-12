@@ -1,0 +1,86 @@
+table TB_REAL2025
+	lineageTag: 39b05327-a583-46af-867c-02a78e85c5d4
+
+	column 'D R E   Gerêncial'
+		dataType: string
+		lineageTag: 5ffd6c93-e758-4212-98ff-20374a9f7dae
+		summarizeBy: none
+		sourceColumn: D R E   Gerêncial
+
+		annotation SummarizationSetBy = Automatic
+
+	column xCOD
+		dataType: int64
+		formatString: 0
+		lineageTag: e1d2249e-c7ae-4ee6-83c3-300b42f8f4a9
+		summarizeBy: none
+		sourceColumn: xCOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column Atributo
+		dataType: string
+		lineageTag: 313bfad7-84c6-46af-be73-eb922b2715ec
+		summarizeBy: none
+		sourceColumn: Atributo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valor
+		dataType: double
+		lineageTag: a68dc842-72b5-41f4-8c4a-13f034a837ea
+		summarizeBy: sum
+		sourceColumn: Valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column xDATA
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 08e88306-08fb-4332-94a9-dc9d7d55551d
+		summarizeBy: none
+		sourceColumn: xDATA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition TB_REAL2025 = m
+		mode: import
+		queryGroup: Fatos
+		source =
+				let
+				  Origem = Excel.Workbook(File.Contents("\\dados\Financeiro\Controladoria\BD_BI\DRE CLIENTE CONSOLIDADO\DRE_ORCADOS\KPIs DRE Consolidado.xlsx"), null, true),
+				  #"Navegação 1" = Origem{[Item = "Planilha1", Kind = "Sheet"]}[Data],
+				  #"As outras colunas foram removidas" = Table.SelectColumns(#"Navegação 1", {"Column2", "Column3", "Column5", "Column7", "Column9", "Column11", "Column13", "Column15", "Column17", "Column19", "Column21", "Column23", "Column25"}),
+				  #"Linhas filtradas" = Table.SelectRows(#"As outras colunas foram removidas", each ([Column2] <> null)),
+				  #"Cabeçalhos promovidos" = Table.PromoteHeaders(#"Linhas filtradas", [PromoteAllScalars = true]),
+				  #"Tipo de coluna alterado" = Table.TransformColumnTypes(#"Cabeçalhos promovidos", {{"D R E   Gerêncial", type text}, {" Real JAN/25", type number}, {" Real FEV/25", type number}, {" Real MAR/25", type number}, {" Real ABR/25", type number}, {" Real MAI/25", type number}, {" Real JUN/25", type number}, {" Real JUL/25", type number}, {" Real AGO/25", type number}, {" Real SET/25", type number}, {" Real OUT/25", type number}, {" Real NOV/25", type number}, {" Real DEZ/25", type number}}),
+				  #"Personalização adicionada" = Table.AddColumn(#"Tipo de coluna alterado", "xCOD", each if [D R E   Gerêncial] = "Receita Operacional Bruta " then 20001
+				else if [D R E   Gerêncial] = "Devolução de Clientes" then 30001
+				else if [D R E   Gerêncial] = "Impostos s/ vendas" then 40001
+				else if [D R E   Gerêncial] = "MATÉRIA PRIMA + EMBALAGENS (CPV Variáveis)" then 60001
+				else if [D R E   Gerêncial] = " GASTOS GERAIS FABRICAÇÃO-GGF FIXO" then 70001
+				else if [D R E   Gerêncial] = "CRÉDITO CPV - Devolução Prod ACA" then 80001
+				else if [D R E   Gerêncial] = "Comissões " then 90001
+				else if [D R E   Gerêncial] = "Fretes Terceiros" then 10001
+				else if [D R E   Gerêncial] = "Contratos Verbas Fixas" then 11001
+				else if [D R E   Gerêncial] = "Contratos Verbas Variáveis" then 12001
+				else if [D R E   Gerêncial] = "Bonificação" then 13001
+				else if [D R E   Gerêncial] = "CRÉDITOS OPERACIONAIS" then 14001
+				else if [D R E   Gerêncial] = "DESPESAS OPERACIONAIS" then 15001
+				else if [D R E   Gerêncial] = "PDD - Prov Devedores Duvidosos" then 16001
+				else if [D R E   Gerêncial] = "DEPRECIAÇÃO Total" then 17001
+				else if [D R E   Gerêncial] = "RESULTADO FINANCEIRO LIQUIDO" then 18001
+				else null),
+				  #"Linhas filtradas 1" = Table.SelectRows(#"Personalização adicionada", each ([xCOD] <> null)),
+				  #"Colunas transformadas em linhas" = Table.UnpivotOtherColumns(#"Linhas filtradas 1", {"D R E   Gerêncial", "xCOD"}, "Atributo", "Valor"),
+				  #"Coluna Condicional Adicionada" = Table.AddColumn(#"Colunas transformadas em linhas", "xDATA", each if [Atributo] = " Real JAN/25" then #date(2025, 1, 1) else if [Atributo] = " Real FEV/25" then #date(2025, 2, 1) else if [Atributo] = " Real MAR/25" then #date(2025, 3, 1) else if [Atributo] = " Real ABR/25" then #date(2025, 4, 1) else if [Atributo] = " Real MAI/25" then #date(2025, 5, 1) else if [Atributo] = " Real JUN/25" then #date(2025, 6, 1) else if [Atributo] = " Real JUL/25" then #date(2025, 7, 1) else if [Atributo] = " Real AGO/25" then #date(2025, 8, 1) else if [Atributo] = " Real SET/25" then #date(2025, 9, 1) else if [Atributo] = " Real OUT/25" then #date(2025, 10, 1) else if [Atributo] = " Real NOV/25" then #date(2025, 11, 1) else if [Atributo] = " Real DEZ/25" then #date(2025, 12, 1) else null, type date),
+				  #"Tipo de coluna alterado 1" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada", {{"xCOD", Int64.Type}})
+				in
+				  #"Tipo de coluna alterado 1"
+
+	annotation PBI_ResultType = Table
+

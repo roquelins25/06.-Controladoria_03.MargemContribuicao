@@ -7066,6 +7066,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "00.DRE 2026": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7123,7 +7133,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "entity__Medidas2.entity_03__grafic": {
+			    "entity__Medidas2.entity_03__grafic____zero": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas2",
@@ -7133,12 +7143,7 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "03. grafic": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "03. grafic ( % )": {
+			          "03. grafic ( % ) zero": {
 			            "State": "Generated"
 			          }
 			        },
@@ -7151,11 +7156,17 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "0": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
-			      ],
-			      "Units": [
-			        "percentage",
-			        "%"
 			      ]
 			    },
 			    "entity__Medidas2.entity_03__grafic_TOPO": {
@@ -8937,6 +8948,910 @@ cultureInfo pt-BR
 			        "percentage",
 			        "%"
 			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_total_despesas_operacionais": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE Total Despesas Operacionais"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE total despesas operacionais": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "01.dre aggregate despesa operacionais": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "01.dre overall despesa operacionais": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02_DRE_creditos_operacionais": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02.DRE Creditos Operacionais"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02.DRE creditos operacionais": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_01_DRE_total_credito_imposto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "01.DRE Total Credito Imposto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "01.DRE total credito imposto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "01.dre aggregate credito imposto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "01.dre overall credito imposto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_02_DRE_despesas_operacionais": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "02.DRE Despesas Operacionais"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02.DRE despesas operacionais": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_00_DRE_CorLinha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "00.DRE CorLinha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "00.DRE CorLinha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.dredre_ah_teste": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "dredre ah teste"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dredre ah teste": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_03__linha_maxima_grafic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "03. Linha Maxima Grafic"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "03. linha maxima grafic": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_03__linha_minima_grafic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "03. Linha Minima Grafic"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "03. linha minima grafic": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_00_dre_2025": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "00.DRE 2025"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "00.dre 2025": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__Medidas2.entity_00_dre_orcado_2026": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas2",
+			          "ConceptualProperty": "00.DRE ORCADO 2026"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "00.dre orcado 2026": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Orçado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tb_real_2025": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_REAL2025"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tb real 2025": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TB_REAL2025": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "real 2025": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "tb_real_2025.d_r_e___gerêncial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_REAL2025",
+			          "ConceptualProperty": "D R E   Gerêncial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "d r e   gerêncial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "d r e gerêncial": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "tb_real_2025.x_COD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_REAL2025",
+			          "ConceptualProperty": "xCOD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "x COD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "xCOD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "COD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "tb_real_2025.atributo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_REAL2025",
+			          "ConceptualProperty": "Atributo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "atributo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tb_real_2025.valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_REAL2025",
+			          "ConceptualProperty": "Valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pluck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spirit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nerve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "tb_real_2025.x_DATA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_REAL2025",
+			          "ConceptualProperty": "xDATA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "x DATA": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "xDATA": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "DATA": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "x information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "x fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "x info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "x statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "x document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "x figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "tb_orcado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_ORCADO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tb orcado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TB_ORCADO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "tb_orcado.d_r_e___gerêncial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_ORCADO",
+			          "ConceptualProperty": "D R E   Gerêncial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "d r e   gerêncial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "d r e gerêncial": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "tb_orcado.x_COD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_ORCADO",
+			          "ConceptualProperty": "xCOD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "x COD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "xCOD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "COD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "tb_orcado.atributo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_ORCADO",
+			          "ConceptualProperty": "Atributo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "atributo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tb_orcado.valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_ORCADO",
+			          "ConceptualProperty": "Valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pluck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spirit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nerve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "tb_orcado.x_DATA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "TB_ORCADO",
+			          "ConceptualProperty": "xDATA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "x DATA": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "xDATA": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "DATA": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "x information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "x fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "x info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "x statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "x document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "x figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
 			    }
 			  },
 			  "Relationships": {
@@ -9765,6 +10680,260 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "tb_orcado_has_calendario_dax": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_ORCADO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_orcado": {
+			          "Target": {
+			            "Entity": "tb_orcado"
+			          }
+			        },
+			        "calendario_dax": {
+			          "Target": {
+			            "Entity": "calendario_dax"
+			          },
+			          "Nouns": [
+			            {
+			              "x DATA": {
+			                "State": "Generated"
+			              }
+			            },
+			            {
+			              "DATA": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_orcado"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_orcados_have_calendario_dax"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax"
+			            },
+			            "Object": {
+			              "Role": "tb_orcado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_dax_have_tb_orcados"
+			        }
+			      ]
+			    },
+			    "tb_orcado_has_dre_lv_2": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_ORCADO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_orcado": {
+			          "Target": {
+			            "Entity": "tb_orcado"
+			          }
+			        },
+			        "dre_lv_2": {
+			          "Target": {
+			            "Entity": "dre_lv_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_orcado"
+			            },
+			            "Object": {
+			              "Role": "dre_lv_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_orcados_have_dre_lv_2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_2"
+			            },
+			            "Object": {
+			              "Role": "tb_orcado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_2_have_tb_orcados"
+			        }
+			      ]
+			    },
+			    "tb_real_2025_has_calendario_dax": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_REAL2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_real_2025": {
+			          "Target": {
+			            "Entity": "tb_real_2025"
+			          }
+			        },
+			        "calendario_dax": {
+			          "Target": {
+			            "Entity": "calendario_dax"
+			          },
+			          "Nouns": [
+			            {
+			              "x DATA": {
+			                "State": "Generated"
+			              }
+			            },
+			            {
+			              "DATA": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_real_2025"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_real_2025_have_calendario_dax"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax"
+			            },
+			            "Object": {
+			              "Role": "tb_real_2025"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_dax_have_tb_real_2025"
+			        }
+			      ]
+			    },
+			    "tb_real_2025_has_dre_lv_2": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_REAL2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_real_2025": {
+			          "Target": {
+			            "Entity": "tb_real_2025"
+			          }
+			        },
+			        "dre_lv_2": {
+			          "Target": {
+			            "Entity": "dre_lv_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_real_2025"
+			            },
+			            "Object": {
+			              "Role": "dre_lv_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_real_2025_have_dre_lv_2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_2"
+			            },
+			            "Object": {
+			              "Role": "tb_real_2025"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_2_have_tb_real_2025"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_calendario_dax": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "calendario_dax": {
+			          "Target": {
+			            "Entity": "calendario_dax"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_calendario_dax"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax"
+			            },
+			            "Object": {
+			              "Role": "DRE_Geral__plan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_dax_have_DRE_Geral__plans"
+			        }
+			      ]
+			    },
 			    "DRE_Geral__plan_has_tb_cliente": {
 			      "Binding": {
 			        "ConceptualEntity": "DRE_Geral - Plan"
@@ -9907,52 +11076,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "tb_produtos_have_DRE_Geral__plans"
-			        }
-			      ]
-			    },
-			    "DRE_Geral__plan_has_calendario_dax": {
-			      "Binding": {
-			        "ConceptualEntity": "DRE_Geral - Plan"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "DRE_Geral__plan": {
-			          "Target": {
-			            "Entity": "DRE_Geral__plan"
-			          }
-			        },
-			        "calendario_dax": {
-			          "Target": {
-			            "Entity": "calendario_dax"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "DRE_Geral__plan"
-			            },
-			            "Object": {
-			              "Role": "calendario_dax"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "DRE_Geral__plans_have_calendario_dax"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_dax"
-			            },
-			            "Object": {
-			              "Role": "DRE_Geral__plan"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_dax_have_DRE_Geral__plans"
 			        }
 			      ]
 			    },
@@ -10180,6 +11303,64 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "TB_fatos_DRE_has_calendario_dax": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_FatosDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "TB_fatos_DRE": {
+			          "Target": {
+			            "Entity": "TB_fatos_DRE"
+			          }
+			        },
+			        "calendario_dax": {
+			          "Target": {
+			            "Entity": "calendario_dax"
+			          },
+			          "Nouns": [
+			            {
+			              "data nf": {
+			                "State": "Generated"
+			              }
+			            },
+			            {
+			              "nf": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "TB_fatos_DRE"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "TB_fatos_DREs_have_calendario_dax"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax"
+			            },
+			            "Object": {
+			              "Role": "TB_fatos_DRE"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_dax_have_TB_fatos_DREs"
+			        }
+			      ]
+			    },
 			    "TB_fatos_DRE_has_tb_cliente": {
 			      "Binding": {
 			        "ConceptualEntity": "TB_FatosDRE"
@@ -10325,64 +11506,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "TB_fatos_DRE_has_calendario_dax": {
-			      "Binding": {
-			        "ConceptualEntity": "TB_FatosDRE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "TB_fatos_DRE": {
-			          "Target": {
-			            "Entity": "TB_fatos_DRE"
-			          }
-			        },
-			        "calendario_dax": {
-			          "Target": {
-			            "Entity": "calendario_dax"
-			          },
-			          "Nouns": [
-			            {
-			              "data nf": {
-			                "State": "Generated"
-			              }
-			            },
-			            {
-			              "nf": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "TB_fatos_DRE"
-			            },
-			            "Object": {
-			              "Role": "calendario_dax"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "TB_fatos_DREs_have_calendario_dax"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_dax"
-			            },
-			            "Object": {
-			              "Role": "TB_fatos_DRE"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_dax_have_TB_fatos_DREs"
-			        }
-			      ]
-			    },
 			    "TB_fatos_DRE_has_tb_motivo": {
 			      "Binding": {
 			        "ConceptualEntity": "TB_FatosDRE"
@@ -10426,6 +11549,930 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "tb_motivos_have_TB_fatos_DREs"
+			        }
+			      ]
+			    },
+			    "tb_orcado_has_x_DATA": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_ORCADO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_orcado": {
+			          "Target": {
+			            "Entity": "tb_orcado"
+			          }
+			        },
+			        "tb_orcado.x_DATA": {
+			          "Target": {
+			            "Entity": "tb_orcado.x_DATA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_orcado"
+			            },
+			            "Object": {
+			              "Role": "tb_orcado.x_DATA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_orcados_have_x_DATA"
+			        }
+			      ]
+			    },
+			    "tb_orcado_has_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_ORCADO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_orcado": {
+			          "Target": {
+			            "Entity": "tb_orcado"
+			          }
+			        },
+			        "tb_orcado.valor": {
+			          "Target": {
+			            "Entity": "tb_orcado.valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_orcado"
+			            },
+			            "Object": {
+			              "Role": "tb_orcado.valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_orcados_have_valor"
+			        }
+			      ]
+			    },
+			    "tb_orcado_has_atributo": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_ORCADO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_orcado": {
+			          "Target": {
+			            "Entity": "tb_orcado"
+			          }
+			        },
+			        "tb_orcado.atributo": {
+			          "Target": {
+			            "Entity": "tb_orcado.atributo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_orcado"
+			            },
+			            "Object": {
+			              "Role": "tb_orcado.atributo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_orcados_have_atributos"
+			        }
+			      ]
+			    },
+			    "tb_orcado_has_d_r_e___gerêncial": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_ORCADO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_orcado": {
+			          "Target": {
+			            "Entity": "tb_orcado"
+			          }
+			        },
+			        "tb_orcado.d_r_e___gerêncial": {
+			          "Target": {
+			            "Entity": "tb_orcado.d_r_e___gerêncial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_orcado"
+			            },
+			            "Object": {
+			              "Role": "tb_orcado.d_r_e___gerêncial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_orcados_have_d_r_e___gerêncials"
+			        }
+			      ]
+			    },
+			    "tb_real_2025_has_x_DATA": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_REAL2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_real_2025": {
+			          "Target": {
+			            "Entity": "tb_real_2025"
+			          }
+			        },
+			        "tb_real_2025.x_DATA": {
+			          "Target": {
+			            "Entity": "tb_real_2025.x_DATA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_real_2025"
+			            },
+			            "Object": {
+			              "Role": "tb_real_2025.x_DATA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_real_2025_have_x_DATA"
+			        }
+			      ]
+			    },
+			    "tb_real_2025_has_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_REAL2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_real_2025": {
+			          "Target": {
+			            "Entity": "tb_real_2025"
+			          }
+			        },
+			        "tb_real_2025.valor": {
+			          "Target": {
+			            "Entity": "tb_real_2025.valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_real_2025"
+			            },
+			            "Object": {
+			              "Role": "tb_real_2025.valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_real_2025_have_valor"
+			        }
+			      ]
+			    },
+			    "tb_real_2025_has_atributo": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_REAL2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_real_2025": {
+			          "Target": {
+			            "Entity": "tb_real_2025"
+			          }
+			        },
+			        "tb_real_2025.atributo": {
+			          "Target": {
+			            "Entity": "tb_real_2025.atributo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_real_2025"
+			            },
+			            "Object": {
+			              "Role": "tb_real_2025.atributo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_real_2025_have_atributos"
+			        }
+			      ]
+			    },
+			    "tb_real_2025_has_d_r_e___gerêncial": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_REAL2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_real_2025": {
+			          "Target": {
+			            "Entity": "tb_real_2025"
+			          }
+			        },
+			        "tb_real_2025.d_r_e___gerêncial": {
+			          "Target": {
+			            "Entity": "tb_real_2025.d_r_e___gerêncial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_real_2025"
+			            },
+			            "Object": {
+			              "Role": "tb_real_2025.d_r_e___gerêncial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_real_2025_have_d_r_e___gerêncials"
+			        }
+			      ]
+			    },
+			    "tb_orcado_has_entity__Medidas2_entity_00_dre_orcado_2026": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_ORCADO"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_orcado": {
+			          "Target": {
+			            "Entity": "tb_orcado"
+			          }
+			        },
+			        "entity__Medidas2.entity_00_dre_orcado_2026": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_00_dre_orcado_2026"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_orcado"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_00_dre_orcado_2026"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_orcados_have_00_dre_orcado_2026"
+			        }
+			      ]
+			    },
+			    "dre_lv_1_has_entity__Medidas2_entity_00_dre_orcado_2026": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_1": {
+			          "Target": {
+			            "Entity": "dre_lv_1"
+			          }
+			        },
+			        "entity__Medidas2.entity_00_dre_orcado_2026": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_00_dre_orcado_2026"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_1"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_00_dre_orcado_2026"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_1_have_00_dre_orcado_2026"
+			        }
+			      ]
+			    },
+			    "tb_real_2025_has_entity__Medidas2_entity_00_dre_2025": {
+			      "Binding": {
+			        "ConceptualEntity": "TB_REAL2025"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tb_real_2025": {
+			          "Target": {
+			            "Entity": "tb_real_2025"
+			          }
+			        },
+			        "entity__Medidas2.entity_00_dre_2025": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_00_dre_2025"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tb_real_2025"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_00_dre_2025"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tb_real_2025_have_00_dre_2025"
+			        }
+			      ]
+			    },
+			    "dre_lv_1_has_entity__Medidas2_entity_00_dre_2025": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_1": {
+			          "Target": {
+			            "Entity": "dre_lv_1"
+			          }
+			        },
+			        "entity__Medidas2.entity_00_dre_2025": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_00_dre_2025"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_1"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_00_dre_2025"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_1_have_00_dre_2025"
+			        }
+			      ]
+			    },
+			    "dre_lv_2_has_entity__Medidas2_entity_03__linha_minima_grafic": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_2": {
+			          "Target": {
+			            "Entity": "dre_lv_2"
+			          }
+			        },
+			        "entity__Medidas2.entity_03__linha_minima_grafic": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_03__linha_minima_grafic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_2"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_03__linha_minima_grafic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_2_have_03__linha_minima_grafic"
+			        }
+			      ]
+			    },
+			    "dre_lv_1_has_entity__Medidas2_entity_03__linha_minima_grafic": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_1": {
+			          "Target": {
+			            "Entity": "dre_lv_1"
+			          }
+			        },
+			        "entity__Medidas2.entity_03__linha_minima_grafic": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_03__linha_minima_grafic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_1"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_03__linha_minima_grafic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_1_have_03__linha_minima_grafic"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_03__linha_minima_grafic": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_03__linha_minima_grafic": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_03__linha_minima_grafic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_03__linha_minima_grafic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_03__linha_minima_grafic"
+			        }
+			      ]
+			    },
+			    "calendario_dax_has_entity__Medidas2_entity_03__linha_minima_grafic": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax": {
+			          "Target": {
+			            "Entity": "calendario_dax"
+			          }
+			        },
+			        "entity__Medidas2.entity_03__linha_minima_grafic": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_03__linha_minima_grafic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_03__linha_minima_grafic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_dax_have_03__linha_minima_grafic"
+			        }
+			      ]
+			    },
+			    "dre_lv_2_has_entity__Medidas2_entity_03__linha_maxima_grafic": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_2": {
+			          "Target": {
+			            "Entity": "dre_lv_2"
+			          }
+			        },
+			        "entity__Medidas2.entity_03__linha_maxima_grafic": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_03__linha_maxima_grafic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_2"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_03__linha_maxima_grafic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_2_have_03__linha_maxima_grafic"
+			        }
+			      ]
+			    },
+			    "dre_lv_1_has_entity__Medidas2_entity_03__linha_maxima_grafic": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_1": {
+			          "Target": {
+			            "Entity": "dre_lv_1"
+			          }
+			        },
+			        "entity__Medidas2.entity_03__linha_maxima_grafic": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_03__linha_maxima_grafic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_1"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_03__linha_maxima_grafic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_1_have_03__linha_maxima_grafic"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_03__linha_maxima_grafic": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_03__linha_maxima_grafic": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_03__linha_maxima_grafic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_03__linha_maxima_grafic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_03__linha_maxima_grafic"
+			        }
+			      ]
+			    },
+			    "calendario_dax_has_entity__Medidas2_entity_03__linha_maxima_grafic": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax": {
+			          "Target": {
+			            "Entity": "calendario_dax"
+			          }
+			        },
+			        "entity__Medidas2.entity_03__linha_maxima_grafic": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_03__linha_maxima_grafic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_03__linha_maxima_grafic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_dax_have_03__linha_maxima_grafic"
+			        }
+			      ]
+			    },
+			    "dre_lv_2_has_entity__Medidas2_dredre_ah_teste": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_2": {
+			          "Target": {
+			            "Entity": "dre_lv_2"
+			          }
+			        },
+			        "entity__Medidas2.dredre_ah_teste": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.dredre_ah_teste"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_2"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.dredre_ah_teste"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_2_have_dredre_ah_teste"
+			        }
+			      ]
+			    },
+			    "dre_lv_1_has_entity__Medidas2_dredre_ah_teste": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_1": {
+			          "Target": {
+			            "Entity": "dre_lv_1"
+			          }
+			        },
+			        "entity__Medidas2.dredre_ah_teste": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.dredre_ah_teste"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_1"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.dredre_ah_teste"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_1_have_dredre_ah_teste"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_dredre_ah_teste": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.dredre_ah_teste": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.dredre_ah_teste"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.dredre_ah_teste"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_dredre_ah_teste"
+			        }
+			      ]
+			    },
+			    "entity__Medidas2_has_entity_00_DRE_CorLinha": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__Medidas2": {
+			          "Target": {
+			            "Entity": "entity__Medidas2"
+			          }
+			        },
+			        "entity__Medidas2.entity_00_DRE_CorLinha": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_00_DRE_CorLinha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__Medidas2"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_00_DRE_CorLinha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_Medidas2_have_00_DRE_CorLinha"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02_DRE_despesas_operacionais": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02_DRE_despesas_operacionais": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02_DRE_despesas_operacionais"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02_DRE_despesas_operacionais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02_DRE_despesas_operacionais"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_total_credito_imposto": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_total_credito_imposto": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_total_credito_imposto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_total_credito_imposto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_total_credito_imposto"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_02_DRE_creditos_operacionais": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_02_DRE_creditos_operacionais": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_02_DRE_creditos_operacionais"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_02_DRE_creditos_operacionais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_02_DRE_creditos_operacionais"
+			        }
+			      ]
+			    },
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_01_DRE_total_despesas_operacionais": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_Geral - Plan"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "DRE_Geral__plan": {
+			          "Target": {
+			            "Entity": "DRE_Geral__plan"
+			          }
+			        },
+			        "entity__Medidas2.entity_01_DRE_total_despesas_operacionais": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_01_DRE_total_despesas_operacionais"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "DRE_Geral__plan"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_01_DRE_total_despesas_operacionais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "DRE_Geral__plans_have_01_DRE_total_despesas_operacionais"
 			        }
 			      ]
 			    },
@@ -10591,6 +12638,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dre_lv_2_have_03__grafico_nome"
+			        }
+			      ]
+			    },
+			    "dre_lv_1_has_entity__Medidas2_entity_03__grafico_nome": {
+			      "Binding": {
+			        "ConceptualEntity": "DRE_LV1"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dre_lv_1": {
+			          "Target": {
+			            "Entity": "dre_lv_1"
+			          }
+			        },
+			        "entity__Medidas2.entity_03__grafico_nome": {
+			          "Target": {
+			            "Entity": "entity__Medidas2.entity_03__grafico_nome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dre_lv_1"
+			            },
+			            "Object": {
+			              "Role": "entity__Medidas2.entity_03__grafico_nome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dre_lv_1_have_03__grafico_nome"
 			        }
 			      ]
 			    },
@@ -11835,7 +13915,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "dre_lv_2_has_entity__Medidas2_entity_03__grafic": {
+			    "dre_lv_2_has_entity__Medidas2_entity_03__grafic____zero": {
 			      "Binding": {
 			        "ConceptualEntity": "DRE_LV2"
 			      },
@@ -11846,9 +13926,9 @@ cultureInfo pt-BR
 			            "Entity": "dre_lv_2"
 			          }
 			        },
-			        "entity__Medidas2.entity_03__grafic": {
+			        "entity__Medidas2.entity_03__grafic____zero": {
 			          "Target": {
-			            "Entity": "entity__Medidas2.entity_03__grafic"
+			            "Entity": "entity__Medidas2.entity_03__grafic____zero"
 			          }
 			        }
 			      },
@@ -11859,16 +13939,16 @@ cultureInfo pt-BR
 			              "Role": "dre_lv_2"
 			            },
 			            "Object": {
-			              "Role": "entity__Medidas2.entity_03__grafic"
+			              "Role": "entity__Medidas2.entity_03__grafic____zero"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dre_lv_2_have_03__grafic"
+			          "ID": "dre_lv_2_have_03__grafic____zero"
 			        }
 			      ]
 			    },
-			    "dre_lv_1_has_entity__Medidas2_entity_03__grafic": {
+			    "dre_lv_1_has_entity__Medidas2_entity_03__grafic____zero": {
 			      "Binding": {
 			        "ConceptualEntity": "DRE_LV1"
 			      },
@@ -11879,9 +13959,9 @@ cultureInfo pt-BR
 			            "Entity": "dre_lv_1"
 			          }
 			        },
-			        "entity__Medidas2.entity_03__grafic": {
+			        "entity__Medidas2.entity_03__grafic____zero": {
 			          "Target": {
-			            "Entity": "entity__Medidas2.entity_03__grafic"
+			            "Entity": "entity__Medidas2.entity_03__grafic____zero"
 			          }
 			        }
 			      },
@@ -11892,16 +13972,16 @@ cultureInfo pt-BR
 			              "Role": "dre_lv_1"
 			            },
 			            "Object": {
-			              "Role": "entity__Medidas2.entity_03__grafic"
+			              "Role": "entity__Medidas2.entity_03__grafic____zero"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dre_lv_1_have_03__grafic"
+			          "ID": "dre_lv_1_have_03__grafic____zero"
 			        }
 			      ]
 			    },
-			    "DRE_Geral__plan_has_entity__Medidas2_entity_03__grafic": {
+			    "DRE_Geral__plan_has_entity__Medidas2_entity_03__grafic____zero": {
 			      "Binding": {
 			        "ConceptualEntity": "DRE_Geral - Plan"
 			      },
@@ -11912,9 +13992,9 @@ cultureInfo pt-BR
 			            "Entity": "DRE_Geral__plan"
 			          }
 			        },
-			        "entity__Medidas2.entity_03__grafic": {
+			        "entity__Medidas2.entity_03__grafic____zero": {
 			          "Target": {
-			            "Entity": "entity__Medidas2.entity_03__grafic"
+			            "Entity": "entity__Medidas2.entity_03__grafic____zero"
 			          }
 			        }
 			      },
@@ -11925,12 +14005,12 @@ cultureInfo pt-BR
 			              "Role": "DRE_Geral__plan"
 			            },
 			            "Object": {
-			              "Role": "entity__Medidas2.entity_03__grafic"
+			              "Role": "entity__Medidas2.entity_03__grafic____zero"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "DRE_Geral__plans_have_03__grafic"
+			          "ID": "DRE_Geral__plans_have_03__grafic____zero"
 			        }
 			      ]
 			    },
