@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "faeac5ee5d326b917070",
   "position": {
-    "x": 226.71261199172986,
-    "y": 262.88077188146104,
-    "z": 7001,
-    "height": 455.2204176334107,
-    "width": 1048.2598607888631,
-    "tabOrder": 7001
+    "x": 222.30186078566507,
+    "y": 254.94141971054447,
+    "z": 7000,
+    "height": 464.89317711922814,
+    "width": 1047.9944865609925,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -96,7 +96,23 @@
                 }
               },
               "queryRef": "_Medidas2.00.DRE DRE ( texto )",
-              "nativeQueryRef": "00.DRE DRE ( texto )"
+              "nativeQueryRef": "Valor ( R$ )",
+              "displayName": "Valor ( R$ )"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas2"
+                    }
+                  },
+                  "Property": "00.DRE DRE A.H ( % )"
+                }
+              },
+              "queryRef": "_Medidas2.00.DRE DRE A.H ( % )",
+              "nativeQueryRef": "A.H ( % )",
+              "displayName": "A.H ( % )"
             }
           ]
         }
@@ -249,7 +265,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E5E5E5'"
+                      "Value": "'#FFF3B0'"
                     }
                   }
                 }
@@ -419,6 +435,13 @@
                   }
                 }
               }
+            },
+            "bandedRowHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         },
@@ -494,6 +517,146 @@
             ],
             "metadata": "_Medidas2.00.DRE DRE ( texto )"
           }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Medidas2"
+                        }
+                      },
+                      "Property": "00.DRE CorLinha"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Medidas2.00.DRE DRE ( texto )"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 2,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "_Medidas2"
+                                    }
+                                  },
+                                  "Property": "00.DRE DRE A.H ( % )"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#000000'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "_Medidas2"
+                                    }
+                                  },
+                                  "Property": "00.DRE DRE A.H ( % )"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#B5010F'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Medidas2.00.DRE DRE A.H ( % )"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Medidas2"
+                        }
+                      },
+                      "Property": "00.DRE CorLinha"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Medidas2.00.DRE DRE A.H ( % )"
+          }
         }
       ],
       "columnTotal": [
@@ -533,7 +696,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FEC200'"
+                      "Value": "'#FFF3B0'"
                     }
                   }
                 }
@@ -795,6 +958,44 @@
             "metadata": "_Medidas2.00.DRE DRE ( texto )"
           }
         }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showExpandCollapseButtons": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFF3B0'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -813,5 +1014,102 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f054885f175762ae067b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DRE_LV1"
+              }
+            },
+            "Property": "DESC"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DRE_LV1",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "DESC"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'( = ) MARGEM OPERACIONAL'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'( - ) Despesas Operacionais'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'( = ) LUCRO/PREJUIZO OPERACIONAL'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'( + ) Creditos Operacionais'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

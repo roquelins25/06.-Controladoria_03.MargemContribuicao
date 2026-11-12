@@ -246,20 +246,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "eac6eb18d42034be811d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "TB_REP"
-              }
-            },
-            "Property": "NOMREP"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "8bc5c604ecdd3b934678",
         "field": {
           "Column": {

@@ -368,5 +368,5 @@ table TB_CLIENTE
 				    Fonte
 				```
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

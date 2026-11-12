@@ -43,7 +43,7 @@ table DRE_LV2
 		queryGroup: _DRE
 		source =
 				let
-				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("hZHNToNQEIVfZcJKY40C1tqloDQuGokxbEgXA4zJTYBp7r00vo5xYXwAn4AXc/hJRRIjm5PAd2bOHNLUuZTHdRaOO2qcQKAbyxcx5mzJOLtF6ngTyBN9opyURXjck8ZccY1lz/kTzhe9owOXTfvRfpEBghDrnEqsqLY8DL6aGJaiD9WejWVIqC6wJ5Z/ENPRPXg9AVeiW7Ttp1YIsVYVwhncbwM4gVAOTFDeH0gZOO2tq5l1g7LBwEaOEybCTKscZdU7y4BIvfLou5n5Qk2FkmzdjvOfhGKLNRdNwXCbY4YF9+71xL3u3FwpY473uLPPkSb5HfBMWrrXY3+uO59RW41d+IR0hqZLiyPq/YN2rbRvXS0D7//mA67Vy9BDH3H3DQ==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ID = _t, ID_LV1 = _t, DESC = _t]),
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("hZLPSsNAEMZfZchJsaKbttYebTXFQzGI5BJ6mCYjLDSZsrstvo54EB/AJ8iLOfnTdg2IexnY/L5vZr5smgbXclQwCFRX4wRmZuf4KsaMHdlgNUiD0INCqc+UkXYIT1symGkucdNwQ48bSr2nPW921Wf1TRYI5lhmtMGCSset8cgTjKU+Flu2jiGhMseGGP9B+NYNeOOBE6lLdNWX0Qix0QXCBTwsZ3AGc1kwQbnfk7Zw3kgnPekCpYOFhSwnTIRrozOUVh8sBpF+405329PNDeVaZqt7XJ4mFFlsON/lDHcZrjHnRj311NNazYW29riP6n2ODMnvgBcykr3p8lOq71E6g/XwCZk12npa7NDwH7ROpXqvY2n54W9+xqV+bXM4jjg6Ikqd9rfeuziYjU9k+zDsliz2ydUP", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ID = _t, ID_LV1 = _t, DESC = _t]),
 				  #"Tipo de coluna alterado" = Table.TransformColumnTypes(Origem, {{"ID", Int64.Type}, {"DESC", type text}, {"ID_LV1", type text}}),
 				  #"Índice adicionado" = Table.AddIndexColumn(#"Tipo de coluna alterado", "Índice", 1, 1, Int64.Type)
 				in

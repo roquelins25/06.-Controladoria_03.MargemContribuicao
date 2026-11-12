@@ -429,6 +429,9 @@ table _Medidas2
 			             - [02.DRE Credito CPV - Devolucao Pro ACA] )
 			VAR _desp = -( [02.DRE Fretes Tereceiros ( R$ )] + [02.DRE Verbas Fixas ( R$ )]
 			             + [02.DRE Verbas Variaveis ( R$ )] + [02.DRE Bonificacao] + [02.DRE Comissoes ( R$ )] )
+			VAR _credOP = [02.DRE Creditos Operacionais]
+			
+			VAR _despOP = - [02.DRE Despesas Operacionais]
 			
 			VAR _analitico =
 			    SUMX(
@@ -447,7 +450,9 @@ table _Medidas2
 			            10001, -[02.DRE Fretes Tereceiros ( R$ )],
 			            11001, -[02.DRE Verbas Fixas ( R$ )],
 			            12001, -[02.DRE Verbas Variaveis ( R$ )],
-			            13001, -[02.DRE Bonificacao]
+			            13001, -[02.DRE Bonificacao],
+			            14001, [02.DRE Creditos Operacionais],
+			            15001, [02.DRE Despesas Operacionais]
 			        )
 			    )
 			
@@ -466,7 +471,9 @@ table _Medidas2
 			            "10003", _dev,
 			            "10005", _imp,
 			            "10007", _cpv,
-			            "10009", _desp
+			            "10009", _desp,
+			            "10011", _credOP,
+			            "10013", _despOP
 			        )
 			    )
 			
@@ -503,6 +510,331 @@ table _Medidas2
 		lineageTag: bd653dab-2470-49c9-881a-3f09fe752548
 
 		annotation PBI_FormatHint = {"isText":true}
+
+	measure '03. Grafic ( % ) zero' = ```
+			
+			// Seleciona no filtro
+			/*
+			VAR _SELECT = SELECTEDVALUE( DRE_LV1[ID] )
+			VAR _MAX = 
+			CALCULATE(
+			    MAXX(
+			        FILTER(
+			            SUMMARIZECOLUMNS(
+			                DRE_LV1[ID],
+			                'CALENDARIO DAX'[Ano-Mes],
+			                "@Total", [00.DRE DRE] ),
+			            DRE_LV1[ID] = _SELECT ),
+			        [@Total] ) ,
+			    ALL( 'CALENDARIO DAX' )
+			)
+			RETURN
+			IF(
+			   ISBLANK( [00.DRE DRE] ), BLANK(),
+			        ( _MAX * 0.1 ) + _MAX
+			) */
+			IF( ISBLANK( [00.DRE DRE] ), BLANK() , 0 )
+			```
+		displayFolder: 03. Graficos
+		lineageTag: bafeefb9-9215-4993-b587-c649f254498a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. Grafic TOPO' =
+			
+			( [03. Grafic ( % ) zero] * 0.05 ) + [03. Grafic ( % ) zero]
+		displayFolder: 03. Graficos
+		lineageTag: febf6199-d9ec-4f32-9770-8d6a010494cb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. 01 - Grafico Rotulo TOPO' = ```
+			
+			VAR _SELECT = SELECTEDVALUE( DRE_LV1[ID] )
+			VAR _ALL =
+			CALCULATE(
+			    [00.DRE DRE],
+			    DRE_LV1[ID] = _SELECT,
+			    ALL( 'CALENDARIO DAX')
+			)
+			RETURN
+			DIVIDE( 
+			    CALCULATE(
+			        [00.DRE DRE],
+			        DRE_LV1[ID] = _SELECT),
+			_ALL , 0 )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: 03. Graficos
+		lineageTag: 021570d1-dd57-40c1-be8d-b417aa193dd4
+
+	measure '03. 02 - Grafico Rotulo TOPO2' = ```
+			
+			VAR _SELECT = SELECTEDVALUE( DRE_LV1[ID] )
+			VAR _ALL =
+			CALCULATE(
+			    [00.DRE DRE],
+			    DRE_LV1[ID] = "10002" 
+			)
+			RETURN
+			DIVIDE( [00.DRE DRE], _ALL, 0 )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: 03. Graficos
+		lineageTag: 7a9ae4a1-fa04-4c0a-bc18-2a77cd5bd0e3
+
+	measure '03. Grafico Nome' =
+			
+			IF(
+			    HASONEFILTER( DRE_LV2[DESC] ),
+			        CONCATENATEX(
+			            VALUES( DRE_LV2[DESC] ),
+			            DRE_LV2[DESC],
+			            " || "
+			        ),
+			    SELECTEDVALUE( DRE_LV1[DESC] )
+			)
+		displayFolder: 03. Graficos
+		lineageTag: 1145b729-2f0a-4b70-aa96-98ff02d0b2aa
+
+	measure Sankey_SVG =
+			VAR pad = 20
+			VAR gap = 14
+			VAR nw = 34
+			VAR step = 200
+			VAR esc = 0.35
+			VAR v_rec = [02.DRE Receita Operacional Bruta ( R$ )]
+			VAR v_dev = [02.DRE Devolucao e Cancelamentos ( R$ )]
+			VAR v_imp = [02.DRE Imposto de Vendas ( R$ )] - [02.DRE Impostos Devolucoes ( R$ )]
+			VAR v_mp = [02.DRE Materia Prima + Embalagens ( CPV Variaveis ) ( R$ )] - [02.DRE Credito CPV - Devolucao Pro ACA]
+			VAR v_ggf = [02.DRE Gastos Gerais Fabricacao-GGF FIXO ( R$ )]
+			VAR v_com = [02.DRE Comissoes ( R$ )]
+			VAR v_fre = [02.DRE Fretes Tereceiros ( R$ )]
+			VAR v_vf = [02.DRE Verbas Fixas ( R$ )]
+			VAR v_vv = [02.DRE Verbas Variaveis ( R$ )]
+			VAR v_bon = [02.DRE Bonificacao]
+			VAR v_rsd = v_rec - v_dev
+			VAR v_rl = v_rsd - v_imp
+			VAR v_cpv = v_mp + v_ggf
+			VAR v_mb = v_rl - v_cpv
+			VAR v_dv = v_com + v_fre + v_vf + v_vv + v_bon
+			VAR v_mc = v_mb - v_dv
+			VAR k = DIVIDE( 620 - 2*pad - 3*gap, MAX( v_rec, 1 ) ) * esc
+			VAR h_rec = MAX( v_rec, 0 ) * k
+			VAR h_dev = MAX( v_dev, 0 ) * k
+			VAR h_rsd = MAX( v_rsd, 0 ) * k
+			VAR h_imp = MAX( v_imp, 0 ) * k
+			VAR h_rl = MAX( v_rl, 0 ) * k
+			VAR h_cpv = MAX( v_cpv, 0 ) * k
+			VAR h_mb = MAX( v_mb, 0 ) * k
+			VAR h_mp = MAX( v_mp, 0 ) * k
+			VAR h_ggf = MAX( v_ggf, 0 ) * k
+			VAR h_dv = MAX( v_dv, 0 ) * k
+			VAR h_mc = MAX( v_mc, 0 ) * k
+			VAR h_com = MAX( v_com, 0 ) * k
+			VAR h_fre = MAX( v_fre, 0 ) * k
+			VAR h_vf = MAX( v_vf, 0 ) * k
+			VAR h_vv = MAX( v_vv, 0 ) * k
+			VAR h_bon = MAX( v_bon, 0 ) * k
+			VAR y_rec = pad
+			VAR y_dev = pad
+			VAR y_rsd = y_dev + h_dev + gap
+			VAR y_imp = pad
+			VAR y_rl = y_imp + h_imp + gap
+			VAR y_cpv = pad
+			VAR y_mb = y_cpv + h_cpv + gap
+			VAR y_mp = pad
+			VAR y_ggf = y_mp + h_mp + gap
+			VAR y_dv = y_ggf + h_ggf + gap
+			VAR y_mc = y_dv + h_dv + gap
+			VAR y_com = pad
+			VAR y_fre = y_com + h_com + gap
+			VAR y_vf = y_fre + h_fre + gap
+			VAR y_vv = y_vf + h_vf + gap
+			VAR y_bon = y_vv + h_vv + gap
+			VAR Nodes0 = DATATABLE( "id", STRING, "col", INTEGER, "sh", INTEGER, "clr", STRING, "full", STRING, "nm", STRING, {{"rec", 0, 0, "#1f6f8b", "Receita Bruta", "Receita Bruta"}, {"dev", 1, 70, "#c0392b", "Devoluções", "Devoluções"}, {"rsd", 1, 0, "#1f6f8b", "Receita s/ Devol.", "Rec. s/ Devol."}, {"imp", 2, 70, "#c0392b", "Impostos (líq.)", "Impostos (líq.)"}, {"rl", 2, 0, "#1f6f8b", "Receita Líquida", "Receita Líquida"}, {"cpv", 3, 70, "#c0392b", "CPV", "CPV"}, {"mb", 3, 0, "#2e8b57", "Margem Bruta", "Margem Bruta"}, {"mp", 4, 0, "#e67e22", "Mat. Prima + Emb. (líq. crédito)", "Mat.Prima+Emb."}, {"ggf", 4, 0, "#e67e22", "GGF Fixo", "GGF Fixo"}, {"dv", 4, 70, "#c0392b", "Despesas Variáveis", "Desp. Variáveis"}, {"mc", 4, 0, "#2e8b57", "Margem Contribuição", "Margem Contrib."}, {"com", 5, 0, "#e67e22", "Comissões", "Comissões"}, {"fre", 5, 0, "#e67e22", "Fretes", "Fretes"}, {"vf", 5, 0, "#e67e22", "Verbas Fixas", "Verbas Fixas"}, {"vv", 5, 0, "#e67e22", "Verbas Variáveis", "Verbas Var."}, {"bon", 5, 0, "#e67e22", "Bonificação", "Bonificação"}} )
+			VAR Nodes = ADDCOLUMNS( Nodes0, "v", SWITCH( [id], "rec", v_rec, "dev", v_dev, "rsd", v_rsd, "imp", v_imp, "rl", v_rl, "cpv", v_cpv, "mb", v_mb, "mp", v_mp, "ggf", v_ggf, "dv", v_dv, "mc", v_mc, "com", v_com, "fre", v_fre, "vf", v_vf, "vv", v_vv, "bon", v_bon, 0 ), "h", SWITCH( [id], "rec", h_rec, "dev", h_dev, "rsd", h_rsd, "imp", h_imp, "rl", h_rl, "cpv", h_cpv, "mb", h_mb, "mp", h_mp, "ggf", h_ggf, "dv", h_dv, "mc", h_mc, "com", h_com, "fre", h_fre, "vf", h_vf, "vv", h_vv, "bon", h_bon, 0 ), "y", SWITCH( [id], "rec", y_rec, "dev", y_dev, "rsd", y_rsd, "imp", y_imp, "rl", y_rl, "cpv", y_cpv, "mb", y_mb, "mp", y_mp, "ggf", y_ggf, "dv", y_dv, "mc", y_mc, "com", y_com, "fre", y_fre, "vf", y_vf, "vv", y_vv, "bon", y_bon, 0 ) )
+			VAR Links0 = DATATABLE( "s", STRING, "d", STRING, "sc", INTEGER, "dc", INTEGER, "ss", INTEGER, "ds", INTEGER, "clr", STRING, "sn", STRING, "dn", STRING, {{"rec", "dev", 0, 1, 0, 70, "#c0392b", "Receita Bruta", "Devoluções"}, {"rec", "rsd", 0, 1, 0, 0, "#1f6f8b", "Receita Bruta", "Receita s/ Devol."}, {"rsd", "imp", 1, 2, 0, 70, "#c0392b", "Receita s/ Devol.", "Impostos (líq.)"}, {"rsd", "rl", 1, 2, 0, 0, "#1f6f8b", "Receita s/ Devol.", "Receita Líquida"}, {"rl", "cpv", 2, 3, 0, 70, "#c0392b", "Receita Líquida", "CPV"}, {"rl", "mb", 2, 3, 0, 0, "#2e8b57", "Receita Líquida", "Margem Bruta"}, {"cpv", "mp", 3, 4, 70, 0, "#e67e22", "CPV", "Mat. Prima + Emb. (líq. crédito)"}, {"cpv", "ggf", 3, 4, 70, 0, "#e67e22", "CPV", "GGF Fixo"}, {"mb", "dv", 3, 4, 0, 70, "#c0392b", "Margem Bruta", "Despesas Variáveis"}, {"mb", "mc", 3, 4, 0, 0, "#2e8b57", "Margem Bruta", "Margem Contribuição"}, {"dv", "com", 4, 5, 70, 0, "#e67e22", "Despesas Variáveis", "Comissões"}, {"dv", "fre", 4, 5, 70, 0, "#e67e22", "Despesas Variáveis", "Fretes"}, {"dv", "vf", 4, 5, 70, 0, "#e67e22", "Despesas Variáveis", "Verbas Fixas"}, {"dv", "vv", 4, 5, 70, 0, "#e67e22", "Despesas Variáveis", "Verbas Variáveis"}, {"dv", "bon", 4, 5, 70, 0, "#e67e22", "Despesas Variáveis", "Bonificação"}} )
+			VAR Links = ADDCOLUMNS( Links0, "hd", SWITCH( [d], "rec", h_rec, "dev", h_dev, "rsd", h_rsd, "imp", h_imp, "rl", h_rl, "cpv", h_cpv, "mb", h_mb, "mp", h_mp, "ggf", h_ggf, "dv", h_dv, "mc", h_mc, "com", h_com, "fre", h_fre, "vf", h_vf, "vv", h_vv, "bon", h_bon, 0 ), "vd", SWITCH( [d], "rec", v_rec, "dev", v_dev, "rsd", v_rsd, "imp", v_imp, "rl", v_rl, "cpv", v_cpv, "mb", v_mb, "mp", v_mp, "ggf", v_ggf, "dv", v_dv, "mc", v_mc, "com", v_com, "fre", v_fre, "vf", v_vf, "vv", v_vv, "bon", v_bon, 0 ), "ys", SWITCH( [s], "rec", y_rec, "dev", y_dev, "rsd", y_rsd, "imp", y_imp, "rl", y_rl, "cpv", y_cpv, "mb", y_mb, "mp", y_mp, "ggf", y_ggf, "dv", y_dv, "mc", y_mc, "com", y_com, "fre", y_fre, "vf", y_vf, "vv", y_vv, "bon", y_bon, 0 ) + SWITCH( [d], "dev", 0, "rsd", h_dev, "imp", 0, "rl", h_imp, "cpv", 0, "mb", h_cpv, "mp", 0, "ggf", h_mp, "dv", 0, "mc", h_dv, "com", 0, "fre", h_com, "vf", h_com + h_fre, "vv", h_com + h_fre + h_vf, "bon", h_com + h_fre + h_vf + h_vv, 0 ), "yd", SWITCH( [d], "rec", y_rec, "dev", y_dev, "rsd", y_rsd, "imp", y_imp, "rl", y_rl, "cpv", y_cpv, "mb", y_mb, "mp", y_mp, "ggf", y_ggf, "dv", y_dv, "mc", y_mc, "com", y_com, "fre", y_fre, "vf", y_vf, "vv", y_vv, "bon", y_bon, 0 ) )
+			VAR LinkSvg =
+			    CONCATENATEX( Links,
+			        VAR x0 = 20 + [sc]*step - [ss] + nw
+			        VAR x1 = 20 + [dc]*step - [ds]
+			        VAR xm = (x0 + x1)/2
+			        VAR y0 = [ys] + [hd]/2
+			        VAR y1 = [yd] + [hd]/2
+			        RETURN "<path d='M" & SUBSTITUTE( FORMAT( x0, "0.00" ), ",", "." ) & "," & SUBSTITUTE( FORMAT( y0, "0.00" ), ",", "." ) & " C" & SUBSTITUTE( FORMAT( xm, "0.00" ), ",", "." ) & "," & SUBSTITUTE( FORMAT( y0, "0.00" ), ",", "." ) & " " & SUBSTITUTE( FORMAT( xm, "0.00" ), ",", "." ) & "," & SUBSTITUTE( FORMAT( y1, "0.00" ), ",", "." ) & " " & SUBSTITUTE( FORMAT( x1, "0.00" ), ",", "." ) & "," & SUBSTITUTE( FORMAT( y1, "0.00" ), ",", "." ) & "' fill='none' stroke='" & [clr] & "' stroke-opacity='0.35' stroke-width='" & SUBSTITUTE( FORMAT( MAX([hd],1), "0.00" ), ",", "." ) & "'><title>" & [sn] & " → " & [dn] & ": R$ " & FORMAT( ([vd])/1000000, "#,##0.0" ) & " M" & " (" & FORMAT( DIVIDE( [vd], v_rec ), "0.0%" ) & " da Rec. Bruta)</title></path>", "" )
+			VAR NodeSvg =
+			    CONCATENATEX( Nodes,
+			        VAR x = 20 + [col]*step - [sh]
+			        VAR hh = MAX( [h], 2 )
+			        VAR cy = [y] + hh/2
+			        VAR cx = x + nw/2
+			        VAR rot = " transform='rotate(-90 " & SUBSTITUTE( FORMAT( cx, "0.00" ), ",", "." ) & " " & SUBSTITUTE( FORMAT( cy, "0.00" ), ",", "." ) & ")'"
+			        RETURN "<rect x='" & SUBSTITUTE( FORMAT( x, "0.00" ), ",", "." ) & "' y='" & SUBSTITUTE( FORMAT( [y], "0.00" ), ",", "." ) & "' width='" & nw & "' height='" & SUBSTITUTE( FORMAT( hh, "0.00" ), ",", "." ) & "' fill='" & [clr] & "'/>"
+			            & IF( hh >= MAX( LEN([nm])*6.2, 52 ) + 10,
+			                "<text x='" & SUBSTITUTE( FORMAT( cx, "0.00" ), ",", "." ) & "' y='" & SUBSTITUTE( FORMAT( cy - 3, "0.00" ), ",", "." ) & "'" & rot & " text-anchor='middle' font-size='11' font-weight='600' fill='#fff'>" & [nm] & "</text>"
+			                & "<text x='" & SUBSTITUTE( FORMAT( cx, "0.00" ), ",", "." ) & "' y='" & SUBSTITUTE( FORMAT( cy + 11, "0.00" ), ",", "." ) & "'" & rot & " text-anchor='middle' font-size='11' fill='#fff'>" & FORMAT( ([v])/1000000, "#,##0.0" ) & " M" & "</text>",
+			                "<text x='" & SUBSTITUTE( FORMAT( x + nw + 5, "0.00" ), ",", "." ) & "' y='" & SUBSTITUTE( FORMAT( cy + 4, "0.00" ), ",", "." ) & "' font-size='11' fill='#222'>" & [nm] & ": " & FORMAT( ([v])/1000000, "#,##0.0" ) & " M" & "</text>" ), "" )
+			RETURN
+			IF( v_rec <= 0, "<div style='font-family:Segoe UI;color:#666'>Sem dados para os filtros selecionados</div>",
+			    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1250 400' width='100%' style='font-family:Segoe UI,Arial,sans-serif'>" & LinkSvg & NodeSvg & "</svg>" )
+		displayFolder: 03. Graficos
+		lineageTag: 63a41550-a32f-450c-85f9-c41dc8d2b4b4
+
+	measure '00.DRE DRE A.H ( % )' = ```
+			
+			VAR _Receita = CALCULATE( [02.DRE Receita Operacional Bruta ( R$ )] )
+			
+			VAR _ReceitaLiquida = CALCULATE( [00.DRE DRE],ALL(DRE_LV1 ), DRE_LV1[ID] = "10006" )
+			
+			VAR _TOTALBrut = 
+			DIVIDE(
+			    [00.DRE DRE],
+			    _Receita ,
+			    0 )
+			VAR _TotalLiq = 
+			DIVIDE(
+			    [00.DRE DRE],
+			    _ReceitaLiquida,
+			    0 
+			)
+			RETURN
+			IF(
+			    SELECTEDVALUE( DRE_LV1[Índice] ) > 6,
+			    _TotalLiq,
+			    _TOTALBrut
+			)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 30cc67a5-8b55-42b4-8b8a-53ea55239fd0
+
+	measure '01.DRE Total Despesas Operacionais' =
+			
+			SUM( 'DRE_Geral - Plan'[DESP_Oper_Fixa] )
+		displayFolder: 01. Totais
+		lineageTag: cf5e4b51-1921-4cb5-af83-da734fe9414f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02.DRE Creditos Operacionais' =
+			
+			CALCULATE(
+			    [01.DRE Total Credito Imposto],
+			    'DRE_Geral - Plan'[Operacao] = "Saidas" )
+		formatString: 0
+		displayFolder: 02. Auxiliares Horizontal
+		lineageTag: 9c12e0d8-532a-44c5-9364-5f8aca9f06e1
+
+	measure '01.DRE Total Credito Imposto' =
+			
+			SUM( 'DRE_Geral - Plan'[CRED_Impostos] )
+		displayFolder: 01. Totais
+		lineageTag: 653c2cfa-1ef2-48df-861f-106974515903
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '02.DRE Despesas Operacionais' =
+			
+			CALCULATE(
+			    [01.DRE Total Despesas Operacionais],
+			    'DRE_Geral - Plan'[Operacao] = "Saidas"
+			)
+		displayFolder: 02. Auxiliares Horizontal
+		lineageTag: 4dbb4b4e-6b72-4a86-9435-5bbb43eaa84b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '00.DRE CorLinha' =
+			
+			SWITCH(
+			    TRUE(),
+			    SELECTEDVALUE( DRE_LV1[ID] ) = "10001", "#ffd6a5",
+			    SELECTEDVALUE( DRE_LV1[SUB] ) = "ST", "#fff3b0",
+			    "#f8f9fa"
+			)
+		lineageTag: 6736f6c5-9079-41a3-8c52-51a0609d4da1
+
+	measure 'dredre ah teste' = ```
+			
+			VAR _Receita = CALCULATE( [02.DRE Receita Operacional Bruta ( R$ )] )
+			
+			VAR _ReceitaLiquida = CALCULATE( [00.DRE DRE],ALL(DRE_LV1 ), DRE_LV1[ID] = "10006" )
+			
+			VAR _TOTALBrut = 
+			DIVIDE(
+			    [00.DRE DRE],
+			    _Receita ,
+			    0 )
+			VAR _TotalLiq = 
+			DIVIDE(
+			    [00.DRE DRE],
+			    _ReceitaLiquida,
+			    0 
+			)
+			RETURN
+			IF(
+			    SELECTEDVALUE( DRE_LV1[Índice] ) > 6,
+			    _TotalLiq,
+			    _TOTALBrut
+			)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 375860c9-858b-4647-99da-c81b4e7f8b62
+
+	measure '03. Linha Maxima Grafic' = ```
+			
+			
+			VAR _SELECT = SELECTEDVALUE( DRE_LV1[ID] )
+			VAR _MAX = 
+			CALCULATE(
+			    MAXX(
+			        FILTER(
+			            SUMMARIZECOLUMNS(
+			                DRE_LV1[ID],
+			                'CALENDARIO DAX'[Ano-Mes],
+			                "@Total", [00.DRE DRE] ),
+			            DRE_LV1[ID] = _SELECT ),
+			        [@Total] ) ,
+			    ALL( 'CALENDARIO DAX' )
+			)
+			RETURN
+			IF(
+			   ISBLANK( [00.DRE DRE] ), BLANK(),
+			        ( _MAX * 0.3 ) + _MAX
+			) 
+			```
+		displayFolder: 03. Graficos
+		lineageTag: 1509a8c7-7969-4f03-b747-359e53e2580d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. Linha Minima Grafic' = ```
+			
+			
+			VAR _SELECT = SELECTEDVALUE( DRE_LV1[ID] )
+			VAR _MAX = 
+			CALCULATE(
+			    MINX(
+			        FILTER(
+			            SUMMARIZECOLUMNS(
+			                DRE_LV1[ID],
+			                'CALENDARIO DAX'[Ano-Mes],
+			                "@Total", [00.DRE DRE] ),
+			            DRE_LV1[ID] = _SELECT ),
+			        [@Total] ) ,
+			    ALL( 'CALENDARIO DAX' )
+			)
+			RETURN
+			IF(
+			   ISBLANK( [00.DRE DRE] ), BLANK(),
+			        ( _MAX * 1 ) + _MAX
+			) 
+			```
+		displayFolder: 03. Graficos
+		lineageTag: d90a191a-3b3b-44db-96d3-b665f7433b2f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition _Medidas2 = m
 		mode: import

@@ -55,6 +55,7 @@ table 'CALENDARIO DAX'
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Mês Abrev]
+		sortByColumn: Mês
 
 		annotation SummarizationSetBy = Automatic
 
