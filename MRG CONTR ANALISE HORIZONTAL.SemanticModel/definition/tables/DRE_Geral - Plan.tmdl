@@ -314,3 +314,5 @@ table 'DRE_Geral - Plan'
 				in
 				  Origem
 
+	annotation PBI_ResultType = Table
+

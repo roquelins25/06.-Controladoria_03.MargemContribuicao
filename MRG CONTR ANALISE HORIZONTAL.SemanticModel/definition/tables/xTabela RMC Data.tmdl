@@ -1,0 +1,104 @@
+table 'xTabela RMC Data'
+	lineageTag: b206d0e5-2968-4678-9ee6-e610628f9424
+
+	column 'CALENDARIO DAX_Ano-Mes'
+		lineageTag: 1112229e-4fd4-437b-8f69-fe346e2278de
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: CALENDARIO DAX[Ano-Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CALENDARIO DAX_Mês Abrev'
+		lineageTag: 4df91e0f-6ea4-413d-9b34-3b78e97cb2f6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: CALENDARIO DAX[Mês Abrev]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CALENDARIO DAX_Mês'
+		formatString: 0
+		lineageTag: 1aaf3b61-b5db-4d46-952f-097ddcf1269f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: CALENDARIO DAX[Mês]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Periodo
+		lineageTag: c24a8281-fd1a-42e1-aa01-bd3af45708b5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Periodo]
+		sortByColumn: 'CALENDARIO DAX_Mês'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod. Periodo'
+		formatString: 0
+		lineageTag: ffeb4f91-5320-49cf-bbcd-4e0256dc8fd9
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Cod. Periodo]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'xTabela RMC Data' = calculated
+		mode: import
+		source = ```
+				
+				VAR _ANO = 
+				ADDCOLUMNS(
+				    DISTINCT(
+				    SELECTCOLUMNS(
+				        'CALENDARIO DAX',
+				        'CALENDARIO DAX'[Ano] ) ),
+				    "Mês Abrev", BLANK(),
+				    "Mês", 'CALENDARIO DAX'[Ano] * 100 ,
+				    "Periodo", CONCATENATE("YTD ", 'CALENDARIO DAX'[Ano] ),
+				    "Cod. Periodo", 2 )
+				
+				VAR _MES = 
+				ADDCOLUMNS(
+				    DISTINCT(
+				    SELECTCOLUMNS(
+				        'CALENDARIO DAX',
+				        'CALENDARIO DAX'[Ano-Mes],
+				        'CALENDARIO DAX'[Mês Abrev],
+				        'CALENDARIO DAX'[Mês] ) ),
+				    "Periodo", 'CALENDARIO DAX'[Mês Abrev] ,
+				    "Cod. Periodo", 1 )
+				
+				VAR _meta = 
+				ROW(
+				    "Ano-Mes", 2026,
+				    "Mês Abrev", BLANK(),
+				    "Mês", 9999999 ,
+				    "Periodo", "Orça.",
+				    "Cod. Periodo", 3 )
+				
+				VAR _Previ = 
+				ROW(
+				    "Ano-Mes", BLANK(),
+				    "Mês Abrev", BLANK(),
+				    "Mês", 99999999 ,
+				    "Periodo", "Prev.",
+				    "Cod. Periodo", 4 )
+				
+				VAR _PM = 
+				ROW(
+				    "Ano-Mes", BLANK(),
+				    "Mês Abrev", BLANK(),
+				    "Mês", 999999999 ,
+				    "Periodo", "Preço Médio",
+				    "Cod. Periodo", 5 )
+				
+				
+				RETURN
+				UNION(_MES,_ANO,_meta)
+				
+				```
+
+	annotation PBI_Id = 4dc24bffd4a043f0b7265b614c4d758f
+
