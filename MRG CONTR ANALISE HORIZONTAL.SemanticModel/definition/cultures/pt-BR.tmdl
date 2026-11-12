@@ -3404,39 +3404,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calendario_dax.ano_number": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "CALENDARIO DAX",
-			          "ConceptualProperty": "AnoNumber"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ano number": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "AnoNumber": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "ano no": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        }
-			      ]
-			    },
 			    "calendario_dax.mê": {
 			      "Definition": {
 			        "Binding": {
@@ -9073,7 +9040,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas2",
-			          "ConceptualProperty": "dredre ah teste"
+			          "ConceptualProperty": "DRE Grafics YTD"
 			        }
 			      },
 			      "State": "Generated",

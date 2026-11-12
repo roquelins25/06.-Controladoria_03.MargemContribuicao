@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "84dc43d5c90cb5aec329",
+  "displayName": "GRAFICOS",
+  "displayOption": "FitToWidth",
+  "height": 1285,
+  "width": 1700,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Graficos.png'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "Graficos8113184737163496.png"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Fit'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "c41db1b013273dde47d5",
+      "target": "1971fc3f14e6e6da8135",
+      "type": "NoFilter"
+    },
+    {
+      "source": "c41db1b013273dde47d5",
+      "target": "df12eaf710008382bc26",
+      "type": "NoFilter"
+    },
+    {
+      "source": "c41db1b013273dde47d5",
+      "target": "020a3226d39a49aba478",
+      "type": "NoFilter"
+    },
+    {
+      "source": "c41db1b013273dde47d5",
+      "target": "80438360509e2582773d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "c41db1b013273dde47d5",
+      "target": "c487d7c8cdb25bc08c14",
+      "type": "NoFilter"
+    }
+  ]
+}

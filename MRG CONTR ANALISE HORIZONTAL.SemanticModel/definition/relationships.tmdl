@@ -61,7 +61,11 @@ relationship 18c9999e-a614-9d40-79c8-7e7408f6cf34
 	fromColumn: TB_REAL2025.xCOD
 	toColumn: DRE_LV2.ID
 
-relationship 715ee892-10c4-4cb0-9bc0-c1d89a1c8d79
+relationship aaab6689-9077-6fb6-6499-926a6c179cbf
+	fromColumn: TB_ORCADO.xCOD
+	toColumn: DRE_LV2.ID
+
+relationship f1449a7e-27c0-41a9-80bb-f8a0ade162c8
 	joinOnDateBehavior: datePartOnly
 	fromColumn: 'CALENDARIO DAX'.Date
 	toColumn: LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335.Date
@@ -78,11 +82,18 @@ relationship b0507044-9c80-57d7-f822-21cd9dbd9853
 	fromColumn: TB_REAL2025.xDATA
 	toColumn: 'CALENDARIO DAX'.Date
 
-relationship aaab6689-9077-6fb6-6499-926a6c179cbf
-	fromColumn: TB_ORCADO.xCOD
-	toColumn: DRE_LV2.ID
-
 relationship 23972f34-56ea-659b-1c18-f45a0678c7e9
 	fromColumn: TB_ORCADO.xDATA
 	toColumn: 'CALENDARIO DAX'.Date
+
+relationship 4a89efd6-bb5c-43f7-cbc9-f209d4f7ea19
+	toCardinality: many
+	fromColumn: 'CALENDARIO DAX'.Ano-Mes
+	toColumn: 'xTabela RMC Data'.'CALENDARIO DAX_Ano-Mes'
+
+relationship cda13aee-2dfb-6e07-aff7-55a7cf85a065
+	isActive: false
+	toCardinality: many
+	fromColumn: 'CALENDARIO DAX'.AnoText
+	toColumn: 'xTabela RMC Data'.'CALENDARIO DAX_Ano-Mes'
 

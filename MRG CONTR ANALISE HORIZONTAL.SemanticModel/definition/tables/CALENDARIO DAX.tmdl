@@ -10,7 +10,7 @@ table 'CALENDARIO DAX'
 
 		variation Variação
 			isDefault
-			relationship: 715ee892-10c4-4cb0-9bc0-c1d89a1c8d79
+			relationship: f1449a7e-27c0-41a9-80bb-f8a0ade162c8
 			defaultHierarchy: LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
@@ -21,15 +21,6 @@ table 'CALENDARIO DAX'
 		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Ano]
-
-		annotation SummarizationSetBy = Automatic
-
-	column AnoNumber
-		formatString: 0
-		lineageTag: 7311044b-399c-492b-b489-20b6c8870646
-		summarizeBy: sum
-		isNameInferred
-		sourceColumn: [AnoNumber]
 
 		annotation SummarizationSetBy = Automatic
 
@@ -143,6 +134,14 @@ table 'CALENDARIO DAX'
 
 		annotation SummarizationSetBy = Automatic
 
+	column AnoText
+		lineageTag: 7cf0e0b2-33e5-4dd4-ab63-a2912fd662ac
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [AnoText]
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'CALENDARIO DAX' = calculated
 		mode: import
 		source = ```
@@ -156,7 +155,7 @@ table 'CALENDARIO DAX'
 				        YEAR([Date]) >= minAno &&
 				        YEAR([Date]) <= MaxAno),
 				        "Ano", YEAR([Date]),
-				        "AnoNumber", YEAR( [Date] ),
+				        "AnoText", FORMAT( YEAR( [Date] ), "" ),
 				        "Mês", MONTH([Date]),
 				        "Nome do Mês", FORMAT([Date],"mmmm","PT-BR"),
 				        "Mês Abrev",UPPER(LEFT(FORMAT([Date], "mmm"), 1)) & LOWER(RIGHT(FORMAT([Date], "mmm"), 2)),

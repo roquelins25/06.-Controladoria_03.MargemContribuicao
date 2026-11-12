@@ -556,7 +556,7 @@ table _Medidas2
 			CALCULATE(
 			    [00.DRE DRE],
 			    DRE_LV1[ID] = _SELECT,
-			    ALL( 'CALENDARIO DAX')
+			    ALL( 'xTabela RMC Data' )
 			)
 			RETURN
 			DIVIDE( 
@@ -756,32 +756,16 @@ table _Medidas2
 			)
 		lineageTag: 6736f6c5-9079-41a3-8c52-51a0609d4da1
 
-	measure 'dredre ah teste' = ```
+	measure 'DRE Grafics YTD' =
 			
-			VAR _Receita = CALCULATE( [02.DRE Receita Operacional Bruta ( R$ )] )
-			
-			VAR _ReceitaLiquida = CALCULATE( [00.DRE DRE],ALL(DRE_LV1 ), DRE_LV1[ID] = "10006" )
-			
-			VAR _TOTALBrut = 
-			DIVIDE(
-			    [00.DRE DRE],
-			    _Receita ,
-			    0 )
-			VAR _TotalLiq = 
-			DIVIDE(
-			    [00.DRE DRE],
-			    _ReceitaLiquida,
-			    0 
+			SWITCH(
+			    SELECTEDVALUE( 'xTabela RMC Data'[Cod. Periodo] ),
+			    2, CALCULATE( [00.DRE 2025] + [00.DRE DRE], USERELATIONSHIP( 'CALENDARIO DAX'[AnoText], 'xTabela RMC Data'[CALENDARIO DAX_Ano-Mes] ) ),
+			    3, CALCULATE( [00.DRE ORCADO 2026], USERELATIONSHIP( 'CALENDARIO DAX'[AnoText], 'xTabela RMC Data'[CALENDARIO DAX_Ano-Mes] ) )
 			)
-			RETURN
-			IF(
-			    SELECTEDVALUE( DRE_LV1[Índice] ) > 6,
-			    _TotalLiq,
-			    _TOTALBrut
-			)
-			```
-		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 375860c9-858b-4647-99da-c81b4e7f8b62
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '03. Linha Maxima Grafic' = ```
 			
@@ -853,7 +837,10 @@ table _Medidas2
 			    )
 			)
 			RETURN
+			IF(
+			    HASONEFILTER( 'UF/REGIÃO'[Região/Grupo] ) || HASONEFILTER( TB_REP[NOMREP] ) || HASONEFILTER( TB_REDE[XNOMGRE] ), BLANK() , 
 			_SUBTOTAL
+			)
 			```
 		formatString: #,0
 		lineageTag: f4c0d24c-d937-4143-92e6-132c798aecb0
@@ -876,7 +863,10 @@ table _Medidas2
 			    )
 			)
 			RETURN
+			IF(
+			    HASONEFILTER( 'UF/REGIÃO'[Região/Grupo] ) || HASONEFILTER( TB_REP[NOMREP] ) || HASONEFILTER( TB_REDE[XNOMGRE] ), BLANK() , 
 			_SUBTOTAL
+			)
 			```
 		formatString: #,0
 		lineageTag: 32fbfa04-97e4-4268-8014-c33250f4fcd0
