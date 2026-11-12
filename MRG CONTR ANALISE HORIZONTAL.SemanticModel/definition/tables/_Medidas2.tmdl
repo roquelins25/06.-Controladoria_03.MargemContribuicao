@@ -47,7 +47,7 @@ table _Medidas2
 			VAR _CPV = 
 			    VAR vCPVSAIDAS = CALCULATE( [01.DRE Total CPV ItemVenda], 'DRE_Geral - Plan'[Operacao]  = "Saidas" )
 			    VAR vCPVENTRAD = CALCULATE( [01.DRE Total CPV ItemVenda], 'DRE_Geral - Plan'[Operacao]  = "Entradas" )
-			    VAR vCPVFIXOSA = CALCULATE( [01. Total CPV Fixo ( R$ )], 'DRE_Geral - Plan'[Operacao]  = "Saidas" )
+			    VAR vCPVFIXOSA = CALCULATE( [01.DRE Total CPV Fixo], 'DRE_Geral - Plan'[Operacao]  = "Saidas" )
 			    RETURN
 			    vCPVSAIDAS -  vCPVENTRAD + vCPVFIXOSA 
 			

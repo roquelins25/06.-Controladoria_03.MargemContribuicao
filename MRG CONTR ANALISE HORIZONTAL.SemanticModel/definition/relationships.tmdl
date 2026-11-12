@@ -3,22 +3,6 @@ relationship 5988ac3b-bca9-44b6-93e7-2dd5fa2e99eb
 	fromColumn: TB_CLIENTE.DATCAD
 	toColumn: LocalDateTable_a7a6e3d3-7ef7-4d32-b6ad-4752882cc1ad.Date
 
-relationship AutoDetected_2ff23641-8ff9-4020-87aa-cd1b53f93e83
-	fromColumn: TB_FatosDRE.USU_CODMAR
-	toColumn: TB_MOTIVO.USU_CODMAR
-
-relationship 02163e64-9ecd-51c7-8ce4-14252b9d93e8
-	fromColumn: TB_FatosDRE.CODPRODUTO
-	toColumn: TB_PRODUTO.CODPRO
-
-relationship fc84dab6-a547-04f5-d2b9-bb5f3a9744df
-	fromColumn: TB_FatosDRE.CODIGO_REPRES_NF
-	toColumn: TB_REP.CODREP
-
-relationship 157492ae-3d82-8ed6-6f81-2462fa90eabb
-	fromColumn: TB_FatosDRE.COD_CLIENTE
-	toColumn: TB_CLIENTE.CODCLI
-
 relationship 6b4af198-4606-e14c-1277-fec2a2a6956f
 	fromColumn: TB_PRODUTO.USU_CODFAMDAY
 	toColumn: TB_FAMRMC.CODRMC
@@ -70,10 +54,6 @@ relationship f1449a7e-27c0-41a9-80bb-f8a0ade162c8
 	fromColumn: 'CALENDARIO DAX'.Date
 	toColumn: LocalDateTable_e407fd11-becc-48db-ba9d-85dfd717e335.Date
 
-relationship b4da1ee2-2fa3-8147-2bd4-8961973e1b09
-	fromColumn: TB_FatosDRE.DATA_NF
-	toColumn: 'CALENDARIO DAX'.Date
-
 relationship 6a853e48-e812-a8b3-9672-dc22feabdcd1
 	fromColumn: 'DRE_Geral - Plan'.Mes_Ano
 	toColumn: 'CALENDARIO DAX'.Date
@@ -96,4 +76,25 @@ relationship cda13aee-2dfb-6e07-aff7-55a7cf85a065
 	toCardinality: many
 	fromColumn: 'CALENDARIO DAX'.AnoText
 	toColumn: 'xTabela RMC Data'.'CALENDARIO DAX_Ano-Mes'
+
+relationship AutoDetected_c3ef15a5-1438-400e-a887-72f5b62954d2
+	fromColumn: TB_FatosDRE.USU_CODMAR
+	toColumn: TB_MOTIVO.USU_CODMAR
+
+relationship 97787933-1b8a-1f01-9441-61edd23bb26a
+	fromColumn: TB_FatosDRE.CODPRODUTO
+	toColumn: TB_PRODUTO.CODPRO
+
+relationship c660a100-004a-ff3e-5527-6d810790f02d
+	fromColumn: TB_FatosDRE.CODIGO_REPRES_NF
+	toColumn: TB_REP.CODREP
+
+relationship 7c523794-ee06-f55e-a209-09867b7726bd
+	fromColumn: TB_FatosDRE.COD_CLIENTE
+	toColumn: TB_CLIENTE.CODCLI
+
+relationship d4c2b4db-2d04-b817-036c-fded7466509c
+	isActive: false
+	fromColumn: TB_FatosDRE.DATA_NF
+	toColumn: 'CALENDARIO DAX'.Date
 

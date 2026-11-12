@@ -1,53 +1,72 @@
 table TB_FatosDRE
-	lineageTag: 2d396aa5-abfa-44ac-8e5d-c799941c720e
+	isHidden
+	lineageTag: 71459903-f2cc-4b1e-8a4e-c99e1b8c3dbd
 
 	column OPERACAO
 		dataType: string
-		lineageTag: ae081be8-0f84-48c3-9c1a-4cd2b9bd2703
+		isHidden
+		lineageTag: 967f7d3c-433d-4bb0-ae95-f0d07b7e8376
 		summarizeBy: none
 		sourceColumn: OPERACAO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column FILIAL
 		dataType: int64
+		isHidden
 		formatString: 0
-		lineageTag: 9a289af9-06df-49e4-94e8-2a4016da2f4a
+		lineageTag: e64002fa-65fa-4d28-90d0-6f06a8673a4f
 		summarizeBy: sum
 		sourceColumn: FILIAL
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column MES_ANO
 		dataType: string
-		lineageTag: c44fd03e-dec9-4aed-888d-6fb9a2fefa6d
+		isHidden
+		lineageTag: d5347db0-5a5c-41db-afe9-c7a17ca04629
 		summarizeBy: none
 		sourceColumn: MES_ANO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column DATA_NF
 		dataType: dateTime
+		isHidden
 		formatString: General Date
-		lineageTag: 140af4c1-7374-4a23-a3e4-f7fa5b5116fd
+		lineageTag: 2ff4612a-37fe-4067-922b-bd0962750248
 		summarizeBy: none
 		sourceColumn: DATA_NF
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column TIPO_NOTA
 		dataType: string
-		lineageTag: 47ba180e-9bfc-4539-bc8b-07a323687315
+		isHidden
+		lineageTag: d5938358-b2dc-42aa-aa83-90bb71059e86
 		summarizeBy: none
 		sourceColumn: TIPO_NOTA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column CODIGO_REPRES_NF
 		dataType: double
-		lineageTag: f4aeba00-8b15-4c8f-9dbf-dd9c484d5617
+		isHidden
+		lineageTag: c9bc371e-fac9-43a3-9df4-38281243bf77
 		summarizeBy: none
 		sourceColumn: CODIGO_REPRES_NF
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -55,9 +74,12 @@ table TB_FatosDRE
 
 	column NOTA_FISCAL
 		dataType: double
-		lineageTag: 98e9e308-2025-4773-af4c-2671da2a667a
+		isHidden
+		lineageTag: 157ab1be-30c5-4d44-b09b-aa89a2c0ffa9
 		summarizeBy: sum
 		sourceColumn: NOTA_FISCAL
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -65,42 +87,57 @@ table TB_FatosDRE
 
 	column COD_CLIENTE
 		dataType: int64
+		isHidden
 		formatString: 0
-		lineageTag: 904d2a03-b103-4b38-a435-fcea13f720d2
+		lineageTag: bcbc4054-c52f-452b-a451-56792b70e33f
 		summarizeBy: none
 		sourceColumn: COD_CLIENTE
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column CFOP
 		dataType: string
-		lineageTag: b001737d-a284-476c-b992-714698701438
+		isHidden
+		lineageTag: 1354edd3-1661-41c7-8535-f5f926a9a1f8
 		summarizeBy: none
 		sourceColumn: CFOP
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column DESCRICAO_CFOP
 		dataType: string
-		lineageTag: fba9006c-df52-4ea8-8020-cbed2fa64250
+		isHidden
+		lineageTag: 45c95ac4-e63f-469e-8835-426e3df15c88
 		summarizeBy: none
 		sourceColumn: DESCRICAO_CFOP
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column CODPRODUTO
 		dataType: string
-		lineageTag: 5fade6cf-ab4d-4a3d-a22d-a8b67eb88cd8
+		isHidden
+		lineageTag: 725e21da-49f6-4090-954b-5f83abb312a3
 		summarizeBy: none
 		sourceColumn: CODPRODUTO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column QTD_ITEM
 		dataType: double
-		lineageTag: ad3a6f69-3289-46fc-95ef-988a9485fa81
+		isHidden
+		lineageTag: 05c3bf90-0c0e-4875-9696-04167f3fd9b9
 		summarizeBy: sum
 		sourceColumn: QTD_ITEM
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -108,9 +145,12 @@ table TB_FatosDRE
 
 	column CPV_ITEM_VENDA
 		dataType: double
-		lineageTag: 8967f2f2-940f-486a-bf5f-72477e9d844c
+		isHidden
+		lineageTag: fdeba568-c822-425f-9243-56f69a5451f0
 		summarizeBy: sum
 		sourceColumn: CPV_ITEM_VENDA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -118,20 +158,25 @@ table TB_FatosDRE
 
 	column VALOR_VENDA
 		dataType: double
-		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
-		lineageTag: 9669a2ae-ce3e-427e-b54d-83db6fcc7795
+		isHidden
+		lineageTag: ace09376-ab9f-4bdb-bd65-4ce7b16c75ab
 		summarizeBy: sum
 		sourceColumn: VALOR_VENDA
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column VALOR_CPV_BONIF
 		dataType: double
-		lineageTag: 2833cdeb-dfff-4e43-8eb0-702e4f61d35b
+		isHidden
+		lineageTag: 3506d0f3-eb3b-4e6f-9a22-7065b7327c10
 		summarizeBy: sum
 		sourceColumn: VALOR_CPV_BONIF
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -139,9 +184,12 @@ table TB_FatosDRE
 
 	column VALOR_DESCONTO
 		dataType: double
-		lineageTag: 541e4014-a301-4133-8728-ad3f3ca83583
+		isHidden
+		lineageTag: ff246447-ae5b-4218-8e55-53005ba6392d
 		summarizeBy: sum
 		sourceColumn: VALOR_DESCONTO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -149,9 +197,12 @@ table TB_FatosDRE
 
 	column VALOR_OUTRAS
 		dataType: double
-		lineageTag: 9e1ee594-0e6e-4627-96d4-05f34eaa8bc0
+		isHidden
+		lineageTag: d14620c5-8b53-43d1-a4fc-fdbe6724a904
 		summarizeBy: sum
 		sourceColumn: VALOR_OUTRAS
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -159,9 +210,12 @@ table TB_FatosDRE
 
 	column VALOR_IPI
 		dataType: double
-		lineageTag: 3653f2fd-392b-4249-a176-64a100ed60b0
+		isHidden
+		lineageTag: 4d37d466-aa92-47fe-ae3e-eaf32c7a6169
 		summarizeBy: sum
 		sourceColumn: VALOR_IPI
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -169,9 +223,12 @@ table TB_FatosDRE
 
 	column VALOR_ICMS
 		dataType: double
-		lineageTag: d9d85fa5-f8ef-499e-85cd-cb722e7878cd
+		isHidden
+		lineageTag: 748d5d7d-6972-4300-b890-8d8364d6d6e7
 		summarizeBy: sum
 		sourceColumn: VALOR_ICMS
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -179,9 +236,12 @@ table TB_FatosDRE
 
 	column VALOR_FCP
 		dataType: double
-		lineageTag: 9db90c3e-274a-47f3-94ec-e8e17440f258
+		isHidden
+		lineageTag: e979dbd5-05c8-4144-b47e-edf759692cf4
 		summarizeBy: sum
 		sourceColumn: VALOR_FCP
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -189,9 +249,12 @@ table TB_FatosDRE
 
 	column VALOR_ST
 		dataType: double
-		lineageTag: d03944ef-56f4-41e5-8450-63f492181abd
+		isHidden
+		lineageTag: 113e2183-36f0-4bfa-8178-d1ec5c68f41f
 		summarizeBy: sum
 		sourceColumn: VALOR_ST
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -199,9 +262,12 @@ table TB_FatosDRE
 
 	column VALOR_PIS_VENDA
 		dataType: double
-		lineageTag: b985f0f2-7621-47f0-9c88-01819c9fa66f
+		isHidden
+		lineageTag: 38a980e8-0791-40a4-9b40-2b87a04c0b1b
 		summarizeBy: sum
 		sourceColumn: VALOR_PIS_VENDA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -209,9 +275,12 @@ table TB_FatosDRE
 
 	column VALOR_COFINS
 		dataType: double
-		lineageTag: d8b44353-a65c-446a-b8d2-7f87dab0197d
+		isHidden
+		lineageTag: 670f1a73-0793-436b-8975-34887ea8f85e
 		summarizeBy: sum
 		sourceColumn: VALOR_COFINS
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -219,9 +288,12 @@ table TB_FatosDRE
 
 	column TOTAL_IMPOSTOS
 		dataType: double
-		lineageTag: 97e285e2-fa19-4f26-b2de-fcb820ba0668
+		isHidden
+		lineageTag: b9fe6743-d835-4bde-b892-f2a69c693e76
 		summarizeBy: sum
 		sourceColumn: TOTAL_IMPOSTOS
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -229,9 +301,12 @@ table TB_FatosDRE
 
 	column VALOR_COMISSAO
 		dataType: double
-		lineageTag: f13b4947-6da6-4eee-87b9-b7f609d29c5e
+		isHidden
+		lineageTag: ceea2000-382f-4b6c-9f66-0fe744ec6d3d
 		summarizeBy: sum
 		sourceColumn: VALOR_COMISSAO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -239,9 +314,12 @@ table TB_FatosDRE
 
 	column CPV_PROC_FIXO
 		dataType: double
-		lineageTag: 22097e23-27b4-4552-b2f6-727cc47c023c
+		isHidden
+		lineageTag: 912443f9-ba1d-4e86-b08c-93c4ceaa7362
 		summarizeBy: sum
 		sourceColumn: CPV_PROC_FIXO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -249,9 +327,12 @@ table TB_FatosDRE
 
 	column DESP_OPER_FIXA
 		dataType: double
-		lineageTag: 7a0ba747-5d4e-4282-9183-40e0b87fd725
+		isHidden
+		lineageTag: d31d8534-a169-4eec-9164-ff92a67cfbc9
 		summarizeBy: sum
 		sourceColumn: DESP_OPER_FIXA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -259,9 +340,12 @@ table TB_FatosDRE
 
 	column CRED_IMPOSTOS
 		dataType: double
-		lineageTag: df570781-0aab-4ef8-a8f8-1837a0d81fb0
+		isHidden
+		lineageTag: 24c590cf-df91-4dd3-bc97-809c514cb588
 		summarizeBy: sum
 		sourceColumn: CRED_IMPOSTOS
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -269,9 +353,12 @@ table TB_FatosDRE
 
 	column VERBA_FIXA
 		dataType: double
-		lineageTag: 1c395e7f-ce52-4b60-937f-703a77daa6fb
+		isHidden
+		lineageTag: 815277b5-9ca0-4cf7-930d-04fb5a91bb80
 		summarizeBy: sum
 		sourceColumn: VERBA_FIXA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -279,9 +366,12 @@ table TB_FatosDRE
 
 	column VERBA_VARIAVEL
 		dataType: double
-		lineageTag: 8535b29c-32a4-4e2f-9002-af0d1dc4af60
+		isHidden
+		lineageTag: 053b35d8-47ba-4c9d-b1a2-3515f8fc40f9
 		summarizeBy: sum
 		sourceColumn: VERBA_VARIAVEL
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -289,9 +379,12 @@ table TB_FatosDRE
 
 	column FRETE
 		dataType: double
-		lineageTag: b603cda7-0ad1-4ffe-90f0-5b71ec278845
+		isHidden
+		lineageTag: ba653f88-478c-4a29-ba53-7c882e7bbbca
 		summarizeBy: sum
 		sourceColumn: FRETE
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -299,17 +392,23 @@ table TB_FatosDRE
 
 	column PLACA
 		dataType: string
-		lineageTag: a294683e-f935-48a6-a45e-74767d3d074d
+		isHidden
+		lineageTag: 4b7edbb0-ae64-4eb3-a1a2-45f7fb048385
 		summarizeBy: none
 		sourceColumn: PLACA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column USU_CODMAR
 		dataType: string
-		lineageTag: 9bff2bec-9bf5-4ff2-b8e0-1bb50bc61fdd
+		isHidden
+		lineageTag: 7ea51483-2be4-4f06-a06c-3acdb28cc5cd
 		summarizeBy: none
 		sourceColumn: USU_CODMAR
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -934,6 +1033,8 @@ table TB_FatosDRE
 				in
 				    Fonte
 				```
+
+	changedProperty = IsHidden
 
 	annotation PBI_ResultType = Table
 

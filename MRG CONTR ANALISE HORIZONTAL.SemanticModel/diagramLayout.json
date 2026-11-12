@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1.2812119520353593,
-        "y": 5571.9907794017781
+        "x": 0,
+        "y": 7455.6940546803244
       },
       "nodes": [
         {
           "location": {
             "x": 1146.5934853844346,
-            "y": 5240.96729954649
+            "y": 7500.7531643309694
           },
           "nodeIndex": "TB_CLIENTE",
           "nodeLineageTag": "2f4df360-4357-4a2d-a524-c7cd7c15bbba",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 669.63579853478041,
-            "y": 5034.8463722320867
+            "y": 7294.6322370165663
           },
           "nodeIndex": "TB_FAMRMC",
           "nodeLineageTag": "72f99b04-39f6-4587-b7ff-0a956e853f80",
@@ -36,22 +36,8 @@
         },
         {
           "location": {
-            "x": 0,
-            "y": 5600.3140228476168
-          },
-          "nodeIndex": "TB_FatosDRE",
-          "nodeLineageTag": "2d396aa5-abfa-44ac-8e5d-c799941c720e",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 17,
-          "expandedHeight": 590.71947626280019
-        },
-        {
-          "location": {
             "x": 290.20874787188507,
-            "y": 5233.1312623210015
+            "y": 7492.9171271054811
           },
           "nodeIndex": "TB_MOTIVO",
           "nodeLineageTag": "ba6619ff-85a3-4e13-9c68-7cf3263f6a23",
@@ -64,7 +50,7 @@
         {
           "location": {
             "x": 571.88089993359188,
-            "y": 5236.0725568127255
+            "y": 7495.8584215972051
           },
           "nodeIndex": "TB_PRODUTO",
           "nodeLineageTag": "43858bad-c090-4c50-ae47-4714e4b59363",
@@ -77,7 +63,7 @@
         {
           "location": {
             "x": 1265.8156038864051,
-            "y": 5022.7432780384479
+            "y": 7282.5291428229275
           },
           "nodeIndex": "TB_REDE",
           "nodeLineageTag": "a2937ea4-4305-4d3a-a190-6c4f936d3367",
@@ -90,7 +76,7 @@
         {
           "location": {
             "x": 859.65687842554973,
-            "y": 5239.7436138630492
+            "y": 7499.5294786475288
           },
           "nodeIndex": "TB_REP",
           "nodeLineageTag": "49927c4f-3e1e-42ee-b75f-d55d2d1c88b8",
@@ -103,7 +89,7 @@
         {
           "location": {
             "x": 718.85510185285466,
-            "y": 6091.1221401137464
+            "y": 8350.908004898225
           },
           "nodeIndex": "CALENDARIO DAX",
           "nodeLineageTag": "fe6b691c-0458-41b2-9144-901f0e948316",
@@ -116,7 +102,7 @@
         {
           "location": {
             "x": 0,
-            "y": 5027.8878288667638
+            "y": 7287.6736936512434
           },
           "nodeIndex": "_Medidas",
           "nodeLineageTag": "3670fca3-0252-4d77-906a-2819406b8ad7",
@@ -129,7 +115,7 @@
         {
           "location": {
             "x": 1499.7494123069487,
-            "y": 5236.9590725466314
+            "y": 7496.744937331111
           },
           "nodeIndex": "UF/REGIÃO",
           "nodeLineageTag": "590f796e-e9fc-4398-a550-98a3b2e1a639",
@@ -142,7 +128,7 @@
         {
           "location": {
             "x": 1738.4730420196229,
-            "y": 5003.9160704082915
+            "y": 7263.7019351927711
           },
           "nodeIndex": "Senhas/Gerente",
           "nodeLineageTag": "b1444a9d-8503-4bd9-9441-7383523303b0",
@@ -155,7 +141,7 @@
         {
           "location": {
             "x": 2136.3184903341471,
-            "y": 5004.6324182740973
+            "y": 7264.4182830585769
           },
           "nodeIndex": "DRE_LV1",
           "nodeLineageTag": "89b734a3-2baa-4671-aaad-af654eb40223",
@@ -168,7 +154,7 @@
         {
           "location": {
             "x": 1917.8642674422508,
-            "y": 5260.4559994213323
+            "y": 7520.2418642058119
           },
           "nodeIndex": "DRE_LV2",
           "nodeLineageTag": "e04ab721-74c0-47e7-b022-7bfea74c772b",
@@ -181,7 +167,7 @@
         {
           "location": {
             "x": 0,
-            "y": 5148.3231871849421
+            "y": 7408.1090519694217
           },
           "nodeIndex": "xSenha",
           "nodeLineageTag": "1aab9d1a-59bf-4526-9f79-4cc366fa70c6",
@@ -195,7 +181,7 @@
         {
           "location": {
             "x": 0,
-            "y": 5831.6407733821525
+            "y": 8091.4266381666321
           },
           "nodeIndex": "DRE_Geral - Plan",
           "nodeLineageTag": "4e0e30e5-fd32-4116-a90a-1dc49c2a2ce2",
@@ -203,13 +189,13 @@
             "height": 176,
             "width": 234
           },
-          "zIndex": 18,
+          "zIndex": 17,
           "expandedHeight": 300
         },
         {
           "location": {
             "x": 2420.3184903341471,
-            "y": 4519.5717295689592
+            "y": 6779.3575943534388
           },
           "nodeIndex": "_Medidas2",
           "nodeLineageTag": "4748875b-4f08-4356-875e-456556170049",
@@ -222,7 +208,7 @@
         {
           "location": {
             "x": 0,
-            "y": 6032.9359533893021
+            "y": 8292.72181817378
           },
           "nodeIndex": "TB_REAL2025",
           "nodeLineageTag": "39b05327-a583-46af-867c-02a78e85c5d4",
@@ -235,7 +221,7 @@
         {
           "location": {
             "x": 0,
-            "y": 6267.8689729037305
+            "y": 8527.65483768821
           },
           "nodeIndex": "TB_ORCADO",
           "nodeLineageTag": "a7f05ee0-1737-4722-9224-70eb8845b2bb",
@@ -248,7 +234,7 @@
         {
           "location": {
             "x": 1127.668876413695,
-            "y": 6094.3122611032277
+            "y": 8354.0981258877073
           },
           "nodeIndex": "xTabela RMC Data",
           "nodeLineageTag": "b206d0e5-2968-4678-9ee6-e610628f9424",
@@ -256,11 +242,24 @@
             "height": 200,
             "width": 234
           },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 3.956997996000041,
+            "y": 7711.0221911527324
+          },
+          "nodeIndex": "TB_FatosDRE",
+          "nodeLineageTag": "71459903-f2cc-4b1e-8a4e-c99e1b8c3dbd",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
           "zIndex": 19
         }
       ],
       "name": "Todas as tabelas",
-      "zoomValue": 78.051098291065713,
+      "zoomValue": 87.852317329038286,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
