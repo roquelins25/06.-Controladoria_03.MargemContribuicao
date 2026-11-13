@@ -471,7 +471,7 @@ table _Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure HTML_Filtros_Ativos =
+	measure HTML_Filtros_Ativos = ```
 			
 			VAR FiltroACC = IF( ISFILTERED('Senhas/Gerente'[Usuario]),
 			    CONCATENATEX( TOPN(5, VALUES('Senhas/Gerente'[Usuario]), 'Senhas/Gerente'[Usuario], ASC),
@@ -515,11 +515,30 @@ table _Medidas
 			    & IF( COUNTROWS(VALUES('UF/REGIÃO'[UF])) > 5,
 			        "<span class='more'>+" & (COUNTROWS(VALUES('UF/REGIÃO'[UF])) - 5) & "</span>", "" ) )
 			
+			VAR Filtro8 = IF( ISFILTERED(TB_PRODUTO[CLASSIFICACAO_BI (grupos)]),
+			    CONCATENATEX( TOPN(5, VALUES(TB_PRODUTO[CLASSIFICACAO_BI (grupos)]), TB_PRODUTO[CLASSIFICACAO_BI (grupos)], ASC),
+			        "<span class='chip'>" & 'TB_PRODUTO'[CLASSIFICACAO_BI (grupos)] & "</span>", "", TB_PRODUTO[CLASSIFICACAO_BI (grupos)], ASC )
+			    & IF( COUNTROWS(VALUES(TB_PRODUTO[CLASSIFICACAO_BI (grupos)])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES(TB_PRODUTO[CLASSIFICACAO_BI (grupos)])) - 5) & "</span>", "" ) )
+			
+			VAR Filtro9 = IF( ISFILTERED(TB_PRODUTO[CLASSIFICACAO_BI]),
+			    CONCATENATEX( TOPN(5, VALUES(TB_PRODUTO[CLASSIFICACAO_BI]), TB_PRODUTO[CLASSIFICACAO_BI], ASC),
+			        "<span class='chip'>" & TB_PRODUTO[CLASSIFICACAO_BI] & "</span>", "", TB_PRODUTO[CLASSIFICACAO_BI], ASC )
+			    & IF( COUNTROWS(VALUES(TB_PRODUTO[CLASSIFICACAO_BI])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES(TB_PRODUTO[CLASSIFICACAO_BI])) - 5) & "</span>", "" ) )
+			
+			VAR Filtro10 = IF( ISFILTERED(TB_CLIENTE[ABRRVE]),
+			    CONCATENATEX( TOPN(5, VALUES(TB_CLIENTE[ABRRVE]), TB_CLIENTE[ABRRVE], ASC),
+			        "<span class='chip'>" & TB_CLIENTE[ABRRVE] & "</span>", "", TB_CLIENTE[ABRRVE], ASC )
+			    & IF( COUNTROWS(VALUES(TB_CLIENTE[ABRRVE])) > 5,
+			        "<span class='more'>+" & (COUNTROWS(VALUES(TB_CLIENTE[ABRRVE])) - 5) & "</span>", "" ) )
+			
 			VAR TotalFiltros =
 			    (NOT ISBLANK(FiltroACC)) +
 			    (NOT ISBLANK(Filtro1)) + (NOT ISBLANK(Filtro2)) + (NOT ISBLANK(Filtro3)) +
 			    (NOT ISBLANK(Filtro4)) + (NOT ISBLANK(Filtro5)) + (NOT ISBLANK(Filtro6)) +
-			    (NOT ISBLANK(Filtro7))
+			    (NOT ISBLANK(Filtro7)) + (NOT ISBLANK(Filtro8)) + (NOT ISBLANK(Filtro9)) +
+			    (NOT ISBLANK(Filtro10))
 			
 			VAR CSS =
 			"<style>
@@ -548,7 +567,10 @@ table _Medidas
 			    IF( NOT ISBLANK(Filtro4), "<div class='grp'><span class='lbl'>Cliente:</span><div class='chips'>" & Filtro4 & "</div></div>", "" ) &
 			    IF( NOT ISBLANK(Filtro5), "<div class='grp'><span class='lbl'>Representante:</span><div class='chips'>" & Filtro5 & "</div></div>", "" ) &
 			    IF( NOT ISBLANK(Filtro6), "<div class='grp'><span class='lbl'>Região:</span><div class='chips'>" & Filtro6 & "</div></div>", "" ) &
-			    IF( NOT ISBLANK(Filtro7), "<div class='grp'><span class='lbl'>UF:</span><div class='chips'>" & Filtro7 & "</div></div>", "" )
+			    IF( NOT ISBLANK(Filtro7), "<div class='grp'><span class='lbl'>UF:</span><div class='chips'>" & Filtro7 & "</div></div>", "" ) &
+			    IF( NOT ISBLANK(Filtro8), "<div class='grp'><span class='lbl'>Grupos/Emb:</span><div class='chips'>" & Filtro8 & "</div></div>", "" ) &
+			    IF( NOT ISBLANK(Filtro9), "<div class='grp'><span class='lbl'>Embalagem:</span><div class='chips'>" & Filtro9 & "</div></div>", "" ) &
+			    IF( NOT ISBLANK(Filtro10), "<div class='grp'><span class='lbl'>Regional:</span><div class='chips'>" & Filtro10 & "</div></div>", "" ) 
 			
 			RETURN
 			CSS &
@@ -558,6 +580,7 @@ table _Medidas
 			        IF( TotalFiltros = 0, "<span class='none'>Nenhum filtro aplicado</span>", Grupos ) &
 			    "</div>
 			</div>"
+			```
 		lineageTag: faecb63c-7852-489a-bea3-af559bf6c640
 
 	measure '00. DRE A.H ( % )' = ```

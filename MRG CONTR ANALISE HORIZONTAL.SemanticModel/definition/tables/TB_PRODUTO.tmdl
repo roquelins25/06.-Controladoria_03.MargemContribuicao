@@ -228,6 +228,56 @@ table TB_PRODUTO
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'CLASSIFICACAO_BI (grupos)' =
+			SWITCH(
+				TRUE,
+				ISBLANK('TB_PRODUTO'[CLASSIFICACAO_BI]),
+				"(Em branco)",
+				'TB_PRODUTO'[CLASSIFICACAO_BI] IN {"ENERGÉTICO 1L",
+					"ENERGÉTICO 2.5L",
+					"ENERGÉTICO 250ML",
+					"ENERGÉTICO 2L",
+					"ENERGÉTICO 473ML",
+					"ENERGÉTICO 750ML",
+					"ISOTONICOS",
+					"KIDS",
+					"OUTROS NÃO ALCOOLICOS",
+					"SAFADAO"},
+				"01. BEB. ENERG. E FUNC",
+				'TB_PRODUTO'[CLASSIFICACAO_BI] IN {"CERVEJA",
+					"GIN",
+					"OUTROS ALCOOLICOS",
+					"VODKA",
+					"WHISKY"},
+				"02. ALCOOLICOS",
+				'TB_PRODUTO'[CLASSIFICACAO_BI] IN {"OUTROS"},
+				"03. OUTROS",
+				'TB_PRODUTO'[CLASSIFICACAO_BI]
+			)
+		lineageTag: 298466c2-4258-41f7-813e-a204250cced2
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "TB_PRODUTO"
+				          }
+				        },
+				        "Property": "CLASSIFICACAO_BI"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"t","Entity":"TB_PRODUTO"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"t"}},"Property":"CLASSIFICACAO_BI"}}],"GroupItems":[{"DisplayName":"(Em branco)","BlankDefaultPlaceholder":true},{"DisplayName":"01. BEB. ENERG. E FUNC","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"t"}},"Property":"CLASSIFICACAO_BI"}}],"Values":[[{"Literal":{"Value":"'ENERGÉTICO 1L'"}}],[{"Literal":{"Value":"'ENERGÉTICO 2.5L'"}}],[{"Literal":{"Value":"'ENERGÉTICO 250ML'"}}],[{"Literal":{"Value":"'ENERGÉTICO 2L'"}}],[{"Literal":{"Value":"'ENERGÉTICO 473ML'"}}],[{"Literal":{"Value":"'ENERGÉTICO 750ML'"}}],[{"Literal":{"Value":"'ISOTONICOS'"}}],[{"Literal":{"Value":"'KIDS'"}}],[{"Literal":{"Value":"'OUTROS NÃO ALCOOLICOS'"}}],[{"Literal":{"Value":"'SAFADAO'"}}]]}}},{"DisplayName":"02. ALCOOLICOS","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"t"}},"Property":"CLASSIFICACAO_BI"}}],"Values":[[{"Literal":{"Value":"'CERVEJA'"}}],[{"Literal":{"Value":"'GIN'"}}],[{"Literal":{"Value":"'OUTROS ALCOOLICOS'"}}],[{"Literal":{"Value":"'VODKA'"}}],[{"Literal":{"Value":"'WHISKY'"}}]]}}},{"DisplayName":"03. OUTROS","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"t"}},"Property":"CLASSIFICACAO_BI"}}],"Values":[[{"Literal":{"Value":"'OUTROS'"}}]]}}}]}
+
+		annotation SummarizationSetBy = Automatic
+
 	partition TB_PRODUTO = m
 		mode: import
 		queryGroup: Dimensao

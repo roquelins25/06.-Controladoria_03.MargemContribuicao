@@ -1,0 +1,116 @@
+createOrReplace
+
+	ref table _Medidas
+
+		measure HTML_Filtros_Ativos = ```
+				
+				VAR FiltroACC = IF( ISFILTERED('Senhas/Gerente'[Usuario]),
+				    CONCATENATEX( TOPN(5, VALUES('Senhas/Gerente'[Usuario]), 'Senhas/Gerente'[Usuario], ASC),
+				        "<span class='chip'>" & 'Senhas/Gerente'[Usuario] & "</span>", "", 'Senhas/Gerente'[Usuario], ASC )
+				    & IF( COUNTROWS(VALUES('Senhas/Gerente'[Usuario])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES('Senhas/Gerente'[Usuario])) - 5) & "</span>", "" ) )
+				
+				VAR Filtro1 = IF( ISFILTERED('CALENDARIO DAX'[Ano]),
+				    CONCATENATEX( TOPN(5, VALUES('CALENDARIO DAX'[Ano]), 'CALENDARIO DAX'[Ano], ASC),
+				        "<span class='chip'>" & 'CALENDARIO DAX'[Ano] & "</span>", "", 'CALENDARIO DAX'[Ano], ASC )
+				    & IF( COUNTROWS(VALUES('CALENDARIO DAX'[Ano])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES('CALENDARIO DAX'[Ano])) - 5) & "</span>", "" ) )
+				VAR Filtro2 = IF( ISFILTERED('CALENDARIO DAX'[Ano-Mes]),
+				    CONCATENATEX( TOPN(5, VALUES('CALENDARIO DAX'[Ano-Mes]), 'CALENDARIO DAX'[Ano-Mes], ASC),
+				        "<span class='chip'>" & 'CALENDARIO DAX'[Ano-Mes] & "</span>", "", 'CALENDARIO DAX'[Ano-Mes], ASC )
+				    & IF( COUNTROWS(VALUES('CALENDARIO DAX'[Ano-Mes])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES('CALENDARIO DAX'[Ano-Mes])) - 5) & "</span>", "" ) )
+				VAR Filtro3 = IF( ISFILTERED(TB_REDE[XNOMGRE]),
+				    CONCATENATEX( TOPN(5, VALUES(TB_REDE[XNOMGRE]), TB_REDE[XNOMGRE], ASC),
+				        "<span class='chip'>" & TB_REDE[XNOMGRE] & "</span>", "", TB_REDE[XNOMGRE], ASC )
+				    & IF( COUNTROWS(VALUES(TB_REDE[XNOMGRE])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES(TB_REDE[XNOMGRE])) - 5) & "</span>", "" ) )
+				VAR Filtro4 = IF( ISFILTERED(TB_CLIENTE[XNOMCLI]),
+				    CONCATENATEX( TOPN(5, VALUES(TB_CLIENTE[XNOMCLI]), TB_CLIENTE[XNOMCLI], ASC),
+				        "<span class='chip'>" & TB_CLIENTE[XNOMCLI] & "</span>", "", TB_CLIENTE[XNOMCLI], ASC )
+				    & IF( COUNTROWS(VALUES(TB_CLIENTE[XNOMCLI])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES(TB_CLIENTE[XNOMCLI])) - 5) & "</span>", "" ) )
+				VAR Filtro5 = IF( ISFILTERED(TB_REP[NOMREP]),
+				    CONCATENATEX( TOPN(5, VALUES(TB_REP[NOMREP]), TB_REP[NOMREP], ASC),
+				        "<span class='chip'>" & TB_REP[NOMREP] & "</span>", "", TB_REP[NOMREP], ASC )
+				    & IF( COUNTROWS(VALUES(TB_REP[NOMREP])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES(TB_REP[NOMREP])) - 5) & "</span>", "" ) )
+				VAR Filtro6 = IF( ISFILTERED('UF/REGIÃO'[Região/Grupo]),
+				    CONCATENATEX( TOPN(5, VALUES('UF/REGIÃO'[Região/Grupo]), 'UF/REGIÃO'[Região/Grupo], ASC),
+				        "<span class='chip'>" & 'UF/REGIÃO'[Região/Grupo] & "</span>", "", 'UF/REGIÃO'[Região/Grupo], ASC )
+				    & IF( COUNTROWS(VALUES('UF/REGIÃO'[Região/Grupo])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES('UF/REGIÃO'[Região/Grupo])) - 5) & "</span>", "" ) )
+				VAR Filtro7 = IF( ISFILTERED('UF/REGIÃO'[UF]),
+				    CONCATENATEX( TOPN(5, VALUES('UF/REGIÃO'[UF]), 'UF/REGIÃO'[UF], ASC),
+				        "<span class='chip'>" & 'UF/REGIÃO'[UF] & "</span>", "", 'UF/REGIÃO'[UF], ASC )
+				    & IF( COUNTROWS(VALUES('UF/REGIÃO'[UF])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES('UF/REGIÃO'[UF])) - 5) & "</span>", "" ) )
+				
+				VAR Filtro8 = IF( ISFILTERED(TB_PRODUTO[CLASSIFICACAO_BI (grupos)]),
+				    CONCATENATEX( TOPN(5, VALUES(TB_PRODUTO[CLASSIFICACAO_BI (grupos)]), TB_PRODUTO[CLASSIFICACAO_BI (grupos)], ASC),
+				        "<span class='chip'>" & 'TB_PRODUTO'[CLASSIFICACAO_BI (grupos)] & "</span>", "", TB_PRODUTO[CLASSIFICACAO_BI (grupos)], ASC )
+				    & IF( COUNTROWS(VALUES(TB_PRODUTO[CLASSIFICACAO_BI (grupos)])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES(TB_PRODUTO[CLASSIFICACAO_BI (grupos)])) - 5) & "</span>", "" ) )
+				
+				VAR Filtro9 = IF( ISFILTERED(TB_PRODUTO[CLASSIFICACAO_BI]),
+				    CONCATENATEX( TOPN(5, VALUES(TB_PRODUTO[CLASSIFICACAO_BI]), TB_PRODUTO[CLASSIFICACAO_BI], ASC),
+				        "<span class='chip'>" & TB_PRODUTO[CLASSIFICACAO_BI] & "</span>", "", TB_PRODUTO[CLASSIFICACAO_BI], ASC )
+				    & IF( COUNTROWS(VALUES(TB_PRODUTO[CLASSIFICACAO_BI])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES(TB_PRODUTO[CLASSIFICACAO_BI])) - 5) & "</span>", "" ) )
+				
+				VAR Filtro10 = IF( ISFILTERED(TB_CLIENTE[ABRRVE]),
+				    CONCATENATEX( TOPN(5, VALUES(TB_CLIENTE[ABRRVE]), TB_CLIENTE[ABRRVE], ASC),
+				        "<span class='chip'>" & TB_CLIENTE[ABRRVE] & "</span>", "", TB_CLIENTE[ABRRVE], ASC )
+				    & IF( COUNTROWS(VALUES(TB_CLIENTE[ABRRVE])) > 5,
+				        "<span class='more'>+" & (COUNTROWS(VALUES(TB_CLIENTE[ABRRVE])) - 5) & "</span>", "" ) )
+				
+				VAR TotalFiltros =
+				    (NOT ISBLANK(FiltroACC)) +
+				    (NOT ISBLANK(Filtro1)) + (NOT ISBLANK(Filtro2)) + (NOT ISBLANK(Filtro3)) +
+				    (NOT ISBLANK(Filtro4)) + (NOT ISBLANK(Filtro5)) + (NOT ISBLANK(Filtro6)) +
+				    (NOT ISBLANK(Filtro7)) + (NOT ISBLANK(Filtro8)) + (NOT ISBLANK(Filtro9)) +
+				    (NOT ISBLANK(Filtro10))
+				
+				VAR CSS =
+				"<style>
+				 .bar{font-family:'Segoe UI',Arial,sans-serif;display:flex;align-items:center;gap:12px;box-sizing:border-box;
+				   width:100%;min-height:36px;padding:6px 12px;background:#FFFBEA;border:1px solid #FBE08A;
+				   border-left:5px solid #FEC200;border-radius:8px}
+				 .head{display:flex;align-items:center;gap:6px;flex:0 0 auto;font-size:11px;font-weight:800;
+				   letter-spacing:.06em;text-transform:uppercase;color:#6B5000}
+				 .badge{background:#FEC200;color:#1F1F1F;border-radius:999px;min-width:20px;height:20px;padding:0 6px;
+				   display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;box-sizing:border-box}
+				 .list{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;flex:1 1 auto}
+				 .grp{display:flex;align-items:center;gap:5px}
+				 .lbl{font-size:11px;font-weight:700;color:#B38600}
+				 .chips{display:flex;flex-wrap:wrap;gap:4px}
+				 .chip{background:#fff;color:#4A3800;border:1px solid #FBE08A;border-radius:999px;padding:2px 9px;font-size:11px;
+				   max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+				 .more{background:#FEC200;color:#1F1F1F;border-radius:999px;padding:2px 8px;font-size:11px;font-weight:800}
+				 .none{font-size:11px;color:#8A7A3A;font-style:italic}
+				</style>"
+				
+				VAR Grupos =
+				    IF( NOT ISBLANK(FiltroACC), "<div class='grp'><span class='lbl'>Usuario:</span><div class='chips'>" & FiltroACC & "</div></div>", "" ) &
+				    IF( NOT ISBLANK(Filtro1), "<div class='grp'><span class='lbl'>Ano:</span><div class='chips'>" & Filtro1 & "</div></div>", "" ) &
+				    IF( NOT ISBLANK(Filtro2), "<div class='grp'><span class='lbl'>Mês:</span><div class='chips'>" & Filtro2 & "</div></div>", "" ) &
+				    IF( NOT ISBLANK(Filtro3), "<div class='grp'><span class='lbl'>Grupo:</span><div class='chips'>" & Filtro3 & "</div></div>", "" ) &
+				    IF( NOT ISBLANK(Filtro4), "<div class='grp'><span class='lbl'>Cliente:</span><div class='chips'>" & Filtro4 & "</div></div>", "" ) &
+				    IF( NOT ISBLANK(Filtro5), "<div class='grp'><span class='lbl'>Representante:</span><div class='chips'>" & Filtro5 & "</div></div>", "" ) &
+				    IF( NOT ISBLANK(Filtro6), "<div class='grp'><span class='lbl'>Região:</span><div class='chips'>" & Filtro6 & "</div></div>", "" ) &
+				    IF( NOT ISBLANK(Filtro7), "<div class='grp'><span class='lbl'>UF:</span><div class='chips'>" & Filtro7 & "</div></div>", "" ) &
+				    IF( NOT ISBLANK(Filtro8), "<div class='grp'><span class='lbl'>Grupos/Emb:</span><div class='chips'>" & Filtro8 & "</div></div>", "" ) &
+				    IF( NOT ISBLANK(Filtro9), "<div class='grp'><span class='lbl'>Embalagem:</span><div class='chips'>" & Filtro9 & "</div></div>", "" ) &
+				    IF( NOT ISBLANK(Filtro10), "<div class='grp'><span class='lbl'>Regional:</span><div class='chips'>" & Filtro10 & "</div></div>", "" ) 
+				
+				RETURN
+				CSS &
+				"<div class='bar'>
+				    <div class='head'>&#9660; Filtros aplicados <span class='badge'>" & TotalFiltros & "</span></div>
+				    <div class='list'>" &
+				        IF( TotalFiltros = 0, "<span class='none'>Nenhum filtro aplicado</span>", Grupos ) &
+				    "</div>
+				</div>"
+				```
+			lineageTag: faecb63c-7852-489a-bea3-af559bf6c640
+
